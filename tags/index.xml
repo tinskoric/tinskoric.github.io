@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Tin Skoric</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Tin Skoric</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Houselessness</title>
+      <link>/tags/houselessness/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/houselessness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Racial Inequity</title>
+      <link>/tags/racial-inequity/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/racial-inequity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
