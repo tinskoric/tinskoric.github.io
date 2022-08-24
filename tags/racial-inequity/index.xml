@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 01 Dec 2021 21:13:14 -0500</lastBuildDate><atom:link href="/tags/racial-inequity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring Racial Disparities Among Unhoused Communities</title>
-      <link>/projects/unhousedproj/</link>
+      <link>/projects/racialdisparitiesamongunhousedcommunities/</link>
       <pubDate>Wed, 01 Dec 2021 21:13:14 -0500</pubDate>
       
-      <guid>/projects/unhousedproj/</guid>
+      <guid>/projects/racialdisparitiesamongunhousedcommunities/</guid>
       <description>$(document).ready(function() {$(&#39;.footnotes ol&#39;).appendTo(&#39;#references&#39;);$(&#39;.footnotes&#39;).remove();});PrefaceMany of the data visualizations used are stylized with some having elements, including axis labels, removed for the sake of simplicity. When viewing data visualizations, keep in mind the direction of data more than what individual numeric values may be. As a final note, it could be possible that the realities of those experiencing houselessness over the past decade have been entirely different from what are identified as national trends, and were just masked under family houselessness, which is sometimes difficult to track accurately, especially given the limitations of the PIT count system, which only records individuals that can be found on the street one night a year.</description>
     </item>
     

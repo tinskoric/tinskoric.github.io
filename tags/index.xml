@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Tin Skoric</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jul 2022 21:13:14 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 21:13:14 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infrastructure</title>
+      <link>/tags/infrastructure/</link>
+      <pubDate>Sat, 20 Aug 2022 21:13:14 -0500</pubDate>
+      
+      <guid>/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CoVid-19</title>
       <link>/tags/covid-19/</link>
