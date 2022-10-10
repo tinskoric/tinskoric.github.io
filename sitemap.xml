@@ -13,9 +13,6 @@
   </url><url>
     <loc>/about/resume/</loc>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2022-08-20T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>/categories/</loc>
     <lastmod>2022-08-20T21:13:14-05:00</lastmod>
   </url><url>
@@ -29,6 +26,9 @@
     <lastmod>2022-08-20T21:13:14-05:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2022-08-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>/</loc>
     <lastmod>2022-08-20T21:13:14-05:00</lastmod>
   </url><url>
     <loc>/tags/covid-19/</loc>
