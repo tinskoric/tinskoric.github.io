@@ -1,1 +1,0 @@
-# tinskoric.github.io
