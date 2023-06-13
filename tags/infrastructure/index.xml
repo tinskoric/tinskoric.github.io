@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Infrastructure on Tin Skoric</title>
+    <link>/tags/infrastructure/</link>
+    <description>Recent content in Infrastructure on Tin Skoric</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Aug 2022 21:13:14 -0500</lastBuildDate><atom:link href="/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rural Infrastructure and The Food Deserts of Vermont</title>
+      <link>/projects/vermontfooddeserts/</link>
+      <pubDate>Sat, 20 Aug 2022 21:13:14 -0500</pubDate>
+      
+      <guid>/projects/vermontfooddeserts/</guid>
+      <description>Tragic Americana  Average Poverty Rate by County (VT) Source: USDA ERS (2019)Download
+There is a certain aesthetic present in contemporary critiques of rural American life. That of the sugary drink guzzling, Big Mac obliterating, personification of health complications working some kind of manual job in some kind of dying industry. The thing is that it does not come from nowhere, many people eat and live lives just like that, but what is one to do when their closest affordable meal for miles, painfully, is from a fast-food chain?</description>
+    </item>
+    
+  </channel>
+</rss>

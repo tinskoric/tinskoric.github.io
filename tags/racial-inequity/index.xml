@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Racial Inequity on Tin Skoric</title>
+    <link>/tags/racial-inequity/</link>
+    <description>Recent content in Racial Inequity on Tin Skoric</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 21:13:14 -0500</lastBuildDate><atom:link href="/tags/racial-inequity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Racial Disparities Among Unhoused Communities</title>
+      <link>/projects/racialdisparitiesamongunhousedcommunities/</link>
+      <pubDate>Wed, 01 Dec 2021 21:13:14 -0500</pubDate>
+      
+      <guid>/projects/racialdisparitiesamongunhousedcommunities/</guid>
+      <description>Preface Many of the data visualizations used are stylized with some having elements, including axis labels, removed for the sake of simplicity. When viewing data visualizations, keep in mind the direction of data more than what individual numeric values may be. As a final note, it could be possible that the realities of those experiencing houselessness over the past decade have been entirely different from what are identified as national trends, and were just masked under family houselessness, which is sometimes difficult to track accurately, especially given the limitations of the PIT count system, which only records individuals that can be found on the street one night a year.</description>
+    </item>
+    
+  </channel>
+</rss>
