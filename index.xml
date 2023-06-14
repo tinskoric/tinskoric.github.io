@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🏠 on My New Hugo Site</title>
+    <link>/</link>
+    <description>Recent content in 🏠 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rural Infrastructure and The Food Deserts of Vermont</title>
+      <link>/works/writings/vermontfooddeserts/</link>
+      <pubDate>Sat, 20 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/works/writings/vermontfooddeserts/</guid>
+      <description>Rural Infrastructure and The Food Deserts of VermontTin Skoric August 20, 2022
+Tragic AmericanaAverage Poverty Rate by County (VT) Source: USDA ERS (2019)Download
+There is a certain aesthetic present in contemporary critiques of rural American life. That of the sugary drink guzzling, Big Mac obliterating, personification of health complications working some kind of manual job in some kind of dying industry. The thing is that it does not come from nowhere, many people eat and live lives just like that, but what is one to do when their closest affordable meal for miles, painfully, is from a fast-food chain?</description>
+    </item>
+    
+    <item>
+      <title>Vibes-Based Economics</title>
+      <link>/works/writings/vibesbasedeconomics/</link>
+      <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/works/writings/vibesbasedeconomics/</guid>
+      <description>Vibes-Based EconomicsTin Skoric July 31, 2022
+Something Isn’t RightThere has been a lot in the news about “recession” recently and, considering current data, it does not make much sense. While wages went up (USBLS) and comparatively decent jobs remain available, half the country seems to think that we are back in 2008. Hell, unemployment is back to pre-pandemic levels (USBLS), with long-term unemployment (27 weeks or more) falling as well, and the federal funds rate, while rising steeply, just hit what it was around this same time in 2019 (FRED).</description>
+    </item>
+    
+    <item>
+      <title>Exploring Racial Disparities Among Unhoused Communities</title>
+      <link>/works/writings/racialdisparitiesamongunhousedcommunities/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/works/writings/racialdisparitiesamongunhousedcommunities/</guid>
+      <description>Exploring Racial Disparities Among Unhoused CommunitiesTin Skoric December 1, 2021
+PrefaceMany of the data visualizations used are stylized with some having elements, including axis labels, removed for the sake of simplicity. When viewing data visualizations, keep in mind the direction of data more than what individual numeric values may be. As a final note, it could be possible that the realities of those experiencing houselessness over the past decade have been entirely different from what are identified as national trends, and were just masked under family houselessness, which is sometimes difficult to track accurately, especially given the limitations of the PIT count system, which only records individuals that can be found on the street one night a year.</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>/about/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/resume/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

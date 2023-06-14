@@ -1,0 +1,150 @@
+---
+title: "Rural Infrastructure and The Food Deserts of Vermont"
+author: "Tin Skoric"
+date: 2022-08-20
+weight: 1
+---
+
+# Rural Infrastructure and The Food Deserts of Vermont
+`Tin Skoric` `August 20, 2022`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+```{r data}
+
+library(tidyverse)
+library(mapproj)
+library(ggplot2)
+library(socviz)
+library(dplyr)
+library(gridExtra)
+library(ggtext)
+library(ggdark) 
+library(ggthemes)
+library(plotly)
+library(gapminder)
+library(maps)
+library(sf)
+
+# Data
+
+FoodAccessUSDA <- read.csv("VermontFoodDesertsProjFiles/FoodAccessResearchAtlas.csv")
+
+```
+
+```{r VermontCountyPovertyData}
+
+CountiesVT <- map_data('county', region = 'Vermont')
+
+CountiesVT <- CountiesVT %>%
+  rename("County" = "subregion") %>%
+  rename("STATE_NAME" = "region")
+
+CountiesVT$County[CountiesVT$County == "addison"] <- "Addison County"
+CountiesVT$County[CountiesVT$County == "bennington"] <- "Bennington County"
+CountiesVT$County[CountiesVT$County == "caledonia"] <- "Caledonia County"
+CountiesVT$County[CountiesVT$County == "chittenden"] <- "Chittenden County"
+CountiesVT$County[CountiesVT$County == "essex"] <- "Essex County"
+CountiesVT$County[CountiesVT$County == "franklin"] <- "Franklin County"
+CountiesVT$County[CountiesVT$County == "grand isle"] <- "Grand Isle County"
+CountiesVT$County[CountiesVT$County == "lamoille"] <- "Lamoille County"
+CountiesVT$County[CountiesVT$County == "orange"] <- "Orange County"
+CountiesVT$County[CountiesVT$County == "orleans"] <- "Orleans County"
+CountiesVT$County[CountiesVT$County == "rutland"] <- "Rutland County"
+CountiesVT$County[CountiesVT$County == "washington"] <- "Washington County"
+CountiesVT$County[CountiesVT$County == "windham"] <- "Windham County"
+CountiesVT$County[CountiesVT$County == "windsor"] <- "Windsor County"
+
+VermontFoodAccessUSDA <- FoodAccessUSDA %>%
+  filter(State == "Vermont")
+
+VermontFoodAccessUSDA <- VermontFoodAccessUSDA %>%
+  mutate_at("PovertyRate", as.numeric) %>%
+  mutate_at("MedianFamilyIncome", as.numeric) %>%
+  select(CensusTract, State, County, PovertyRate, MedianFamilyIncome, LILATracts_1And10,LILATracts_1And20, LA1and10, LA1and20, LATractsVehicle_20)
+
+VermontFoodAccessCountyAverageUSDA <- aggregate(VermontFoodAccessUSDA, by = list(VermontFoodAccessUSDA$County), FUN = mean)
+
+VermontFoodAccessCountyAverageUSDA <- VermontFoodAccessCountyAverageUSDA %>%
+  select(Group.1, CensusTract, PovertyRate, MedianFamilyIncome, LILATracts_1And10,LILATracts_1And20, LA1and10, LA1and20, LATractsVehicle_20) %>%
+  rename("County" = "Group.1")
+
+VermontDataMapAverageUSDA <- CountiesVT %>%
+  left_join(VermontFoodAccessCountyAverageUSDA, by = c("County" = "County"))
+
+VermontDataMapAverageUSDA <- VermontDataMapAverageUSDA %>%
+  round_df(dig = 1)
+
+```
+
+```{r VermontCountyPovertyDownloadable}
+
+downloadableplot1 <- ggplot(VermontDataMapAverageUSDA, aes(long, lat, group = group, fill = PovertyRate)) + geom_polygon(color = "black", size = 1) + scale_fill_continuous(low = "blue", high = "red", name = "Poverty Rate (%)") + coord_map("azequalarea") + theme_classic() + theme(axis.line=element_blank(), axis.text=element_blank(), axis.title=element_blank(), axis.ticks=element_blank()) + labs(title = "Average Poverty Rate by County in Vermont", subtitle = "Data from 2019", caption = "Source: USDA ERS Food Access Research Atlas Data")
+
+png("downloadable_visuals/Average_Poverty_Rate_by_County_Vermont.png")
+print(downloadableplot1)
+
+```
+
+# Tragic Americana
+<div style= "float: left; position: relative; top: -13px; left: -20px">
+```{r VermontCountyPovertyInteractive}
+
+dynamicplotstatic1 <- ggplot(VermontDataMapAverageUSDA, aes(long, lat, group = group, fill = PovertyRate)) + geom_polygon(fill = "transparent", color = "white", size = 0.5) + geom_polygon(aes(label1 = County, label2 = PovertyRate),color = "transparent", size = 1) + scale_size_area() + coord_map("azequalarea") + guides(fill = "none") + scale_fill_continuous(low = "transparent", high = "white") + theme_solid(fill = "transparent") + theme(panel.border = element_rect(color = "white", size=1))
+
+dynamicplotstatic1 <- dynamicplotstatic1
+
+dynamicplotinteractive1 <- ggplotly(dynamicplotstatic1, height = 401, width = 350,tooltip = c("label1","label2"))
+
+dynamicplotinteractive1
+
+```
+&nbsp;&nbsp;``Average Poverty Rate by County (VT)`` <br>
+&nbsp;&nbsp;``Source: USDA ERS (2019)``[``Download``](/works/writings/downloadable_visuals/Average_Poverty_Rate_by_County_Vermont.png)
+</div>
+
+<d1> There is a certain aesthetic present in contemporary critiques of rural American life. That of the sugary drink guzzling, Big Mac obliterating, personification of health complications working some kind of manual job in some kind of dying industry. The thing is that it does not come from nowhere, many people eat and live lives just like that, but what is one to do when their closest affordable meal for miles, painfully, is from a fast-food chain? </d1> While many of the issues plaguing the socioeconomic fabric
+
+<div style= "float: right ; position: relative ; top: -20px">
+of America come from a history of vile hatred and abuse—one example being the existence of urban food deserts—the existence of rural food deserts feels more like a form of tragic neglect. To look at what I mean, I want to talk about business and infrastructure, but first, a little background.
+</div>
+
+# When Capital Starves
+
+Rural American food deserts form from a confluence of things, but according to the <a href="#footnote1">``U.S. Department of Agriculture``</a>, the defining element of one is being simultaneously low-income and low access. Low-income and low-access areas are then defined as places maintaining either "a poverty rate of 20 percent or greater, or a median family income at or below 80 percent of the statewide or metropolitan area median family income” <a href="#footnote1">``(USDA)``</a>, and as places wherein "at least 500 and/or at least 33 percent of the population lives more than 10 [Rural Cases] miles from a supermarket or large grocery store" <a href="#footnote1">``(USDA)``</a>. To oversimplify, if one is too poor, too far, or some mix of both to reliably access store-bought foodstuffs then for that person it is as if those things do not exist at all. Imagine yourself in such a situation, ignoring all the other tragedies of rural poverty which would befall you. Imagine that a gas station or convenience store is your only option. Imagine that they charge more than you can afford because they are the only game in town, and it is a logistical nightmare to get good food out where you are. Further, because of how limited the options for healthy food are, childhood obesity—a growing concern across the United States—is particularly pronounced in these areas, not for want of parents' efforts <a href="#footnote2">``(Yousefian A, Leighton A, Fox K, Hartley D)``</a>. It was not always like this. Many rural communities struggling today were at some point thriving, but as pointed out over a decade ago in a <a href="#footnote3">``PBS News Hour``</a> broadcast, when jobs dry up, so does everything else. "We even had dry goods stores. We had a grocery storm. We had a pharmacy. We had all of that, a doctor's office. But now it's nothing here” <a href="#footnote3">``(PBS)``</a>. 
+
+# Where Capital Starves
+
+Earlier I mentioned the high costs incurred by simply buying goods in food deserts, due in part to the logistics behind getting goods to them. That problem stems from a general lack of infrastructure designed to facilitate such a process in the first place. Of course, grocery stores and supermarkets themselves are forms of infrastructure, but neither can exist without a means of getting goods to them. Let us look at the state of Vermont. According to the visualization shown at the top of this page, Essex County is the poorest in the state of Vermont. Essex County also has within its boundaries many of the food deserts identified in the state <a href="#footnote1">``(USDA)``</a>. What makes these points important to my highlighting of logistics is that Essex County, on top of everything else, has some of the worst road connectivity in the state. To illustrate this, I want to consider the town of Brighton, one of the largest in the county. For food to get to store shelves in town, it may have to travel out from Boston or any number of large distribution center cities over to U.S. Route 91, and from there on to Vermont Route 114, a two-lane road <a href="#footnote4">``(UVM)``</a>. Consider the possibility of a bottleneck with a semi-truck going down that road to serve just around one thousand people, because that is one of the only major roads through Vermont that gets there. The only other option would be to drive up through New Hampshire and cut through Vermont Route 105, another two-lane road. Expecting ungodly-massive highways to connect a state of under one million is an unreasonable ask, and would frankly be a terrible waste of nature, but there is a real and noticeable disparity in the availability of rail or road infrastructure in Essex County compared to the rest of the state. The county I live in, Rutland County, has 14 state routes and 2 U.S. Routes travelling through it <a href="#footnote5">``(VCGI)``</a>. In comparison, Essex County has 3 and 1 respectively <a href="#footnote5">``(VCGI)``</a>. The only other county with as few major roads going through it as is Grand Isle County <a href="#footnote5">``(VCGI)``</a>, a chain of islands in Lake Champlain constituting about one-eighth the land. To be fair, Grand Isle County is more populous than its major roadway count counterpart but still—it is in the middle of a lake. Poor road connectivity lengthens trips, which may otherwise take less time, and when living in a place with few options for healthy food nearby, that matters a great deal.
+
+# Why Capital Starves
+
+The state of infrastructure in Essex County could be chalked up to the minuscule share of the state population residing there, and the lower median incomes of those who do <a href="#footnote1">``(USDA)``</a>. Surely the state coffers must be a little light, and so few live there anyway, if there was anywhere that would be comparatively worse off it would make sense that it was there. However, this perspective ignores two key elements. First, that in 1890 the population of Essex County was once almost double what it is now <a href="#footnote6">``(USCB)``</a>. In fact, the population of the county at that time, though still lower than many other counties, was nearly *three* times that of that same group of islands in Lake Champlain which today outshine it <a href="#footnote6">``(USCB)``</a>. Second, that that should not matter at all. When talking about something like the rationality behind why a place is under-served by business or state infrastructure, we are ignoring that human beings with lives live there. That is the key tragedy in the neglect which many smaller rural communities face and which leads them to shrink, convulse, and collapse. Is it fair to blame businesses, particularly smaller businesses which lack the leeway granted by proceeds from other locations? Sort of, but not really. Why would someone go through the work of setting up a storefront, dealing with distributors, and getting the word out, if they cannot even find anyone to work <a href="#footnote6">``(Alexander Marre)``</a> because of how rapidly people are leaving? This is generally an issue many rural areas face but it must be particularly hard among food deserts where people are even poorer and often even less in number.
+
+# How Capital Starves
+
+In the same way that the universe is not necessarily cruel for each misfortune which we face, the worsening of conditions among small rural communities is not intentionally cruel. It is rational according to the economic order we have set. It is instead that that economic order is incompatible with rural life. Many rural communities at some point ate what they grew themselves almost exclusively, and food availability was less of a concern. Today rural communities are farming and gardening still, but sending what they collect to be processed and likely eaten somewhere else, turning around to find their own shelves empty <a href="#footnote3">``(PBS)``</a>. " It's really hard, because, you know, when I was coming up, we had greens and gardens and all that. But now you have to buy produce. So, it's real hard for the kids" <a href="#footnote3">``(PBS)``</a>. Some would argue that the systems in place now are fundamentally the same as they were in the recent past but that is not true. The *reach* of these systems is what kills. Rural areas have long struggled with infrastructure, but that was generally fine when they were closed units, barring the odd harvest failure. When these same places no longer eat most of what they grow and when they must rely on the decrepit infrastructure for basic food, they suffer. The profit incentive leads not only to the neglect of infrastructure, but also to the wholesale ignorance of the predicament these people are in.
+
+Counterintuitively, businesses in rural areas tend to be *more* profitable than in other areas once they have gotten the chance to get running <a href="#footnote8">``(Richmond FED, Atlanta FED)``</a>, but the problem is that you need people with money, and you need people to work, and at this point a lot of the worst-hit communities have neither. Many rural areas depend on smaller banks as well <a href="#footnote8">``(Richmond FED, Atlanta FED)``</a> and while they often do have an easier time getting financed, some areas are so small that they do not even have banks, or so poor that banks shut down <a href="#footnote9">``(Courtney Brown)``</a> .
+
+To give Vermont some quick credit though, as this is focused *slightly* on the state, things are not nearly as bad or exploitative in this sense as they are in some areas in the Midwest or South. Speaking about the Midwest in contrast I think the reason Vermont avoids some of the worst of this is just a different social understanding behind farming and community. The colonization of the Midwest and later West coast—tell me that is not what it was, I dare you—by the United States was a rushed affair telling people to go out and get land to find riches. The existence of many old railroad towns out in the heartland is entirely for profit. In contrast the colonization of New England was, to begin with, communities eking out sufficiency away from the British Isles or elsewhere. This is an oversimplification, absolutely, but I think it is important to point out.
+
+# Solutions
+
+If businesses don't want to enter these communities, the solution is either to make it more appealing to do so or to return to a more closed loop. Either cut people in on the deal or let them live as they wish because the current half-measure is going to kill these places. The former option would take more work than the latter, but would ultimately be far better for everyone, the question is how to get there. There are a few ways government could act. State and federal authorities could improve infrastructure, which would provide jobs in the immediate term and reduce costs for businesses in the long term. They could also push financial incentives for businesses operating in rural areas, maybe vouchers or tax deductions. These are the two main ideas which come to mind, and they are not particularly new. This is already being done by some, but I'd argue it needs to be done *more* and by *more* states. The real issue is just getting businesses to go there and getting them over the startup hurdle. 
+
+<h3 id="References">References</h3>
+
+<b id="footnote1">1. [Food Access Research Atlas Data| U.S. Department of Agriculture Economic Research Service | 2019 (USDA)](https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/)</b> <br>
+<b id="footnote2">2. [Understanding the rural food environment--perspectives of low-income parents | National Library of Medicine | 2011 (Yousefian A, Leighton A, Fox K, Hartley D)](https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/)</b> <br>
+<b id="footnote3">3. [Mississippi ‘Food Deserts’ Fuel Obesity Epidemic | PBS News Hour | 2010 (PBS)](https://www.pbs.org/newshour/show/mississippi-food-deserts-fuel-obesity-epidemic)</b> <br>
+<b id="footnote4">4. [Bringing Food to the Desert | UVM Today | 2013 (UVM)](https://www.uvm.edu/news/story/bringing-food-desert)</b> <br>
+<b id="footnote5">5. [Interactive Map Viewer | Vermont Center for Geographic Information | 2013 (VCGI)](https://maps.vermont.gov/vcgi/html5viewer/?viewer=vtmapviewer)</b> <br>
+<b id="footnote6">6. [Decennial Census of Population and Housing | Bureau of the Census | 1890, 2020 (USCB)](https://www.census.gov/programs-surveys/decennial-census.html)</b> <br>
+<b id="footnote7">7. [Rural Population Loss and Strategies for Recovery | Federal Reserve Bank of Richmond District Digest | 2020 (Alexander Marre)](https://www.richmondfed.org/publications/research/econ_focus/2020/q1/district_digest)</b> <br>
+<b id="footnote8">8. [Report on Rural Employer Firms | Federal Reserve Bank of Richmond, Federal Reserve Bank of Atlanta | 2017 (Richmond FED, Atlanta FED)](https://www.richmondfed.org/-/media/richmondfedorg/community_development/resource_centers/small_business/pdf/credit_survey/sbcs_report_rural_employer_firms_2016.pdf)</b> <br>
+<b id="footnote9">9. [Rural America's banking problem | Axios | 2019 (Courtney Brown)](https://www.axios.com/2019/11/27/banks-rural-america-recession-economy)</b>
