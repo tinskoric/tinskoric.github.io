@@ -2,15 +2,15 @@
 title: "🏠"
 layout: "home"
 ---
-# Hi there,
+# 👋 Hi there,
 
 My name is [__*Tin Skoric*__](/about/) and I am a senior undergraduate student at the University of Vermont studying economics. This website serves as both a repository of some of the work I do during my time as a student as well as any additional work I do in my own time.
 
 ## Some things I'm Working On
 
-↪️[__A Short Look at Rural Education__](/works/writings/ruraleducation/)  
-↪️[__Annuity Calculator__](/works/projects/annuitycalculator/)  
-↪️[__Vibes-Based Economics__](/works/writings/vibesbasedeconomics/)  
-↪️[__Exploring Racial Disparities Among Unhoused Communities__](/works/writings/racialdisparitiesamongunhousedcommunities/)
+↪️[__A Short Look at Rural Education 📄__](/works/writings/ruraleducation/)  
+↪️[__Annuity Calculator 📈__](/works/projects/annuitycalculator/)  
+↪️[__Vibes-Based Economics 📄__](/works/writings/vibesbasedeconomics/)  
+↪️[__Exploring Racial Disparities Among Unhoused Communities📄__](/works/writings/racialdisparitiesamongunhousedcommunities/)
 
 ## Search for More

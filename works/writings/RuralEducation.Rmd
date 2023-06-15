@@ -139,7 +139,7 @@ There is a saying, oft-repeated in the description of plaguing ills, which tells
 The trope of the uneducated or undereducated rural is a gross exaggeration, and it washes over the variety of conditions which exist concerning education in rural America. When looking at primary and secondary education levels, the discrepancy is not exactly enormous. Particularly in the case of the former, “[rural children] perform as well as urban children on standardized tests” <a href="#footnote4">``(Clark, et al.)``</a>. While standardized testing is a whole assortment of problems on its own, the fact the performance is generally consistent between rural and urban communities lends credence to the idea that the education gap *below* the post-secondary collegiate level is overblown. Where a clear discrepancy does exist though, is when it comes to *higher* levels of educational attainment. In terms of collegiate educational attainment “[rural students are behind] suburban and urban counterparts [...] largely because of their lower socioeconomic background” <a href="#footnote2">``(Byun, et al.)``</a>. What is curious though, is that rural areas across the country tend to underperform the trend *more* at higher levels of income (see the figure below). The more potentially well-off, the worse the performance relatively.
 
 ```{r trendlines}
-income_ordered_trends_static <- ggplot(all_state_counties_income, aes(reorder(County, Median_Household_Income, sum), Bachelor_or_Higher, color = Rural_Condition, label1 = Rural_Condition, label2 = Median_Household_Income, label3 = Bachelor_or_Higher)) + geom_point() +
+income_ordered_trends_static <- ggplot(all_state_counties_income, aes(reorder(County, Median_Household_Income, sum), Bachelor_or_Higher, color = Rural_Condition, label1 = County, label2 = Rural_Condition, label3 = Median_Household_Income, label4 = Bachelor_or_Higher)) + geom_point() +
   geom_smooth(method = lm, se = FALSE, color = "white", aes(group=1, linetype = "Rural Trendline"), rural_state_counties_income) +
   geom_smooth(method = lm, se = FALSE, color = "white", aes(group=1, linetype = "Urban Trendline"), urban_state_counties_income) +
   dark_theme_classic() +
@@ -162,8 +162,8 @@ income_ordered_trends_static <- ggplot(all_state_counties_income, aes(reorder(Co
 [2] American Community Survey 5-Year Estimate (2017-2021), US Census Bureau ") +
   guides(size = "legend", color = "none")
 
-income_ordered_trends <- ggplotly(income_ordered_trends_static, height = 416, width = 1248, tooltip = c("label1", "label2", "label3")) %>%
-      layout(title = list(text = paste0("Bachelor’s Degree or Higher Attainment in Across 12 States by County", '<br>', '<sup>', "Data from 2017 to 2021", '</sup>'))) %>%
+income_ordered_trends <- ggplotly(income_ordered_trends_static, height = 416, width = 1248, tooltip = c("label1", "label2", "label3", "label")) %>%
+      layout(title = list(text = paste0("Bachelor’s Degree or Higher Attainment in the United States by County", '<br>', '<sup>', "Percent of Persons Aged 25 and Older, Median Household Income From Least to Greatest", '</sup>'))) %>%
       layout(annotations = list(x = 1, y = -0.1, 
 text = "Sources: 
 [1] 2010 US Census, US Census Bureau 
