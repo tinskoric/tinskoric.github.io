@@ -2,7 +2,7 @@
 title: "About."
 ---
 
-## About
+# About
 
 <div style="float:right; margin-right: -200px; margin-top: -15px">
 ![](/about/_index_files/Profile2.png){width=50% height=50%}
@@ -26,6 +26,4 @@ I am a student at the University of Vermont studying economics as an undergradua
 <a href="https://github.com/tinskoric" target="_blank">GitHub</a>,
 <a href="https://twitter.com/tinskoric" target="_blank">Twitter</a>
 
-## Resume
-
-<object data="/about/Resume_files/Resume.pdf" type="application/pdf" width="100%" height="800px"></object>
+## Resume [``Download``](/about/Resume_files/Resume.pdf)

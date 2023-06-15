@@ -1,3 +1,8 @@
 ---
 title: "Writings."
+layout: "work"
 ---
+
+# Writings 📄
+
+Here are some writings to look through.

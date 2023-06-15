@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tins.page/works/projects/annuitycalculator/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tins.page/works/writings/ruraleducation/</loc>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tins.page/works/writings/vermontfooddeserts/</loc>
     <lastmod>2022-08-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,22 +17,23 @@
     <loc>https://tins.page/works/writings/racialdisparitiesamongunhousedcommunities/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tins.page/about/resume/</loc>
+    <loc>https://tins.page/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tins.page/works/projects/</loc>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tins.page/works/</loc>
-    <lastmod>2022-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/</loc>
-    <lastmod>2022-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tins.page/works/writings/</loc>
-    <lastmod>2022-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tins.page/about/</loc>
   </url><url>
     <loc>https://tins.page/categories/</loc>
   </url><url>
-    <loc>https://tins.page/works/projects/</loc>
+    <loc>https://tins.page/about/resume/</loc>
   </url><url>
     <loc>https://tins.page/tags/</loc>
   </url>

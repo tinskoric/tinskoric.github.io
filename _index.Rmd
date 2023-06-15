@@ -8,7 +8,8 @@ My name is [__*Tin Skoric*__](/about/) and I am a senior undergraduate student a
 
 ## Some things I'm Working On
 
-↪️[__Rural Infrastructure and The Food Deserts of Vermont__](/works/writings/vermontfooddeserts/)  
+↪️[__A Short Look at Rural Education__](/works/writings/ruraleducation/)  
+↪️[__Annuity Calculator__](/works/projects/annuitycalculator/)  
 ↪️[__Vibes-Based Economics__](/works/writings/vibesbasedeconomics/)  
 ↪️[__Exploring Racial Disparities Among Unhoused Communities__](/works/writings/racialdisparitiesamongunhousedcommunities/)
 

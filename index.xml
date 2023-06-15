@@ -6,7 +6,26 @@
     <description>Recent content in 🏠 on Tin Skoric</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tins.page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tins.page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Annuity Calculator</title>
+      <link>https://tins.page/works/projects/annuitycalculator/</link>
+      <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tins.page/works/projects/annuitycalculator/</guid>
+      <description>Annuity Calculator 📈</description>
+    </item>
+    
+    <item>
+      <title>A Short Look at Rural Education</title>
+      <link>https://tins.page/works/writings/ruraleducation/</link>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tins.page/works/writings/ruraleducation/</guid>
+      <description>A Short Look at Rural EducationTin Skoric December 13, 2022
+A Bit About Small TownsThere is a saying, oft-repeated in the description of plaguing ills, which tells very well the tragedy of places that are neither wholly rural, nor truly city and are certainly not suburbia. First slowly, then suddenly. The small town—the rural city—is a pocket—a vestige of what could have been looking out from some time immemorial when suburbia had not yet come to dominate.</description>
+    </item>
+    
     <item>
       <title>Rural Infrastructure and The Food Deserts of Vermont</title>
       <link>https://tins.page/works/writings/vermontfooddeserts/</link>
@@ -39,12 +58,12 @@ PrefaceMany of the data visualizations used are stylized with some having eleme
     </item>
     
     <item>
-      <title>Resume</title>
+      <title>Resume.</title>
       <link>https://tins.page/about/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tins.page/about/resume/</guid>
-      <description></description>
+      <description>Resume</description>
     </item>
     
   </channel>
