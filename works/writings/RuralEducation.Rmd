@@ -32,7 +32,7 @@ loadfonts(device = "win")
 # Data
   
   # US Census Bureau 2010 Census Rural County Lookup
-    # This table shows the percentage of the county population living in rural areas as of the 2010 Census. 
+    # This table shows the percentage of the county population living in rural areas as of the 2010 Census.
     # GEOIDs and geography names are as of 2015 and may reflect name or FIPS code changes that occurred after 
     # the 2010 Census. Counties with less than 50 percent of the population living in rural areas are 
     # classified as mostly urban; 50 to 99.9 percent are classified as mostly rural; 100 percent rural are 
@@ -200,7 +200,7 @@ Trade schools are cheaper to attend and can provide an education that is more th
 <b id="footnote1">1. [Population Change and Income Inequality in Rural America | Population Research and Policy Review, vol. 39, no. 5, pp. 889–911. | 2020 (Butler, Jaclyn, et al.)](https://doi.org/10.1007/s11113-020-09606-7)</b> <br>
 <b id="footnote2">2. [Rural-Nonrural Disparities in Postsecondary Educational Attainment Revisited | Am. Educ. Res. J., vol. 49, no. 3, pp. 412–437. | 2012 (Byun, Soo-yong, et al.)](https://doi.org/10.3102/0002831211416344)</b> <br>
 <b id="footnote3">3. Hollowing out the Middle: the Rural Brain Drain and What It Means for America | Beacon Press | 2009 (Carr, Patrick J., and Kefalas, Maria)</b> <br>
-<b id="footnote4">4. [Growing up in Rural America.”  | RSF: The Russell Sage Foundation Journal of the Social Sciences, vol. 8, no. 3, pp. 1–47. | 2022 (Clark, Shelley, et al.)](https://doi.org/10.7758/rsf.2022.8.3.01)</b> <br>
+<b id="footnote4">4. [Growing up in Rural America. | RSF: The Russell Sage Foundation Journal of the Social Sciences, vol. 8, no. 3, pp. 1–47. | 2022 (Clark, Shelley, et al.)](https://doi.org/10.7758/rsf.2022.8.3.01)</b> <br>
 <b id="footnote5">5. [Pathways to Prosperity Seeks to Redefine American Education System | Harvard University | 2010 (Harvard Graduate School of Education)](https://www.gse.harvard.edu/news/10/02/pathways-prosperity-seeks-redefine-american-education-system)</b> <br>
 <b id="footnote6">6. [Tough Calculus as Technical Schools Face Deep Cuts | The New York Times | 2011 (Rich, Motoko)](https://www.nytimes.com/2011/07/10/business/vocational-schools-face-deep-cuts-in-federal-funding.html)</b> <br>
 <b id="footnote7">7. [2017-2021 American Community Survey (ACS) | Census.gov | (US Census Bureau)](https://www.census.gov/programs-surveys/acs/)</b> <br>

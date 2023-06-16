@@ -1,0 +1,203 @@
+---
+title: "January 6th and Trump's Reckoning with Political Consequence"
+author: "Tin Skoric"
+date: "2023-05-02"
+weight: 1
+---
+
+# January 6th and Trump's Reckoning with Political Consequence
+`Tin Skoric` `May 2, 2023`
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+```
+
+```{r data}
+
+library(readxl)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(stats)
+library(socviz)
+library(gridExtra)
+library(ggtext)
+library(ggdark) 
+library(plotly)
+library(gapminder)
+library(extrafont)
+loadfonts(device = "win")
+
+Obama_Approval <- read.csv("TrumpApprovalProjFiles/ObamaApprovalData.csv") %>%
+  mutate(ordered_date = as.Date(format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m/%d"))) %>% 
+  mutate(simple_date = format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m")) %>% 
+  rename(approval = Approve) %>% 
+  rename(population = Sample.Type) %>% 
+  filter(!is.na(population)) %>% 
+  select(approval, population, ordered_date, simple_date)
+
+Trump_Approval <- read.csv("TrumpApprovalProjFiles/TrumpApprovalData.csv") %>%
+  mutate(ordered_date = as.Date(format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m/%d"))) %>% 
+  mutate(simple_date = format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m")) %>% 
+  rename(approval = Approve) %>% 
+  rename(population = Sample.Type) %>% 
+  filter(!is.na(population)) %>% 
+  select(approval, population, ordered_date, simple_date)
+
+Obama_Approval_Monthly <- aggregate(approval ~ simple_date, Obama_Approval, mean) %>% 
+  mutate(ID = row_number()) %>% 
+  mutate(ID = case_when(ID > 49 ~ 1, TRUE ~ 0)) %>%
+  filter(grepl(0, ID)) %>% 
+  mutate(ID = row_number())
+
+Trump_Approval_Monthly <- aggregate(approval ~ simple_date, Trump_Approval, mean) %>% 
+  mutate(ID = row_number()) %>% 
+  mutate(ID = case_when(ID > 49 ~ 1 , TRUE ~ 0)) %>%
+  filter(grepl(0, ID)) %>% 
+  mutate(ID = row_number())
+
+Trump_Approval_Weekly <- read.csv("TrumpApprovalProjFiles/TrumpApprovalData.csv") %>%
+  mutate(ordered_date = as.Date(format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m/%d"))) %>% 
+  mutate(simple_date = format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%V")) %>% 
+  rename(approval = Approve) %>% 
+  rename(population = Sample.Type) %>% 
+  filter(!is.na(population)) %>% 
+  select(approval, population, ordered_date, simple_date) %>% 
+  aggregate(approval ~ simple_date, mean) %>% 
+  mutate(ID = row_number())
+
+Both_Approval_Monthly <- Obama_Approval_Monthly %>% 
+  rename(obama_approval = approval) %>% 
+  select(obama_approval, ID) %>% 
+  merge(Trump_Approval_Monthly)
+
+Trump_Approval_Monthly_48 <- aggregate(approval ~ simple_date, Trump_Approval, mean) %>% 
+  mutate(ID = row_number()) %>% 
+  mutate(ID = case_when(ID > 48 ~ 1, TRUE ~ 0)) %>%
+  filter(grepl(0, ID)) %>% 
+  mutate(ID = row_number())
+
+Regression_Model <- loess(approval ~ ID, Trump_Approval_Monthly_48, control = loess.control(surface = "direct"))
+
+Predicted_Approval <- as.data.frame(predict(Regression_Model, Trump_Approval_Monthly, se = TRUE)) %>% 
+  mutate(ID = row_number())
+
+Linear_Model_Prediction_vs_Actual <- Trump_Approval_Monthly %>% 
+  merge(Predicted_Approval) %>% 
+  rename(predicted = fit) %>% 
+  rename(predicted_error = se.fit) %>% 
+  rename(actual = approval) %>% 
+  select(ID, simple_date, actual, predicted, predicted_error)
+
+```
+
+# A Framework for Scandal
+
+Scandals, as defined by John Thompson in <a href="#footnote8">*``Political Scandal: Power and Visibility in the Media Age``*</a>, involve the transgression of social codes via the exercise of various powers to which public officials may be privy and their following public revelation. These transgressions can vary in scope but are broadly categorized by Thompson as being either sexual, financial-political, or power scandals. Each categorization represents an ideal type and is neither exhaustive nor exclusive. Each too shares in a set of factors conditioning why and by how much a scandal is damaging to a public figure, with the principal factors—particularly visible in sexual scandals—being a sense of hypocrisy, conflicts of interest, and second-order transgressions. All of these can be understood as originating as disequilibria under their respective contexts. The sense of hypocrisy being between how political figures present themselves publicly—moral individuals deserving of public support—and how they act privately. Conflicts of interest being between the trusted authorities granted by the public unto a political figure—the capacity to publicly interfere in private affairs—and their private aims. And second-order transgressions simply repeat the cycle, adding another layer of hypocrisy or conflicts of interest (e.g., if an individual commits x transgression and attempts to cover x up via y second-order transgression, both independently can involve some or more factors). What is so fascinating about Trump is that much of this does not feel applicable to him.
+
+# The Teflon Don
+
+Originating as the nickname of Gambino crime family boss John Gotti, “Teflon Don” embodies one of the defining characteristics of Trump’s public-facing persona: nothing sticks. It is a striking thing and was jokingly pointed out already during the campaign. Unlike for Gotti, the name for Trump has not strictly been associated with an ability to evade criminal prosecution but instead with his talent for avoiding electoral or political consequences for his behavior. To illustrate this, consider one historical case of scandal.
+
+In the early 1960s, John Profumo, a British member of parliament, engaged in a several-month-long affair with model Christine Keeler <a href="#footnote8">``(Thompson)``</a>. When rumors of the affair swirled, Profumo soundly denied it, lying directly to the House of Commons under the afforded assumption of truthful conduct within the House. As pressure mounted, Profumo eventually conceded that he had engaged in an affair, admitted to lying, and resigned from his post. In this story, there are two transgressions. The first transgression was the affair itself and the second—or the second-order transgression—was the denial of the affair. These transgressions ended Profumo’s political career. Trump, by contrast, has been accused by over two dozen women of sexual misconduct <a href="#footnote6">``(Rupar)``</a> and has had two affairs become known while facing minimal consequences to his political success <a href="#footnote3">``(Prokop)``</a>. To be fair, Profumo’s affair happened during his time in office whereas even Trump’s most headline-grabbing case—that with adult film star Stormy Daniels—happened prior, but that says nothing of the second-order transgressions committed by both in office to cover up their affairs. Still, looking at polling data (Roper Center) aggregated by week, the percentage that approved of the former president did not see a significant drop from the week immediately before the second week of 2018—the scandal was reported by <a href="#footnote4">``The Wall Street Journal``</a> on Friday, January 12th, 2018—to the week immediately after, and it is safe to safe that Trump did not have to resign over the affair. Approval even rose by the third week. 
+
+Like his proclivity to rack up sexual misconduct allegations, Trump too has often been accused of self-enrichment <a href="#footnote7">``(Voorhees)``</a>, with a sizable number of cases having occurred during his time in office. Whether it was cash-for-access schemes at his resort or promoting his wife’s jewelry line on official government websites <a href="#footnote2">``(National Archives)``</a>, much of what Donald Trump and company did during his presidency can be summarized succinctly this way. These are not scandals—just as Trump’s affair was not a scandal simply by its occurrence—they are examples of corruption, but their revelation would constitute a scandal under Thompson’s definition. These instances were revealed, but their consequences remain elusive. Trump even paid through stays at his hotels with taxpayer money <a href="#footnote7">``(Voorhees)``</a>, yet—looking again at the data <a href="#footnote5">``(Roper Center)``</a> by week—the revelation of this in 2017 did not hurt his approval. The “Teflon Don” used taxpayer money at his own hotel and life went on. Why have these cases, which fit Thompson’s definition, seemingly not impacted Trump?
+
+# Comparing Numbers
+
+Trump was never as popular as his predecessor. Former President Barack Obama (Obama hereafter) began his first term with an approval rating of a little under 65% <a href="#footnote5">``(Roper Center)``</a>. Trump began at just over 40%. Yet by the end of each of their first years, the former would have dropped by over 10% at the polls and the latter by—comparatively—only a few percentage points. There are too some similarities in the trends in approval for the two former presidents—possibly reflecting the increased polarization in national politics—which makes them worthwhile to compare. Trump’s popularity can be characterized as having had a low ceiling but a high floor, with the lowest and highest points of approval being closer together for him than for Obama. This seems representative of a smaller, but more staunchly supportive base. 
+
+```{r ObamaTrump}
+
+obama_trump_static <- ggplot(Both_Approval_Monthly, aes(ID, group = 12)) + 
+  geom_line(aes(y = obama_approval, linetype = "Barack Obama" ), color = "white", linewidth = 1) +
+  geom_line(aes(y = approval, linetype = "Donald Trump"), color = "white", linewidth = 1) +
+  dark_theme_classic() +
+  theme(panel.background = element_rect(fill= "transparent"),
+        text=element_text(size=16,  family="Space Mono"),
+        plot.background = element_rect(fill= "transparent", color = NA),
+        axis.ticks.x = element_blank(), axis.text.x = element_blank(),
+        plot.title=element_text(size=20),
+        plot.subtitle=element_text(size=12),
+        axis.title=element_text(size=12),
+        axis.text = element_text(12),
+        legend.background = element_rect(fill= "transparent", color = NA)) +
+  scale_y_continuous(name = "Approval Rating (%)", breaks = c(35, 50, 65), labels = c("35","50","65")) +
+  scale_x_continuous(name = "Year", breaks = c(1, 13, 25, 37, 49), labels = c("0", "1", "2", "3", "4")) +
+  scale_linetype_manual(name = "Approval", breaks = c("Barack Obama", "Donald Trump"), values = c("longdash", "solid")) +
+  labs(title = "Obama v. Trump Approval Polling", subtitle = "Approval Rating Aggregated by Month for Each Year of Presidency", 
+       caption = "Source: Roper Center for Public Opinion Research at Cornell University")
+
+obama_trump <- ggplotly(obama_trump_static, height = 416, width = 1248) %>%
+      layout(title = list(text = paste0("Obama v. Trump Approval Polling", '<br>', '<sup>', "Approval Rating Aggregated by Month for Each Year of Presidency", '</sup>'))) %>%
+      layout(annotations = list(x = 1, y = -0.1, 
+text = "Source: Roper Center for Public Opinion Research at Cornell University", 
+      showarrow = F, xref='paper', yref='paper', xanchor='right', yanchor='auto', xshift = 0, yshift = 0, font=list(size=8, color="white")))
+
+obama_trump
+
+```
+
+In their paper <a href="#footnote1">*``Teflon Trump? Shifting Public Perceptions of Donald Trump’s Personality Traits across Four Studies over 18 Months``*</a>, authors Nai and Maier write, “In polarized environments, voters are likely to perceive all political issues exclusively through the lens of their partisan preferences.” In Trump’s case too he was provocative well before becoming president which could have divined out supporters prior to his being elected. This is the same man who called Rosie O’Donnell a pig on the debate stage <a href="#footnote13">``(Zaru)``</a> after all. Much of the paper from Nai and Maier discusses how individuals view the personalities and character of political officials and one point that is particularly salient again refers to polarization, writing that “[...] the moderate but substantive negative opinion shifts [...] could be found in a much more dramatic way in countries where leaders have not such an extreme personality in the first place and voters are less obfuscated by hyperpartisanship.” Perhaps there is a tolerance afforded to a candidate by their support base that is higher in more polarized environments, and that tolerance is stressed only in particularly intolerable cases. Looking again at polling data <a href="#footnote5">``(Roper Center)``</a> following his first year in office, Trump’s lowest polling performance tends to coincide with periods of national turbulence. January 2019 saw a sharp decline for one month which matches the duration of the longest government shutdown in American history <a href="#footnote14">``(Zaveri, Gates, and Zraick)``</a>. Trump’s base may accept his antics when bureaucracy functions but lose patience when that stops being the case. Working under these assumptions, the defining Trump-era scandal, something to stick, would therefore be one where the latter condition was met. It is not enough for Trump to have done something corrupt or hypocritical or in some way contrary to the moral or social standards and for that to be revealed. Whatever was done must also be of such severity that people who were otherwise—for whatever reason—indifferent to or supportive of Trump’s behavior change their tune. Consider late-2019.
+
+# What will stick?
+
+Ukraine has long been in a precarious position. Even before the invasion by the Russian Federation (Russia hereafter), the nation was stuck in an awkward limbo between liberal democratic elements and corruptive influence. Ukraine and Russia have some broad similarities concerning the oligarchic control schemes present in both, but in the former, there has been greater success on the part of the populace in combatting it. Following the Maidan Revolution, which had ousted then-Ukrainian President Viktor Yanukovych, and the Russian annexation of Crimea and separatist rebellions in the Donetsk and Luhansk oblasts, the United States worked to realign Ukraine more firmly its side. Part of this came in the form of aid, intended to bolster the strength of the Ukrainian military against the increasing Russian threat. In September 2019, the public came to learn that Trump had halted the flow of aid <a href="#footnote11">``(Wolf and Merrill)``</a> to solicit political favors from Ukrainian President Volodymyr Zelensky (Zelensky hereafter). Trump had pressured Zelensky to investigate Hunter Biden, son of then-Vice President and now current President Joseph R. Biden. Hunter Biden had been put on the board of Ukrainian energy company Burisma <a href="#footnote11">``(Wolf and Merrill)``</a>, and Trump intended to use this to demonstrate the presence of nepotism and corruption for financial gain on the part of the Bidens. Regardless of the case—though I will note that the Bidens were cleared—what Trump did in his attempts to show the apparent criminality of the Biden family was a crime and was enough to warrant impeachment proceedings. This measurably hurt Trump’s approval <a href="#footnote5">``(Roper Center)``</a>, and although he did recover, the shape of the scandal made it more impactful. It was not just Trump saying something insulting or crude, it was him abusing his position as president to extract personal favors and managing to embarrass the United States on the world stage in doing so. 
+
+While Trump managed to weather that scandal too, the decrease in approval was more sustained and was, if anything, softened only because of exogenous factors like CoVid-19. It may be difficult to recognize if charted out like in the first visualization, but one needs to recognize that following the government shutdown and before January 6th, the two lowest periods of Trump’s approval were nationwide protests sparked by the murder of George Floyd by Minneapolis police and the Ukraine quid pro quo scandal <a href="#footnote5">``(Roper Center)``</a>. In that same span of two years, Trump had a litany of other scandals come up, but none hurt him so. With this new theoretical framework in mind—understanding that it is tumult and embarrassment that can chip at the Teflon Don—maybe something even larger will have a lasting impact on approval. 
+
+# The Big One
+
+If the quid pro quo with Ukraine was damaging, January 6th was a catastrophic send-off to an unpopular lame-duck president. Following the November 2020 elections, Trump repeatedly attempted to combat the results, cry foul, and claim victory <a href="#footnote10">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)``</a>. This behavior did not result in a noticeable drop in monthly approval (Roper Center), which is consistent with the adjusted framework requiring that element of national or international turbulence. Trump’s approval had even post-election risen to a relative high following the protests earlier in the summer. While contesting an election is a heated process, throughout this period, Trump had publicly been doing so through the legal channels <a href="#footnote12">``(Woodward and Costa)``</a>, which made it palatable and ignorable for most. If there is anything to hammer home about Trump’s scandals and approval, it is that if something is generally possible to ignore, many who are politically aligned with Trump—polarized American right-wing voters—will ignore it. Trump’s attempts to contest the election would become increasingly difficult to ignore throughout December 2020, already resulting in that small drop, culminating in all the nefariousness of January 2021. In this last month, Trump was resorting to hoping that his Vice President Mike Pence would refuse to certify the election <a href="#footnote10">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)``</a> and that that would somehow be a thing that a vice president could simply do. The same day this was supposed to happen, as Trump was publicly desperate to overturn the election, the Capitol riots began. Not a great look for Trump, even if it did not matter much at that point electorally for him. January 6th was an embarrassment for the United States and included live televised feeds of utter chaos at the seat of the government. Foreign officials, not just his counterpart in the Chinese Peoples’ Liberation Army but other world leaders, were calling General Mark Milley to ask if the United States was still stable <a href="#footnote9">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)</a>. January 6th should have resulted in approval falling off a cliff. While this is a somewhat crude method of understanding the effects of January 6th on Trump's approval, and should not be taken as gospel, if we map a local regression onto the data for the 48 months preceding the month of January 2021, we can guess from that what approval during that last month could have been had there not been any significant changes. Here is what we get:
+
+```{r ApprovalRegression}
+
+regression_plot_static <- ggplot(Linear_Model_Prediction_vs_Actual, aes(ID, group = 12)) + 
+  geom_line(aes(y = actual, linetype = "Actual Approval"), color = "white", linewidth = 1) +
+  geom_line(aes(y = predicted, linetype = "Predicted Approval"), color = "white", linewidth = 1) +
+  dark_theme_classic() +
+  theme(panel.background = element_rect(fill= "transparent"),
+        text=element_text(size=16,  family="Space Mono"),
+        plot.background = element_rect(fill= "transparent", color = NA),
+        axis.ticks.x = element_blank(), axis.text.x = element_blank(),
+        plot.title=element_text(size=20),
+        plot.subtitle=element_text(size=12),
+        axis.title=element_text(size=12),
+        axis.text = element_text(12),
+        legend.background = element_rect(fill= "transparent", color = NA)) +
+  scale_y_continuous(name = "Approval Rating (%)", limits = c(35, 45), breaks = c(35, 40, 45), labels = c("35","40","45")) +
+  scale_x_continuous(name = "Month", breaks = c(1, 13, 25, 37, 49), labels = c("Jan. 2017", "Jan. 2018", "Jan. 2019", "Jan. 2020", "Jan. 2021")) +
+  scale_linetype_manual(name = "Approval", breaks = c("Actual Approval", "Predicted Approval"), values = c("solid","longdash")) +
+  labs(title = "Trump's Approval Rating Real v. Predicted", subtitle = "Approval Rating Aggregated by Month from 2017 to 2021 v. Predicted Approval (LOESS Regression)", 
+       caption = "Source:
+Roper Center for Public Opinion Research at Cornell University")
+
+regression_plot <- ggplotly(regression_plot_static, height = 416, width = 1248) %>%
+      layout(title = list(text = paste0("Trump's Approval Rating Real v. Predicted", '<br>', '<sup>', "Approval Rating Aggregated by Month from 2017 to 2021 v. Predicted Approval (LOESS Regression)", '</sup>'))) %>%
+      layout(annotations = list(x = 1, y = -0.1, 
+text = "Source: Roper Center for Public Opinion Research at Cornell University", 
+      showarrow = F, xref='paper', yref='paper', xanchor='right', yanchor='auto', xshift = 0, yshift = 0, font=list(size=8, color="white")))
+
+regression_plot
+```
+ 
+Again, this is very crude, it is literally a moving average but it is a simple way to get across a big point. Without going into too much depth, as with the other scandals discussed, it is completely possible to use Thompson’s framework of scandal, conditioned by the level of tumult and embarrassment—the lack of “ignorability”—to understand how impactful this was, and this may be useful as we reflect on the many Trump-like world leaders that have come and gone with him.
+
+<h3 id="References">References</h3>
+
+<b id="footnote1">1. [Teflon Trump? Shifting Public Perceptions of Donald Trump’s Personality Traits Across Four Studies Over 18 Months | International Journal of Public Opinion Research 33, no. 2 294-314 | 2021 (Nai, Alessandro and Jü Maier)](https://doi.org/10.1093/ijpor/edaa030)</b> <br>
+<b id="footnote2">2. [Melania Trump | Trumpwhitehouse.archives.gov | 2021 (National Archives)](http://www.trumpwhitehouse.archives.gov/people/melania-trump/)</b> <br>
+<b id="footnote3">3. [Why Cuomo Resigned and Trump Didn’t  | Vox Media | 2021 (Prokop, Andrew)](https://doi.org/10.7758/rsf.2022.8.3.01)</b> <br>
+<b id="footnote4">4. [Trump Lawyer Arranged $130,000 Payment for Adult-Film Star’s Silence | Wall Street Journal | 2018 (Palazzolo, Joe and Michael Rothfeld)](https://www.gse.harvard.edu/news/10/02/pathways-prosperity-seeks-redefine-american-education-system)</b> <br>
+<b id="footnote5">5. [Presidential Approval Polling Data "export(1).xls" | Roper Center for Public Opinion Research, Cornell University | 2023 (Roper Center)](https://www.nytimes.com/2011/07/10/business/vocational-schools-face-deep-cuts-in-federal-funding.html)</b> <br>
+<b id="footnote6">6. [Trump Faces a New Allegation of Sexually Assaulting a Woman at Mar-a-Lago | Vox Media | 2019 (Rupar, Aaron)](http://www.vox.com/policy-and-politics/2019/10/9/20906567/trump-karen-johnson-sexual-assault-mar-a-lago-barry-levine-monique-el-faizy-book)</b> <br>
+<b id="footnote7">7. [The Trumps Are Enriching Themselves with Taxpayer Money by Promoting Their Hotels | The Slate Group | 2017 (Voorhees, Josh)](http://www.slate.com/news-and-politics/2017/07/trumps-state-dept-spent-15000-at-trumps-new-hotel.html)</b> <br>
+<b id="footnote8">8. Political Scandal: Power and Visibility in the Media Age | Cambridge: Malden, MA: Polity Press; Blackwell | 2000 (Thompson, John B)</b> <br>
+<b id="footnote9">9. [Interview Of: General Mark A. Milley | Govinfo.gov | 2021 (U.S. Government Publishing Office)](https://www.govinfo.gov/content/pkg/GPO-J6-TRANSCRIPT-CTRL0000034620/pdf/GPO-J6-TRANSCRIPT-CTRL0000034620.pdf)</b> <br>
+<b id="footnote10">10. [Final Report of the Select Committee to Investigate the January 6th Attack on the United States Capitol | Govinfo.gov | 2022 (U.S. Government Publishing Office)](http://www.vox.com/policy-and-politics/2019/10/9/20906567/trump-karen-johnson-sexual-assault-mar-a-lago-barry-levine-monique-el-faizy-book)</b> <br>
+<b id="footnote11">11. [Whistleblower Complaint, Annotated | CNN | 2019 (Wolf, Zachary, and Curt Merrill)](https://www.cnn.com/interactive/2019/09/politics/whistleblower-complaint-annotated/)</b> <br>
+<b id="footnote12">12. Peril | First Simon & Schuster Hardcover ed. | 2021 (Woodward, Bob, and Costa, Robert)</b> <br>
+<b id="footnote13">13. [The Donald Trump-Rosie O’Donnell Feud: A Timeline | CNN | 2015 (Zaru, Deena)](http://www.cnn.com/2015/08/07/politics/donald-trump-rosie-odonnell-feud)</b> <br>
+<b id="footnote14">14. [The Government Shutdown Was the Longest Ever. Here’s the History | The New York Times | 2019 (Zaveri, Mihir, Guilbert Gates, and Karen Zraick)](https://www.nytimes.com/interactive/2019/01/09/us/politics/longest-government-shutdown.html)</b>
