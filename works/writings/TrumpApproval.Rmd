@@ -2,7 +2,6 @@
 title: "January 6th and Trump's Reckoning with Political Consequence"
 author: "Tin Skoric"
 date: "2023-05-02"
-weight: 1
 ---
 
 # January 6th and Trump's Reckoning with Political Consequence
@@ -25,10 +24,10 @@ library(socviz)
 library(gridExtra)
 library(ggtext)
 library(ggdark) 
-library(plotly)
 library(gapminder)
 library(extrafont)
 loadfonts(device = "win")
+library(themeFoil) # Custom theme
 
 Obama_Approval <- read.csv("TrumpApprovalProjFiles/ObamaApprovalData.csv") %>%
   mutate(ordered_date = as.Date(format(as.Date(Polling.End, "%Y-%m-%d"), format="%Y/%m/%d"))) %>% 
@@ -109,35 +108,17 @@ Like his proclivity to rack up sexual misconduct allegations, Trump too has ofte
 
 Trump was never as popular as his predecessor. Former President Barack Obama (Obama hereafter) began his first term with an approval rating of a little under 65% <a href="#footnote5">``(Roper Center)``</a>. Trump began at just over 40%. Yet by the end of each of their first years, the former would have dropped by over 10% at the polls and the latter by—comparatively—only a few percentage points. There are too some similarities in the trends in approval for the two former presidents—possibly reflecting the increased polarization in national politics—which makes them worthwhile to compare. Trump’s popularity can be characterized as having had a low ceiling but a high floor, with the lowest and highest points of approval being closer together for him than for Obama. This seems representative of a smaller, but more staunchly supportive base. 
 
-```{r ObamaTrump}
+```{r ObamaTrump, fig.align="center", fig.width = 16}
 
-obama_trump_static <- ggplot(Both_Approval_Monthly, aes(ID, group = 12)) + 
+ggplot(Both_Approval_Monthly, aes(ID, group = 12)) + 
   geom_line(aes(y = obama_approval, linetype = "Barack Obama" ), color = "white", linewidth = 1) +
   geom_line(aes(y = approval, linetype = "Donald Trump"), color = "white", linewidth = 1) +
-  dark_theme_classic() +
-  theme(panel.background = element_rect(fill= "transparent"),
-        text=element_text(size=16,  family="Space Mono"),
-        plot.background = element_rect(fill= "transparent", color = NA),
-        axis.ticks.x = element_blank(), axis.text.x = element_blank(),
-        plot.title=element_text(size=20),
-        plot.subtitle=element_text(size=12),
-        axis.title=element_text(size=12),
-        axis.text = element_text(12),
-        legend.background = element_rect(fill= "transparent", color = NA)) +
+  theme_foil() +
   scale_y_continuous(name = "Approval Rating (%)", breaks = c(35, 50, 65), labels = c("35","50","65")) +
   scale_x_continuous(name = "Year", breaks = c(1, 13, 25, 37, 49), labels = c("0", "1", "2", "3", "4")) +
   scale_linetype_manual(name = "Approval", breaks = c("Barack Obama", "Donald Trump"), values = c("longdash", "solid")) +
   labs(title = "Obama v. Trump Approval Polling", subtitle = "Approval Rating Aggregated by Month for Each Year of Presidency", 
        caption = "Source: Roper Center for Public Opinion Research at Cornell University")
-
-obama_trump <- ggplotly(obama_trump_static, height = 416, width = 1248) %>%
-      layout(title = list(text = paste0("Obama v. Trump Approval Polling", '<br>', '<sup>', "Approval Rating Aggregated by Month for Each Year of Presidency", '</sup>'))) %>%
-      layout(annotations = list(x = 1, y = -0.1, 
-text = "Source: Roper Center for Public Opinion Research at Cornell University", 
-      showarrow = F, xref='paper', yref='paper', xanchor='right', yanchor='auto', xshift = 0, yshift = 0, font=list(size=8, color="white")))
-
-obama_trump
-
 ```
 
 In their paper <a href="#footnote1">*``Teflon Trump? Shifting Public Perceptions of Donald Trump’s Personality Traits across Four Studies over 18 Months``*</a>, authors Nai and Maier write, “In polarized environments, voters are likely to perceive all political issues exclusively through the lens of their partisan preferences.” In Trump’s case too he was provocative well before becoming president which could have divined out supporters prior to his being elected. This is the same man who called Rosie O’Donnell a pig on the debate stage <a href="#footnote13">``(Zaru)``</a> after all. Much of the paper from Nai and Maier discusses how individuals view the personalities and character of political officials and one point that is particularly salient again refers to polarization, writing that “[...] the moderate but substantive negative opinion shifts [...] could be found in a much more dramatic way in countries where leaders have not such an extreme personality in the first place and voters are less obfuscated by hyperpartisanship.” Perhaps there is a tolerance afforded to a candidate by their support base that is higher in more polarized environments, and that tolerance is stressed only in particularly intolerable cases. Looking again at polling data <a href="#footnote5">``(Roper Center)``</a> following his first year in office, Trump’s lowest polling performance tends to coincide with periods of national turbulence. January 2019 saw a sharp decline for one month which matches the duration of the longest government shutdown in American history <a href="#footnote14">``(Zaveri, Gates, and Zraick)``</a>. Trump’s base may accept his antics when bureaucracy functions but lose patience when that stops being the case. Working under these assumptions, the defining Trump-era scandal, something to stick, would therefore be one where the latter condition was met. It is not enough for Trump to have done something corrupt or hypocritical or in some way contrary to the moral or social standards and for that to be revealed. Whatever was done must also be of such severity that people who were otherwise—for whatever reason—indifferent to or supportive of Trump’s behavior change their tune. Consider late-2019.
@@ -152,35 +133,18 @@ While Trump managed to weather that scandal too, the decrease in approval was mo
 
 If the quid pro quo with Ukraine was damaging, January 6th was a catastrophic send-off to an unpopular lame-duck president. Following the November 2020 elections, Trump repeatedly attempted to combat the results, cry foul, and claim victory <a href="#footnote10">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)``</a>. This behavior did not result in a noticeable drop in monthly approval (Roper Center), which is consistent with the adjusted framework requiring that element of national or international turbulence. Trump’s approval had even post-election risen to a relative high following the protests earlier in the summer. While contesting an election is a heated process, throughout this period, Trump had publicly been doing so through the legal channels <a href="#footnote12">``(Woodward and Costa)``</a>, which made it palatable and ignorable for most. If there is anything to hammer home about Trump’s scandals and approval, it is that if something is generally possible to ignore, many who are politically aligned with Trump—polarized American right-wing voters—will ignore it. Trump’s attempts to contest the election would become increasingly difficult to ignore throughout December 2020, already resulting in that small drop, culminating in all the nefariousness of January 2021. In this last month, Trump was resorting to hoping that his Vice President Mike Pence would refuse to certify the election <a href="#footnote10">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)``</a> and that that would somehow be a thing that a vice president could simply do. The same day this was supposed to happen, as Trump was publicly desperate to overturn the election, the Capitol riots began. Not a great look for Trump, even if it did not matter much at that point electorally for him. January 6th was an embarrassment for the United States and included live televised feeds of utter chaos at the seat of the government. Foreign officials, not just his counterpart in the Chinese Peoples’ Liberation Army but other world leaders, were calling General Mark Milley to ask if the United States was still stable <a href="#footnote9">``(U.S. House Select Committee To Investigate The January 6th Attack On The United States Capitol)</a>. January 6th should have resulted in approval falling off a cliff. While this is a somewhat crude method of understanding the effects of January 6th on Trump's approval, and should not be taken as gospel, if we map a local regression onto the data for the 48 months preceding the month of January 2021, we can guess from that what approval during that last month could have been had there not been any significant changes. Here is what we get:
 
-```{r ApprovalRegression}
+```{r ApprovalRegression, fig.align="center", fig.width = 16}
 
-regression_plot_static <- ggplot(Linear_Model_Prediction_vs_Actual, aes(ID, group = 12)) + 
+ggplot(Linear_Model_Prediction_vs_Actual, aes(ID, group = 12)) + 
   geom_line(aes(y = actual, linetype = "Actual Approval"), color = "white", linewidth = 1) +
   geom_line(aes(y = predicted, linetype = "Predicted Approval"), color = "white", linewidth = 1) +
-  dark_theme_classic() +
-  theme(panel.background = element_rect(fill= "transparent"),
-        text=element_text(size=16,  family="Space Mono"),
-        plot.background = element_rect(fill= "transparent", color = NA),
-        axis.ticks.x = element_blank(), axis.text.x = element_blank(),
-        plot.title=element_text(size=20),
-        plot.subtitle=element_text(size=12),
-        axis.title=element_text(size=12),
-        axis.text = element_text(12),
-        legend.background = element_rect(fill= "transparent", color = NA)) +
+  theme_foil() +
   scale_y_continuous(name = "Approval Rating (%)", limits = c(35, 45), breaks = c(35, 40, 45), labels = c("35","40","45")) +
   scale_x_continuous(name = "Month", breaks = c(1, 13, 25, 37, 49), labels = c("Jan. 2017", "Jan. 2018", "Jan. 2019", "Jan. 2020", "Jan. 2021")) +
   scale_linetype_manual(name = "Approval", breaks = c("Actual Approval", "Predicted Approval"), values = c("solid","longdash")) +
   labs(title = "Trump's Approval Rating Real v. Predicted", subtitle = "Approval Rating Aggregated by Month from 2017 to 2021 v. Predicted Approval (LOESS Regression)", 
        caption = "Source:
 Roper Center for Public Opinion Research at Cornell University")
-
-regression_plot <- ggplotly(regression_plot_static, height = 416, width = 1248) %>%
-      layout(title = list(text = paste0("Trump's Approval Rating Real v. Predicted", '<br>', '<sup>', "Approval Rating Aggregated by Month from 2017 to 2021 v. Predicted Approval (LOESS Regression)", '</sup>'))) %>%
-      layout(annotations = list(x = 1, y = -0.1, 
-text = "Source: Roper Center for Public Opinion Research at Cornell University", 
-      showarrow = F, xref='paper', yref='paper', xanchor='right', yanchor='auto', xshift = 0, yshift = 0, font=list(size=8, color="white")))
-
-regression_plot
 ```
  
 Again, this is very crude, it is literally a moving average but it is a simple way to get across a big point. Without going into too much depth, as with the other scandals discussed, it is completely possible to use Thompson’s framework of scandal, conditioned by the level of tumult and embarrassment—the lack of “ignorability”—to understand how impactful this was, and this may be useful as we reflect on the many Trump-like world leaders that have come and gone with him.

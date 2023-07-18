@@ -1,8 +1,8 @@
 ---
-title: "Projects."
+title: "Projects"
 layout: "work"
 ---
 
-# Projects 🚧
+# Projects
 
 Here are some projects to look through.

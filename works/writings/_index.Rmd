@@ -1,8 +1,8 @@
 ---
-title: "Writings."
+title: "Writings"
 layout: "work"
 ---
 
-# Writings 📄
+# Writings
 
 Here are some writings to look through.

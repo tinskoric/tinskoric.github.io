@@ -26,3 +26,5 @@ I am a student at the University of Vermont studying economics as an undergradua
 <a href="https://www.linkedin.com/in/tin-skoric-0b6679188" target="_blank">LinkedIn</a>,
 <a href="https://github.com/tinskoric" target="_blank">GitHub</a>,
 <a href="https://twitter.com/tinskoric" target="_blank">Twitter</a>
+
+## [``⬇️ Resume ⬇️``](/about/resume/)

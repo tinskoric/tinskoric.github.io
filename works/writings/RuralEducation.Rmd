@@ -2,7 +2,6 @@
 title: "A Short Look at Rural Education"
 author: "Tin Skoric"
 date: "2022-12-13"
-weight: 1
 ---
 
 # A Short Look at Rural Education
@@ -24,10 +23,10 @@ library(socviz)
 library(gridExtra)
 library(ggtext)
 library(ggdark) 
-library(plotly)
 library(gapminder)
 library(extrafont)
 loadfonts(device = "win")
+library(themeFoil) # Custom theme
 
 # Data
   
@@ -97,7 +96,7 @@ loadfonts(device = "win")
     mutate(Bachelor_or_Higher = as.numeric(Bachelor_or_Higher))
   
   ACS_Estimate <- left_join(ACS_Estimate_Income, ACS_Estimate_Education)
-  
+
   # 2021 5-year Estimate ACS (Age)
   
   ACS_Estimate_Age <- read.csv("RuralEducationProjFiles/AgeACS2021.csv") %>% 
@@ -138,40 +137,20 @@ There is a saying, oft-repeated in the description of plaguing ills, which tells
 
 The trope of the uneducated or undereducated rural is a gross exaggeration, and it washes over the variety of conditions which exist concerning education in rural America. When looking at primary and secondary education levels, the discrepancy is not exactly enormous. Particularly in the case of the former, “[rural children] perform as well as urban children on standardized tests” <a href="#footnote4">``(Clark, et al.)``</a>. While standardized testing is a whole assortment of problems on its own, the fact the performance is generally consistent between rural and urban communities lends credence to the idea that the education gap *below* the post-secondary collegiate level is overblown. Where a clear discrepancy does exist though, is when it comes to *higher* levels of educational attainment. In terms of collegiate educational attainment “[rural students are behind] suburban and urban counterparts [...] largely because of their lower socioeconomic background” <a href="#footnote2">``(Byun, et al.)``</a>. What is curious though, is that rural areas across the country tend to underperform the trend *more* at higher levels of income (see the figure below). The more potentially well-off, the worse the performance relatively.
 
-```{r trendlines}
-income_ordered_trends_static <- ggplot(all_state_counties_income, aes(reorder(County, Median_Household_Income, sum), Bachelor_or_Higher, color = Rural_Condition, label1 = County, label2 = Rural_Condition, label3 = Median_Household_Income, label4 = Bachelor_or_Higher)) + geom_point() +
-  geom_smooth(method = lm, se = FALSE, color = "white", aes(group=1, linetype = "Rural Trendline"), rural_state_counties_income) +
-  geom_smooth(method = lm, se = FALSE, color = "white", aes(group=1, linetype = "Urban Trendline"), urban_state_counties_income) +
-  dark_theme_classic() +
-  theme(panel.background = element_rect(fill= "transparent"),
-        text=element_text(size=16,  family="Space Mono"),
-        plot.background = element_rect(fill= "transparent", color = NA),
-        axis.ticks.x = element_blank(), axis.text.x = element_blank(),
-        plot.title=element_text(size=20),
-        plot.subtitle=element_text(size=12),
-        axis.title=element_text(size=12),
-        axis.text = element_text(12),
-        legend.background = element_rect(fill= "transparent", color = NA)) +
+```{r trendlines, fig.align="center", fig.width = 16}
+ggplot(all_state_counties_income, aes(reorder(County, Median_Household_Income, sum), Bachelor_or_Higher, color = Rural_Condition)) + geom_point(size = 4) +
+  geom_smooth(method = lm, se = FALSE, color = "#E8E9E9", aes(group=1, linetype = "Rural Trendline"), rural_state_counties_income) +
+  geom_smooth(method = lm, se = FALSE, color = "#E8E9E9", aes(group=1, linetype = "Urban Trendline"), urban_state_counties_income) +
+  theme_foil() +
   scale_y_continuous("Persons With Bachelor’s or Higher (%)") +
   scale_x_discrete("Counties (In Order of Median Household Income)", breaks = NULL) +
   scale_color_manual(name = "County Rurality Level (2010)", values = c("#8e0f10", "#8e8f10", "#0f0f90")) +
   scale_linetype_manual(name = "Trendlines", breaks = c("Rural Trendline", "Urban Trendline"), values = c("twodash", "solid")) +
   labs(title = "Bachelor’s Degree or Higher Attainment in the United States by County", subtitle = "Percent of Persons Aged 25 and Older, Counties Ordered by Median Household Income From Least to Greatest", 
-       caption = "Sources:
+       caption = "
+Sources:
 [1] 2010 US Census, US Census Bureau 
-[2] American Community Survey 5-Year Estimate (2017-2021), US Census Bureau ") +
-  guides(size = "legend", color = "none")
-
-income_ordered_trends <- ggplotly(income_ordered_trends_static, height = 416, width = 1248, tooltip = c("label1", "label2", "label3", "label")) %>%
-      layout(title = list(text = paste0("Bachelor’s Degree or Higher Attainment in the United States by County", '<br>', '<sup>', "Percent of Persons Aged 25 and Older, Median Household Income From Least to Greatest", '</sup>'))) %>%
-      layout(annotations = list(x = 1, y = -0.1, 
-text = "Sources: 
-[1] 2010 US Census, US Census Bureau 
-[2] American Community Survey 5-Year
-Estimate (2017-2021), US Census Bureau", 
-      showarrow = F, xref='paper', yref='paper', xanchor='right', yanchor='auto', xshift=224, yshift = 40, font=list(size=8, color="white")))
-
-income_ordered_trends
+[2] American Community Survey 5-Year Estimate (2017-2021), US Census Bureau ")
 ```
 
 This can be explained as rural counties simply making up a greater proportion of lower median income counties, but even with that in mind, urban counties at lower income levels do not tend to perform nearly as often and far above the trendline as they do at higher levels of income. The disparity between rural and urban educational achievement grows with greater levels of income. In this case, rurality is a greater determinant of attainment than income, but that is because the positive impact of rising incomes on education is conditioned by the negative impact of rurality. What could that negative impact be?
