@@ -5,9 +5,10 @@ layout: "about"
 
 # About
 
-<div style="float:right; margin-right: -200px; margin-top: -15px">
+<div style="float:right; margin-right: -194px; margin-top: -15px;">
+<iframe style="border: 2px solid #605CB7; width: 194px; height: 194px;" src="https://bandcamp.com/EmbeddedPlayer/album=2526416630/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://tanda.bandcamp.com/album/mf-doom-x-tatsuro-yamashita">MF DOOM X TATSURO YAMASHITA by Tanda</a></iframe>
 ![](/about/_index_files/Profile2.png){width=50% height=50%}
-</div>It's only fair to give a little background on who I am and don't worry, I'll be brief. If you want to jump past the personal stuff, click <a href="#Important">here</a>.
+</div>It's only fair to give a little background on who I am and don't worry, I'll be brief. If you want to jump past the personal stuff, click <a href="#Important">here</a>. Also, cool song mashup (by [*Tanda*](https://tanda.bandcamp.com)) on your right ➡️.
 </br>
 
 ## Some Personal Things
@@ -27,4 +28,4 @@ I am a student at the University of Vermont studying economics as an undergradua
 <a href="https://github.com/tinskoric" target="_blank">GitHub</a>,
 <a href="https://twitter.com/tinskoric" target="_blank">Twitter</a>
 
-## [``⬇️ Resume ⬇️``](/about/resume/)
+### [``⬇️ Resume ⬇️``](/about/resume/)
