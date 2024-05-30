@@ -1,9 +1,0 @@
----
-title: "Works"
----
-
-# Works
-
-I have split this up into two sub-portions, one for projects that I am working or have worked on that includes basically anything that is not majority text based. The other is for things I have written, both for courses and independently, and is naturally including everything that is majority text based.
-
-### [``📁 Projects``](/works/projects/) [``📁 Writings``](/works/writings/)  

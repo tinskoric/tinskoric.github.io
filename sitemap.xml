@@ -1,43 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tins.page/works/projects/annuitycalculator/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/projects/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/</loc>
-    <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/trumpapproval/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/ruraleducation/</loc>
-    <lastmod>2022-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/vermontfooddeserts/</loc>
-    <lastmod>2022-08-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/vibesbasedeconomics/</loc>
-    <lastmod>2022-07-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/works/writings/racialdisparitiesamongunhousedcommunities/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tins.page/about/</loc>
-  </url><url>
-    <loc>https://tins.page/categories/</loc>
-  </url><url>
-    <loc>https://tins.page/about/resume/</loc>
-  </url><url>
-    <loc>https://tins.page/tags/</loc>
+    <loc>https://tins/page/content/index.html</loc>
+    <lastmod>2024-05-30T18:04:44.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/content/works/index.html</loc>
+    <lastmod>2024-05-30T17:16:02.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/content/works/writings/ECON3500.html</loc>
+    <lastmod>2024-05-30T18:34:17.386Z</lastmod>
   </url>
 </urlset>

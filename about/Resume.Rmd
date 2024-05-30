@@ -1,7 +1,0 @@
----
-title: "Resume"
----
-
-# Resume
-
-<object data="/about/Resume_files/Resume.pdf" type="application/pdf" width="100%" height="800px"></object>

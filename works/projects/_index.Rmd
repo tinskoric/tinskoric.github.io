@@ -1,8 +1,0 @@
----
-title: "Projects"
-layout: "work"
----
-
-# Projects
-
-Here are some projects to look through.

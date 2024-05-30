@@ -1,0 +1,48 @@
+/* font stuff */
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local(''),
+         url('fonts/SpaceMono-Regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('fonts/SpaceMono-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  @font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: local(''),
+         url('fonts/SpaceMono-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('fonts/SpaceMono-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  @font-face {
+    font-family: 'Space Mono';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: local(''),
+         url('fonts/SpaceMono-BoldItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  @font-face {
+    font-family: 'Space Mono';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: local(''),
+         url('fonts/SpaceMono-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  body {
+    font-family: 'Space Mono', monospace;
+  }
+  
+  code {
+    font-family: 'Space Mono', monospace;
+  }
+  
