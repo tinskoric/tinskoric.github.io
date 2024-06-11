@@ -10,5 +10,17 @@
       "/content/works/writings/ECON4500.html",
       "/content/works/writings/Thesis.html"
     ]
+  },
+  {
+    "listing": "/stuff/index.html",
+    "items": [
+      "/stuff/projects/AnnuityCalculator.html",
+      "/stuff/writings/RacialDisparitiesAmongUnhousedCommunities.html",
+      "/stuff/writings/VibesBasedEconomics.html",
+      "/stuff/writings/RuralEducation.html",
+      "/stuff/writings/ECON3500.html",
+      "/stuff/writings/ECON4500.html",
+      "/stuff/writings/Thesis.html"
+    ]
   }
 ]
