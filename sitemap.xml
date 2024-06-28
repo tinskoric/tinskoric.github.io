@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tins/page/content/index.html</loc>
-    <lastmod>2024-05-30T18:04:44.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/content/works/index.html</loc>
-    <lastmod>2024-05-30T17:16:02.720Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/content/works/writings/ECON3500.html</loc>
-    <lastmod>2024-05-30T18:34:17.386Z</lastmod>
+    <loc>https://tins/page/stuff/index.html</loc>
+    <lastmod>2024-06-28T22:03:02.588Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/index.html</loc>
-    <lastmod>2024-06-11T00:52:03.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/stuff/index.html</loc>
-    <lastmod>2024-05-30T17:16:02.720Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/stuff/projects/SteamData.html</loc>
-    <lastmod>2024-06-11T01:49:11.160Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/stuff/writings/Thesis.html</loc>
-    <lastmod>2024-05-30T18:10:57.549Z</lastmod>
+    <lastmod>2024-06-28T22:50:31.096Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/stuff/writings/RacialDisparitiesAmongUnhousedCommunities.html</loc>
     <lastmod>2024-05-30T18:10:30.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/stuff/writings/VibesBasedEconomics.html</loc>
+    <lastmod>2024-05-30T18:11:05.806Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/stuff/writings/RuralEducation.html</loc>
+    <lastmod>2024-05-30T18:10:43.957Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/stuff/writings/ECON3500.html</loc>
@@ -41,15 +29,15 @@
     <lastmod>2024-05-30T18:07:56.579Z</lastmod>
   </url>
   <url>
-    <loc>https://tins/page/stuff/writings/RuralEducation.html</loc>
-    <lastmod>2024-05-30T18:10:43.957Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tins/page/stuff/writings/VibesBasedEconomics.html</loc>
-    <lastmod>2024-05-30T18:11:05.806Z</lastmod>
+    <loc>https://tins/page/stuff/writings/Thesis.html</loc>
+    <lastmod>2024-05-30T18:10:57.549Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/stuff/projects/AnnuityCalculator.html</loc>
     <lastmod>2024-05-30T18:07:54.913Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/stuff/posts/ShowViewership.html</loc>
+    <lastmod>2024-06-28T21:40:19.924Z</lastmod>
   </url>
 </urlset>
