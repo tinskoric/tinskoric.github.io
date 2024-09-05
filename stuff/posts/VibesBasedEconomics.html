@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tin Skoric - Stuff</title>
+<title>Tin Skoric - Vibes-Based Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../stuff/logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../stuff/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -68,123 +66,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-writings .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-writings'] = new List('listing-writings', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../fonts.css">
+<link rel="stylesheet" href="../../fonts.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -213,7 +97,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Tin Skoric</a> 
+      <a href="../../">Tin Skoric</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -225,21 +109,21 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../" class="sidebar-item-text sidebar-link"><i class="bi bi-house-fill" role="img">
+  <a href="../../" class="sidebar-item-text sidebar-link"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../stuff/" class="sidebar-item-text sidebar-link active"><i class="bi bi-archive-fill" role="img">
+  <a href="../../stuff/" class="sidebar-item-text sidebar-link"><i class="bi bi-archive-fill" role="img">
 </i> 
  <span class="menu-text">Stuff</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../stuff/Resume.pdf" class="sidebar-item-text sidebar-link"><i class="bi bi-file-text-fill" role="img">
+  <a href="../../stuff/Resume.pdf" class="sidebar-item-text sidebar-link"><i class="bi bi-file-text-fill" role="img">
 </i> 
  <span class="menu-text">Resume</span></a>
   </div>
@@ -270,20 +154,37 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#something-isnt-right" id="toc-something-isnt-right" class="nav-link active" data-scroll-target="#something-isnt-right"><span class="header-section-number">1</span> Something Isn’t Right</a></li>
+  <li><a href="#ignoring-the-data" id="toc-ignoring-the-data" class="nav-link" data-scroll-target="#ignoring-the-data"><span class="header-section-number">2</span> Ignoring the Data</a></li>
+  <li><a href="#but-the-markets" id="toc-but-the-markets" class="nav-link" data-scroll-target="#but-the-markets"><span class="header-section-number">3</span> But the Markets!</a></li>
+  <li><a href="#the-near-future" id="toc-the-near-future" class="nav-link" data-scroll-target="#the-near-future"><span class="header-section-number">4</span> The Near Future</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stuff</h1>
+<h1 class="title">Vibes-Based Economics</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 2022</p>
+    </div>
+  </div>
   
     
   </div>
@@ -293,203 +194,38 @@ window.Quarto = {
 </header>
 
 
-<p>I have split this up into three sub-portions. “Papers,” is for longer-form writing, mostly papers from classes and other similar works. “Posts,” is for shorter things I have written independently. Lastly, “Projects” is for things that I am working or have worked on that includes basically anything that is not majority text based.</p>
-<section id="papers" class="level2">
-<h2 class="anchored" data-anchor-id="papers">📑 Papers</h2>
-<div id="listing-writings" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-writings-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-writings'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<section id="something-isnt-right" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Something Isn’t Right</h1>
+<p><d1> There has been a lot in the news about “recession” recently and, considering current data, it does not make much sense. </d1> While wages went up <a href="#footnote1"><code>(USBLS)</code></a> and comparatively decent jobs remain available, half the country seems to think that we are back in 2008. Hell, unemployment is back to pre-pandemic levels <a href="#footnote2"><code>(USBLS)</code></a>, with long-term unemployment (27 weeks or more) falling as well, and the federal funds rate, while rising steeply, just hit what it was around this same time in 2019 <a href="#footnote3"><code>(FRED)</code></a>. It is not like nothing is going on, though, <em>something</em> must be off for people to be so concerned, so what is it? Prices. That is it, or a lot of it. The confluence of ongoing supply chain issues, a war in one of the most vital exporting countries in the grain market <a href="#footnote4"><code>(WSJ)</code></a> instigated by an important export country in the natural gas market, greed, and yes, to an extent the rapid expansion of the money supply from government assistance during the pandemic has worked out to a sharp rise in prices across the board. Is this concerning? Absolutely. Is this a recession? No.&nbsp;So why do I keep hearing the word?</p>
+</section>
+<section id="ignoring-the-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Ignoring the Data</h1>
+<p>In 2020 a global pandemic threw the global economy for a loop. Industries whose work could not easily be transferred online declined and millions of people were suddenly unemployed, and no one was sure when exactly things would end. Two years later and the pandemic is still close to us. Some of those millions who were unemployed, and many others, are dead now. But one could be forgiven for mistaking that things had passed with how little care many seem to have anymore. This general sense of apathy, or at least conscious ignorance, has grown so bad in fact that there is already some whole new pandemic and I have yet to hear a single real person share much concern over it. No one wants to care about anymore, and the governments of the world—which had at one time thrown enormous sums of money into the void which constituted their pandemic economies—have just as quickly dropped all mandates and shoved everyone back to the workplace. On one hand this makes sense, there is a feeling that prior to the pandemic things made some kind of sense and that organizations should return to their state of being. On the other hand, over one million people have died, just in the United States, and many are still dying, and no matter how much we choose to ignore it, things are not just going to <em>become</em> normal.</p>
+<p>But what does any of that have to do with our present recessionary woes? A great deal, actually.</p>
+<p>The trouble with selectively detaching yourself from the realities before you is that it becomes hard to keep up with everything else. While national economies are no strangers to emotion—look no further than the intense volatility of some stocks to see how impactful feelings can be—the degree to which many are now just going with their guts on this whole thing is almost unprecedented. The stubbornness with which we continue to ignore the presence of a deadly pandemic has made its way into how we think about a great many things. In this case then, “recession” has taken on a whole new meaning, realistically becoming a buzzword for “things are bad and I don’t like it,” or, more appropriately the current “bad vibes.” This situation is articulated well by Felix Salmon and Elizabeth Spiers in a recent episode of the podcast <a href="#footnote5"><code>Slate Money</code></a>;</p>
+<p>[Elizabeth Spiers] “I think people conflate their sense of financial security with a sense of overall stability and security in general. So if there is a lot of chaos happening in the world, they will automatically sort of assume that this is affecting them economically, even though it might not be the case.”</p>
+<p>Granted many are hit hard by soaring prices for goods but the point stands. A lot <em>is</em> happening, we have gone over this, and emotional overload is both very real and very reasonable given the state of affairs in the past few years but even still what could convince people that things are so unstable? One example could be the rollback of government programs as we reenter our faux normalcy, but the fact is that many of those programs worked in service of businesses more than individual people, at least directly.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="VibesBasedEconomics_files/figure-html/datatrends-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1536"></p>
+</figure>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-date-sort="1638334800000" data-listing-file-modified-sort="1717092630634" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4058" data-listing-title-sort="Exploring Racial Disparities Among Unhoused Communities" data-listing-filename-sort="RacialDisparitiesAmongUnhousedCommunities.qmd">
-<td>
-<a href="../stuff/writings/RacialDisparitiesAmongUnhousedCommunities.html" class="title listing-title">Exploring Racial Disparities Among Unhoused Communities</a>
-</td>
-<td>
-<span class="listing-date">Dec 1, 2021</span>
-</td>
-</tr>
-<tr data-index="1" data-listing-date-sort="1702098000000" data-listing-file-modified-sort="1717094057386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="32" data-listing-word-count-sort="6351" data-listing-title-sort="The Phillips Curve is Alive and Well in 2023" data-listing-filename-sort="ECON3500.qmd">
-<td>
-<a href="../stuff/writings/ECON3500.html" class="title listing-title">The Phillips Curve is Alive and Well in 2023</a>
-</td>
-<td>
-<span class="listing-date">Dec 9, 2023</span>
-</td>
-</tr>
-<tr data-index="2" data-listing-date-sort="1714536000000" data-listing-file-modified-sort="1717092476579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="62" data-listing-word-count-sort="12349" data-listing-title-sort="Brexit and the Phillips Curve" data-listing-filename-sort="ECON4500.qmd">
-<td>
-<a href="../stuff/writings/ECON4500.html" class="title listing-title">Brexit and the Phillips Curve</a>
-</td>
-<td>
-<span class="listing-date">May 1, 2024</span>
-</td>
-</tr>
-<tr data-index="3" data-listing-date-sort="1714536000000" data-listing-file-modified-sort="1717092657549" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="102" data-listing-word-count-sort="20229" data-listing-title-sort="The Effect of the 2008 Financial Crisis on Bosnian Households" data-listing-filename-sort="Thesis.qmd">
-<td>
-<a href="../stuff/writings/Thesis.html" class="title listing-title">The Effect of the 2008 Financial Crisis on Bosnian Households</a>
-</td>
-<td>
-<span class="listing-date">May 1, 2024</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
 </div>
 </div>
 </section>
-<section id="posts" class="level2">
-<h2 class="anchored" data-anchor-id="posts">📝 Posts</h2>
-<div id="listing-posts" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-date-sort="1659240000000" data-listing-file-modified-sort="1717092665806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1337" data-listing-title-sort="Vibes-Based Economics" data-listing-filename-sort="VibesBasedEconomics.qmd">
-<td>
-<a href="../stuff/posts/VibesBasedEconomics.html" class="title listing-title">Vibes-Based Economics</a>
-</td>
-<td>
-<span class="listing-date">Jul 31, 2022</span>
-</td>
-</tr>
-<tr data-index="1" data-listing-date-sort="1670907600000" data-listing-file-modified-sort="1717092643957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3112" data-listing-title-sort="A Short Look at Rural Education" data-listing-filename-sort="RuralEducation.qmd">
-<td>
-<a href="../stuff/posts/RuralEducation.html" class="title listing-title">A Short Look at Rural Education</a>
-</td>
-<td>
-<span class="listing-date">Dec 13, 2022</span>
-</td>
-</tr>
-<tr data-index="2" data-listing-date-sort="1719288000000" data-listing-file-modified-sort="1719616500743" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16" data-listing-word-count-sort="3148" data-listing-title-sort="&quot;Zombie Shows&quot; and a Short Tangent on Ratings Accuracy" data-listing-filename-sort="ShowViewership.qmd">
-<td>
-<a href="../stuff/posts/ShowViewership.html" class="title listing-title">“Zombie Shows” and a Short Tangent on Ratings Accuracy</a>
-</td>
-<td>
-<span class="listing-date">Jun 25, 2024</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<section id="but-the-markets" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> But the Markets!</h1>
+<p>Nowhere do we see the presence of this “bad vibes” mentality more than in the stock market, the beating heart of volatility, and more importantly, something often conflated with economic health and well-being. As Felix Salmon says, “The stock market. Your stocks are down. Used to feel wealthy because stocks were up high and rising. Now you feel poor because stocks are lower and falling.” It really is a perfect kind of storm. For many years there has been this beating of the drum to instill the idea that the market and the economy are linked, and to be fair, it is not so much that they are not as it is that that is not the whole story. But nevertheless, people look towards this mythical thing for answers and right now it is not giving particularly good ones. At the same time people are again going with their guts and so there is a combination of feeling bad and then hearing dreadful things from one of the main places you look. This is not to mention how much big words catch headlines so I cannot help but side-eye publishers and agencies for opining the end of prosperity for clicks. The market was also just performing phenomenally while millions were unemployed and starving so again, it is not really reflective of how things are doing.</p>
 </section>
-<section id="projects" class="level2">
-<h2 class="anchored" data-anchor-id="projects">📁 Projects</h2>
-<div id="listing-projects" class="quarto-listing quarto-listing-container-table">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-listing-date-sort="1692676800000" data-listing-file-modified-sort="1717092474913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="18" data-listing-title-sort="Annuity Calculator 📈" data-listing-filename-sort="AnnuityCalculator.qmd">
-<td>
-<a href="../stuff/projects/AnnuityCalculator.html" class="title listing-title">Annuity Calculator 📈</a>
-</td>
-<td>
-<span class="listing-date">Aug 22, 2023</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
+<section id="the-near-future" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The Near Future</h1>
+<p>One of the most worrying things about this whole situation though is that, at the end of everything, economic health is genuinely dependent on our deeply personal faith in how things are going. When people lose faith, as many are, that’s when things start to go wrong fast. It is a tough situation because there are significant issues right now facing us down economically—the number of people presently unhoused is growing and rising costs certainly are not helping <a href="#footnote6"><code>(Washington Post)</code></a>, and the minimum wage is nowhere near when it needs to be—and they are only magnified by the kind of fear that comes with words like recession. Luckily, the “vibe” has not yet soured enough for people to stop spending, which means that things might just work out if we can get inflation under control.</p>
+<h3 id="References" class="anchored" data-anchor-id="the-near-future">
+References
+</h3>
+<p><b id="footnote1">1. <a href="https://www.bls.gov/news.release/pdf/eci.pdf">Employment Cost Index | June 2022 (USBLS)</a></b> <br> <b id="footnote2">2. <a href="https://www.bls.gov/news.release/empsit.nr0.htm">Employment Situation Summary | June 2022 (USBLS)</a></b> <br> <b id="footnote3">3. <a href="https://fred.stlouisfed.org/series/DFEDTARU">Federal Funds Target Range - Upper Limit (St.&nbsp;Louis FED)</a></b> <br> <b id="footnote4">4. <a href="https://www.wsj.com/articles/even-with-a-ukraine-deal-world-grain-supplies-are-tight-11658499686">Even With a Ukraine Deal, World Grain Supplies Are Tight (WSJ)</a></b> <br> <b id="footnote5">5. <a href="https://slate.com/transcripts/dy9JS3NhQ0h3dWt1OEFVNG5zbGs1SDl1TVUyNnQxQ1c1V1luRVFqTEhsRT0=">Bad Vibes Economics (Slate)</a></b> <br> <b id="footnote6">6. <a href="https://www.washingtonpost.com/business/2022/07/03/inflation-homeless-rent-housing/">Inflation is making homelessness worse (Washington Post)</a></b></p>
 
 
 </section>
