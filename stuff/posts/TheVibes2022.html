@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tin Skoric">
 
-<title>Tin Skoric - “Zombie Shows” and a Short Tangent on Ratings Accuracy</title>
+<title>Tin Skoric - The Vibes from 2022</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,11 +90,36 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<meta name="mermaid-theme" content="neutral">
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../fonts.css">
 </head>
@@ -188,8 +213,8 @@ div.csl-indent {
    
   <ul class="collapse">
   <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#the-walking-dead" id="toc-the-walking-dead" class="nav-link" data-scroll-target="#the-walking-dead"><span class="header-section-number">2</span> The Walking Dead</a></li>
-  <li><a href="#the-problem-with-user-ratings" id="toc-the-problem-with-user-ratings" class="nav-link" data-scroll-target="#the-problem-with-user-ratings"><span class="header-section-number">3</span> The Problem with User Ratings</a></li>
+  <li><a href="#consumer-confidence-and-inflation" id="toc-consumer-confidence-and-inflation" class="nav-link" data-scroll-target="#consumer-confidence-and-inflation"><span class="header-section-number">2</span> Consumer Confidence and Inflation</a></li>
+  <li><a href="#consumer-confidence-pre--and-post-pandemic" id="toc-consumer-confidence-pre--and-post-pandemic" class="nav-link" data-scroll-target="#consumer-confidence-pre--and-post-pandemic"><span class="header-section-number">3</span> Consumer Confidence Pre- and Post-Pandemic</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5</span> References</a></li>
   </ul>
@@ -200,7 +225,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">“Zombie Shows” and a Short Tangent on Ratings Accuracy</h1>
+<h1 class="title">The Vibes from 2022</h1>
 </div>
 
 
@@ -217,7 +242,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 2024</p>
+      <p class="date">September 2024</p>
     </div>
   </div>
   
@@ -231,92 +256,31 @@ div.csl-indent {
 
 <section id="sec-intro" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>Recently I was reminded of the existence of the show <em>The Walking Dead</em>, and something just didn’t sit right in my mind—how in God’s name was it still on air by 2022? I can’t say if the show was still any good by that point (I stopped watching around season 5 in my youth) but I know, however anecdotal this is, that I did not hear a lick of news about it for the last 5 years. Actually its been more than 5 years, I haven’t heard anything in the general conscious since the <a href="https://youtu.be/fXfqvhk_jpI?si=RTe4XC9SQTa-NyNj">death of Glenn</a> and even that was only a blip in a growing stream of silence. I don’t want to bash on a show that has—mercifully—been over for 2 years now. Rather, my realization that <em>The Walking Dead</em> had crawled along for so long, and somehow with decent reviews online, has presented me with a fun question to explore:</p>
-<blockquote class="blockquote">
-<p>Are obvious metrics even reliable? Can we actually trust something like user reviews simply because they are collected in aggregate?</p>
-</blockquote>
-<p>To explain the train of thought that arrived at the question in the above block quote, I’ve provided the following extremely vital (and improperly formatted) flowchart(s):</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<p>Around this same time 2 years ago, I wrote a similarly short and (hopefully dissimilarly) crude post talking about the advent of “vibes based economics” as I’d seen it mentioned by other, more knowledgeable persons. The whole piece is rambling pontification, and I beg whoever reads this to not read that one. I concluded it by talking about the need to maintain faith despite the malaise and that, “luckily,” spending hadn’t appeared to drop despite poor economic sentiment. In retrospect, this was not luck, but rather a feature of the new vibe. There is a growing disconnect between how people describe broader economic conditions, and how they operate under them. This disconnect is not an entirely new phenomenon, but it appears to have been particularly pronounced over these past four years. Consider the figure below from the Institute of Politics at Harvard Kennedy School (<span class="citation" data-cites="harvard"><span>“Harvard IOP Youth Poll”</span> (<a href="#ref-harvard" role="doc-biblioref">2023</a>)</span>):</p>
+<div class="callout callout-style-simple callout-note no-icon" style="border-width: 5px;">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Flowchart
+<div class="callout-body-container">
+<div id="fig-dipzone" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dipzone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://iop.harvard.edu/youth-poll/46th-edition-fall-2023"><span class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="TheVibes2022/survey.png" class="img-fluid figure-img"></span></a>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A(Wow! How the hell did The Walking Dead only just end?)
-    A --&gt;B{Why and when should a show end?}
-    B --&gt;C(When it stops making money! I love the invisible hand!!!)
-    B --&gt;D[When most people stop watching.]
-    B --&gt;E[When it starts sucking.]
-    D --&gt;F{How do you measure this?}
-    E --&gt;F
-    F --&gt;G[Other metrics of course! Viewership numbers and ratings!]
-    F --&gt;G1{Is profitability not a good enough metric?}
-    G1 --&gt;|Yes it is!|C
-    G1 --&gt;|No, I want good shows, not just shows that make money.|G
-    G --&gt;H{Are these metrics really reliable?}
-    H --&gt;|No.|C
-    H --&gt;|Yes?|I[No they're not, how can you really trust that something like review data on television shows isn't skewed by bias?]
-    I --&gt;|Retry!|H
-    H --&gt;|Maybe.|J[Divine the vibe with data!]
-    J --&gt;|And then...|C
-</pre>
-</div>
-<p></p></figure><p></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dipzone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Harvard IOP Youth Poll; Fall 2023
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Unrelated Flowcharts
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    AA(Am I unreasonably biased against a show I haven't watched in a decade?)
-    AA --&gt;AB(A little bit yeah.)
-
-    AAA(What if a show can't end? What is a world without The Simpsons?)
-    AAA --&gt;AAB(Wow that's heavy, you should be a poet.)
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>The immediate answer to the question posed is that user-reviews may be biased by <a href="https://en.wikipedia.org/wiki/Selection_bias#Volunteer_bias">selection bias</a>. <em>Sometimes</em>, perhaps, we can trust user-review aggregates, but other times selection bias is too strong. This is because user-reviews are entirely voluntary at not one but <em>two</em> stages. First (excluding <a href="https://en.wikipedia.org/wiki/Review_bomb">review-bombing</a>), users presumably must choose to watch a show and form an opinion. Second, users must decide that their opinion is worth expressing online in a review. If, for example, a show is slowly dying and only the truest of true fans are left watching, the user-reviews will be biased in aggregate, because those who may otherwise negatively review the show have already dropped out at stage one. This phenomenon isn’t particularly difficult to grasp, but, I think <em>The Walking Dead</em> television show provides a very good example. For the next few sections, I’ll demonstrate how even obvious data can be difficult to trust by using a long-zombified, now-dead, television show as an example. Specifically, I will be looking at viewership statistics and IMDB ratings for <em>The Walking Dead</em> over time.</p>
+<p>If an economy is a system, and our personal economic health is a branch of it, then how could that branch be fine but the proverbial tree be dead? The gap in responses seen in <a href="#fig-dipzone" class="quarto-xref">Figure&nbsp;1</a> is non-negligible, and reflects an excessively pessimistic view of the macroeconomy among a large segment of the populace (in this case specifically, the 18-29 demographic). What this means for something like “sentometrics”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is difficult to ascertain—if we know that consumer sentiment impacts the economy, but we do not know what sentiments are reflective of ones that would create an impact, how do we know when the vibes have soured enough for something to change? I am not going to try to explain an answer to that here, but I do want to share a simple observation illustrating this problematic development.</p>
 </section>
-<section id="the-walking-dead" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> The Walking Dead</h1>
-<p>To call <em>The Walking Dead</em> a “Zombie Show” in its final season would not only be reflective of its content by then, but too of its character. Despite facing declining average viewership as early as season 5, it trudged on for 6 more seasons. Before talking about reviews, I want to make sure that we are in agreement about the death of the show. Below is a graph displaying the television viewership counts in the United States of <em>The Walking Dead</em> per episode and split across seasons <span class="citation" data-cites="twd1 twd2">(<a href="#ref-twd1" role="doc-biblioref"><span>“Sunday Cable Ratings [Multiple]”</span> 2010-2018</a>; <a href="#ref-twd2" role="doc-biblioref"><span>“Showbuzz Daily Sunday Top 150 Cable Originals Network Finals [Multiple]”</span> 2019-2022</a>)</span>:</p>
+<section id="consumer-confidence-and-inflation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Consumer Confidence and Inflation</h1>
+<p>To see how sentiment has changed, we need a measure of sentimenet and a common economic indicator to compare. To keep things simple, I will use personal consumption expenditure <span class="citation" data-cites="PCE">(<a href="#ref-PCE" role="doc-biblioref"><span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI)”</span> 2024</a>)</span> inflation as the indicator of reference and the consumer confidence index <span class="citation" data-cites="CCI">(<a href="#ref-CCI" role="doc-biblioref"><strong>CCI?</strong></a>)</span> to measure sentiment. I chose inflation because it is a metric that makes headlines, and which has some correlation with the sentiment metric when plotted—interestingly, unlike labor market tightness measures (in general). I’ve elected to employ a one-month lag of inflation in comparing it to consumer sentiment since it would be the preceding month’s inflation that is known in the month of each consumer confidence survey.</p>
 <div class="callout callout-style-simple callout-note no-icon" style="border-width: 5px;">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -330,13 +294,13 @@ Unrelated Flowcharts
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="cell-output-display">
-<div id="fig-twd1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-cci-all" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-twd1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="ShowViewership_files/figure-html/fig-twd1-1.gif" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="ShowViewership_files/figure-html/fig-twd1-1.gif" class="img-fluid figure-img"></a>
+<div aria-describedby="fig-cci-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="TheVibes2022_files/figure-html/fig-cci-all-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="TheVibes2022_files/figure-html/fig-cci-all-1.gif" class="img-fluid figure-img"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twd1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Zombie Show: TV Viewership of The Walking Dead by Episode
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cci-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Inflation v. Consumer Confidence Index
 </figcaption>
 </figure>
 </div>
@@ -345,153 +309,149 @@ Figure&nbsp;1: Zombie Show: TV Viewership of The Walking Dead by Episode
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><a href="ShowViewership/figures/twd_plain.png"><code>Download Plot</code></a> <a href="ShowViewership/figures/twd_animated.gif"><code>Download Animated Plot</code></a></p>
+<p><a href="TheVibes2022/figures/cc_plain_all.png"><code>Download Plot</code></a> <a href="TheVibes2022/figures/animated_cc_all.gif"><code>Download Animated Plot</code></a></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>By the above chart in <a href="#fig-twd1" class="quarto-xref">Figure&nbsp;1</a>, viewership counts have faced a sustained decline since around the middle of season 5, with a notable spike in the first episode of season 7—the death of Glenn. Looking at the data, there is a fair criticism right off the bat: these are cable television viewership stats, and people have been cord-cutting <span class="citation" data-cites="pewresearch">(<a href="#ref-pewresearch" role="doc-biblioref">Rainie 2021</a>)</span> for years. What if, the show was not experiencing as dramatic a fall-off as I am depicting? Unfortunately, no, cord-cutting does not explain away the woes of the show. In fact, according to <span class="citation" data-cites="cable">FCC (<a href="#ref-cable" role="doc-biblioref">2019-2022</a>)</span>, more people had cable subscriptions in 2018 than any year prior in the period from 2010 to 2022, and we know <em>The Walking Dead</em> was losing viewers long before then.<br>
-<br>
-Perhaps many with cable subscriptions just didn’t watch much cable anyways by then. As <span class="citation" data-cites="vox">Molla (<a href="#ref-vox" role="doc-biblioref">2018</a>)</span> points out, “Cable and satellite companies often include TV, internet and telephone for a single reduced price. For many [American cable subscribers], the cost they’d have to pay for internet alone isn’t much less than they would pay for all three services individually, so the perceived value can seem tempting. In turn, the cable companies are able to eke out higher overall monthly fees by throwing in those ‘extras.’” There could be many cable subscribers then and now who don’t actually take much advantage of their cable subscription. However, just because subscribers choose not to watch cable doesn’t mean they <em>can’t</em>. I am sure that if someone had easy access to something, the only reason they wouldn’t use it is because they don’t want to—if someone already has cable, the reason they wouldn’t be watching <em>The Walking Dead</em> is either because they don’t want to or they don’t have time to, and in the latter case, that seems not to have stopped viewership prior. Given what we know, the graph below is functionally the same as <a href="#fig-twd1" class="quarto-xref">Figure&nbsp;1</a> so I’ve put it in a collapsed note to avoid taking up too much space with graphs that convey similar points. If you’d like to view this second graph anyways, just click on the note to expand it.</p>
+<p>As seen above in <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;2</a>, it is generally true that higher inflation in one month is reflected by a lower CCI in the next<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Running a simple test for correlation (in the collapsed block below) we get a coefficient of <span class="math inline">\(-0.67\)</span> that is statistically significant. In the years since 2010, we see that low inflation generally resulted in higher consumer confidence and vice versa.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Correlation Test: PCE v. CCI
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  consumer_confidence$PCE_scaled_lag and consumer_confidence$CCI
+t = -11.679, df = 172, p-value &lt; 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.7405351 -0.5729469
+sample estimates:
+       cor 
+-0.6650313 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>So we know it should be negative. Anecdotally, it is unlikely that we wouldn’t see a negative correlation between inflation and consumer confidence—not many are made confident by high inflation—so what could be different? The size of the coefficient. To investigate if this difference exists, we must split the data into pre- and post-vibecession<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> groups.</p>
+</section>
+<section id="consumer-confidence-pre--and-post-pandemic" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Consumer Confidence Pre- and Post-Pandemic</h1>
+<p>It’s fair to say the “vibecession” is a pandemic phenomenon, so it is worth looking at the years preceeding March 2020 to see how sentiments may have changed since. In the collapsed block below is another correlation text containing only values from January 2010 to February 2020.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Correlation Test: PCE v. CCI Pre-Pandemic
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  consumer_confidence_pre$PCE_scaled_lag and consumer_confidence_pre$CCI
+t = -4.9755, df = 121, p-value = 2.177e-06
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.5490941 -0.2535888
+sample estimates:
+       cor 
+-0.4121214 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The relationship noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;2</a> is still present, but the coefficient is lower, only <span class="math inline">\(-0.41\)</span>. This is drastically lower than the original coefficient for all periods, implying that the pandemic (and recovery) period must have a much higher associated coefficient. Below is the same test but with values spanning only March 2020 to June 2024.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-The Same Graph as <a href="#fig-twd1" class="quarto-xref">Figure&nbsp;1</a> But Now Adjusted for Cable Subscription Figures
+Correlation Test: PCE v. CCI Post-Pandemic
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
 
-</div>
-<div class="quarto-layout-panel" data-layout-nrow="2">
-<div class="quarto-layout-row">
-<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<div class="cell-output-display">
-<div id="fig-twd2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-twd2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="ShowViewership_files/figure-html/fig-twd2-1.gif" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="ShowViewership_files/figure-html/fig-twd2-1.gif" class="img-fluid figure-img"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twd2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Zombie Show: TV Viewership of The Walking Dead by Episode (Adjusted for Cable Subscriber Counts)
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><a href="ShowViewership/figures/download_twd_adjusted.png"><code>Download Plot</code></a> <a href="ShowViewership/figures/animated_twd_adjusted.gif"><code>Download Animated Plot</code></a></p>
+data:  consumer_confidence_post$PCE_scaled_lag and consumer_confidence_post$CCI
+t = -8.5349, df = 50, p-value = 2.504e-11
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.8618389 -0.6294231
+sample estimates:
+       cor 
+-0.7700518 </code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<p>Clearly the viewership decline was genuine, so what made people stop watching? If people <em>could</em> watch but did not want to—presumably—the show got worse, or at least worse than competitive offerings in similar categories at the time.</p>
-</section>
-<section id="the-problem-with-user-ratings" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> The Problem with User Ratings</h1>
-<p>Critics have been around forever, but only with the advent of review aggregators can we combine reviews from around the world and seemingly come to a general critic consensus on a show. However another—arguably more impactful—thing that aggregators did was “democratize” reviews. Now anyone from around the world can praise or hate on their media of the day. For the purpose of my guiding question from <a href="#sec-intro" class="quarto-xref">Section&nbsp;1</a>, I am focusing on user-reviews, which are both more plentiful and often more diverse at the level of individual ratings. If we can trust these reviews, surely they should tell us that <em>The Walking Dead</em> got worse (and that would explain why people stopped watching when they otherwise could watch). Below are two charts displaying Internet Movie Database (IMDB) viewer ratings of the show over time:</p>
-<div class="callout callout-style-simple callout-note no-icon" style="border-width: 5px;">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-body-container">
-<div data-layout-nrow="2">
-<div id="fig-twd3" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-twd3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-twd3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-twd3-1" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-twd3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="ShowViewership_files/figure-html/fig-twd3-1.gif" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="fig-twd3"><img src="ShowViewership_files/figure-html/fig-twd3-1.gif" class="img-fluid figure-img" data-ref-parent="fig-twd3"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-twd3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Line Plot
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-twd3" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-twd3-2" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-twd3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="ShowViewership_files/figure-html/fig-twd3-2.gif" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="fig-twd3"><img src="ShowViewership_files/figure-html/fig-twd3-2.gif" class="img-fluid figure-img" data-ref-parent="fig-twd3"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-twd3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Violin Plot
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-twd3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Zombie Show: IMDB Viewer Ratings of The Walking Dead Episodes by Season
-</figcaption>
-</figure>
-</div>
-<p><a href="ShowViewership/figures/download_twd_adjusted.png"><code>Download Plot</code></a> <a href="ShowViewership/figures/animated_twd_adjusted.gif"><code>Download Animated Plot</code></a><br>
-<a href="ShowViewership/figures/download_twd_rating_violin.png"><code>Download Violin Plot</code></a> <a href="ShowViewership/figures/animated_twd_rating_violin.gif"><code>Download Animated Violin Plot</code></a></p>
-</div>
-</div>
-</div>
-</div>
-<p>As seen in <a href="#fig-twd3" class="quarto-xref">Figure&nbsp;3</a>, for the most part (excluding some real stinkers in season 10 apparently), reviews of the show remained positive throughout a dramatic and sustained loss in viewership. People tuned out—presumably because they didn’t like the show enough to watch anymore—but the reviews didn’t exactly nosedive. If we know people <em>could</em> watch the show, and we see the reviews weren’t totally tanking, why we fewer people watching? There are a few main possibilities:</p>
-<ol type="1">
-<li>Even if the show wasn’t <em>bad</em> perhaps there were <em>better</em> shows. But this ignores the fact that people were already invested in one show. To completely stop watching a show you are already five seasons deep in just because another catches your eye just doesn’t sound likely.</li>
-<li>The reviews are not reflective of the tastes of the general viewership. This is the one I want you to believe rather than the straw-man alternative I created.</li>
-</ol>
-<p>You see, <em>I don’t believe</em> these ratings, and I have a simple explanation for why—despite how they have great sample sizes and average everything out—I don’t. I don’t believe these ratings because of the problem of selection bias from <a href="#sec-intro" class="quarto-xref">Section&nbsp;1</a>. People that watch shows are the ones that review them. If people become bored enough with a show to simply leave it, they stop reviewing it as well. This makes taking user reviews and aggregators seriously much more difficult.<br>
-<br>
-Interestingly, you can see very slightly that the the decrease in average reviews per episode and across seasons, is sharpest sometime around season 6 and 7, when there were still many people watching, but the slow trickle away of viewers had already begun. These reviews, given the scale of viewership then, likely included many from the general audience, rather than just die-hard fans, and are notably increasingly negative until there are fewer viewers. This observation aligns with the idea of reviews being biased near the end of the show by devoted viewers and as such I do not trust those reviews. Without watching these later seasons, and with a decade between myself and the last time I watched any of that show, I look to the dynamics of viewership to tell me if the show is worth watching and I don’t see good things.</p>
+<p>As before, the relationship noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;2</a> is still present, but the coefficient is higher, <span class="math inline">\(-0.77\)</span>. Even looking graphically, we see that the drop in CCI was much more pronounced across the 2022 inflationary wave than other waves in earlier years.</p>
 </section>
 <section id="conclusion" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Conclusion</h1>
-<p>I don’t want to entirely discredit user reviews—that would be foolish. Instead, I propose a simple rule for anyone looking at reviews for a show or any similar episodic medium: give weight to the early reviews because that’s when the most general of audiences that has ever watched the show will watch and review the show. If you want to know what awaits you as a viewer down the line, check viewership numbers rather than reviews—if you see a steady decline, you can probably assume the show gets drab for the average viewer by then. I know I have been a little cruel against <em>The Walking Dead</em>, but there is simply no way in hell reviews were only down a point near the end for a show that had fallen to a tenth of its peak viewership, and this demonstrates the value of taking reviews—no matter how big your sample size is—with a grain of salt.</p>
+<p>As seen in these quick tests, consumer confidence was more negatively impacted by inflation in these past 4 years than it had been in the prior decade. In fact, checking the CCI back to the 1970s, it reached a lower low in 2022 than in the decade of stagflation or the 2008 global financial crisis. Yet consumers still spent—aggregate consumption remained at trend throughout this period. Everything tells us that people were desperately concerned about the economy and yet they did not save and behave as people would historically. Again, the vibe soured, but not enough to change behavior. This begs the same question I asked earlier, how do we know when the vibes have soured enough for something to change?</p>
 </section>
 <section id="references" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> References</h1>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-cable" class="csl-entry" role="listitem">
-FCC. 2019-2022. <span>“FCC Annual Video Competition Report.”</span> <em>Federal Communications Commission</em>. <a href="https://en.wikipedia.org/wiki/Cable_television_in_the_United_States#Statistics">https://en.wikipedia.org/wiki/Cable_television_in_the_United_States#Statistics</a>.
+<div id="ref-algaba2020" class="csl-entry" role="listitem">
+Algaba, Andres, David Ardia, Keven Bluteau, Samuel Borms, and Kris Boudt. 2020. <span>“ECONOMETRICS MEETS SENTIMENT: AN OVERVIEW OF METHODOLOGY AND APPLICATIONS.”</span> <em>Journal of Economic Surveys</em> 34 (3): 512–47. <a href="https://doi.org/10.1111/joes.12370">https://doi.org/10.1111/joes.12370</a>.
 </div>
-<div id="ref-vox" class="csl-entry" role="listitem">
-Molla, Rani. 2018. <span>“Americans Are Still Paying for Cable Because It’s Bundled with Their Internet.”</span> <em>Vox</em>. <a href="https://www.vox.com/2018/3/20/17139756/reasons-americans-us-pay-cord-cable-tv">https://www.vox.com/2018/3/20/17139756/reasons-americans-us-pay-cord-cable-tv</a>.
+<div id="ref-harvard" class="csl-entry" role="listitem">
+<span>“Harvard IOP Youth Poll.”</span> 2023. <em>Institute of Politics at Harvard Kennedy School</em>. <a href="https://iop.harvard.edu/youth-poll/46th-edition-fall-2023">https://iop.harvard.edu/youth-poll/46th-edition-fall-2023</a>.
 </div>
-<div id="ref-pewresearch" class="csl-entry" role="listitem">
-Rainie, Lee. 2021. <span>“Cable and Satellite TV Use Has Dropped Dramatically in the U.S. Since 2015.”</span> <em>Pew Research Center</em>. <a href="https://www.pewresearch.org/short-reads/2021/03/17/cable-and-satellite-tv-use-has-dropped-dramatically-in-the-u-s-since-2015/">https://www.pewresearch.org/short-reads/2021/03/17/cable-and-satellite-tv-use-has-dropped-dramatically-in-the-u-s-since-2015/</a>.
+<div id="ref-PCE" class="csl-entry" role="listitem">
+<span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI).”</span> 2024. <em>U.S. Bureau of Economic Analysis</em>. <a href="https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html">https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html</a>.
 </div>
-<div id="ref-twd2" class="csl-entry" role="listitem">
-<span>“Showbuzz Daily Sunday Top 150 Cable Originals Network Finals [Multiple].”</span> 2019-2022. <em>Showbuzz Daily</em>. <a href="https://en.wikipedia.org/wiki/List_of_The_Walking_Dead_episodes#Episodes">https://en.wikipedia.org/wiki/List_of_The_Walking_Dead_episodes#Episodes</a>.
-</div>
-<div id="ref-twd1" class="csl-entry" role="listitem">
-<span>“Sunday Cable Ratings [Multiple].”</span> 2010-2018. <em>TV by the Numbers</em>. <a href="https://en.wikipedia.org/wiki/List_of_The_Walking_Dead_episodes#Episodes">https://en.wikipedia.org/wiki/List_of_The_Walking_Dead_episodes#Episodes</a>.
+<div id="ref-vibes" class="csl-entry" role="listitem">
+Scanlon, Kyla. 2022. <span>“The Vibecession: The Self-Fulfilling Prophecy.”</span> <em>Kyla’s Newsletter</em>. <a href="https://kyla.substack.com/p/the-vibecession-the-self-fulfilling">https://kyla.substack.com/p/the-vibecession-the-self-fulfilling</a>.
 </div>
 </div>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Zombie Show: TV Viewership of The Walking Dead by Episode</span>
-<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Zombie Show: TV Viewership of The Walking Dead by Episode (Adjusted for Cable Subscriber Counts)</span>
-<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3&nbsp;(a): Line Plot</span>
-<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;3&nbsp;(b): Violin Plot</span>
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: Harvard IOP Youth Poll; Fall 2023</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Inflation v. Consumer Confidence Index</span>
 </div>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Really cool field, (see: <span class="citation" data-cites="algaba2020">Algaba et al. (<a href="#ref-algaba2020" role="doc-biblioref">2020</a>)</span>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Just like any data, this is susceptible to funny business. If you include two decades preceding 2020 rather than just one—and with it the period covering the 2008 financial crisis—the p-value derived from comparing inflation and consumer confidence alone will not be significant. I elect to exclude that period because it includes the financial crisis, and it is more useful in this case to use the period of relative stability and growth between the financial crisis and the pandemic era.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Term coined by someone smarter than me: <span class="citation" data-cites="vibes">Scanlon (<a href="#ref-vibes" role="doc-biblioref">2022</a>)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -902,7 +862,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
