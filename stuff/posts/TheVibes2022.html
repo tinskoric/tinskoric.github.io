@@ -91,35 +91,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../fonts.css">
 </head>
@@ -267,7 +238,7 @@ window.Quarto = {
 <div id="fig-dipzone" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dipzone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://iop.harvard.edu/youth-poll/46th-edition-fall-2023"><span class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="TheVibes2022/survey.png" class="img-fluid figure-img"></span></a>
+<a href="https://iop.harvard.edu/youth-poll/46th-edition-fall-2023"><span class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="TheVibes2022/survey.png" class="img-fluid figure-img"></span></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dipzone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Harvard IOP Youth Poll; Fall 2023
@@ -281,9 +252,9 @@ Figure&nbsp;1: Harvard IOP Youth Poll; Fall 2023
 </section>
 <section id="measuring-sentiments" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Measuring Sentiments</h1>
-<p>To see how sentiment has changed compared to economic conditions, we need a measure of sentiment and a common economic indicator to compare. To keep things simple, I use personal consumption expenditure <span class="citation" data-cites="PCE">(<a href="#ref-PCE" role="doc-biblioref"><span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI)”</span> 2024</a>)</span> inflation as the indicator of reference and the consumer confidence index <span class="citation" data-cites="CCI">(<a href="#ref-CCI" role="doc-biblioref"><strong>CCI?</strong></a>)</span> to measure sentiment. I chose inflation because it is a metric that makes headlines, and which has some correlation with the sentiment metric when plotted. Don’t worry about stationarity econometricians, this is not about the number of inflation, it’s about the number of it that turns heads. I’ve elected to employ a one-month lag of inflation in comparing it to consumer sentiment since it would be the preceding month’s inflation that is known in the month of each consumer confidence survey. The time period of both datasets is January 2010 to June 2024<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Before proceeding, only one more thing is necessary.<br>
+<p>To see how sentiment has changed compared to economic conditions, we need a measure of sentiment and a common economic indicator to compare. To keep things simple, I use consumer price index <span class="citation" data-cites="CPI">(<a href="#ref-CPI" role="doc-biblioref"><strong>CPI?</strong></a>)</span> inflation as the indicator of reference (PCE is better but CPI is what most mass media uses) and the consumer confidence index <span class="citation" data-cites="CCI">(<a href="#ref-CCI" role="doc-biblioref"><strong>CCI?</strong></a>)</span> to measure sentiment. I chose inflation because it is a metric that makes headlines, and which has some correlation with the sentiment metric when plotted. Don’t worry about stationarity econometricians, this is not about the number of inflation, it’s about the number of it that turns heads. I’ve elected to employ a one-month lag of inflation in comparing it to consumer sentiment since it would be the preceding month’s inflation that is known in the month of each consumer confidence survey. The time period of both datasets is January 2010 to June 2024<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Before proceeding, only one more thing is necessary.<br>
 <br>
-Although we are using PCE inflation data in this comparison, as mentioned in the above paragraph, we are looking for what makes headlines. This is to say that when inflation is on target, it is unlikely that it is a considerable factor in terms of consumer sentiment. Who was talking about inflation in December of the year 2020? In addition to simply grabbing inflation data, it is necessary to create a benchmark for the <em>kind of inflation</em> that makes headlines. To do this without going through the pain of actually aggregating news articles manually, I use Google Trends with the query “Inflation (Topic)” specifically concerning Google News searches <span class="citation" data-cites="google">(<a href="#ref-google" role="doc-biblioref"><span>“Inflation (Topic)”</span> 2024</a>)</span> over the same time frame as the CCI and PCE data. The results below illustrate Google News search interest in inflation over time:</p>
+Although we are using CPI inflation data in this comparison, as mentioned in the above paragraph, we are looking for what makes headlines. This is to say that when inflation is on target, it is unlikely that it is a considerable factor in terms of consumer sentiment. Who was talking about inflation in December of the year 2020? In addition to simply grabbing inflation data, it is necessary to create a benchmark for the <em>kind of inflation</em> that makes headlines. To do this without going through the pain of actually aggregating news articles manually, I use Google Trends with the query “Inflation (Topic)” specifically concerning Google News searches <span class="citation" data-cites="google">(<a href="#ref-google" role="doc-biblioref"><span>“Inflation (Topic)”</span> 2024</a>)</span> over the same time frame as the CCI and CPI data. The results below illustrate Google News search interest in inflation over time:</p>
 <div class="callout callout-style-simple callout-note no-icon" style="border-width: 5px;">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -299,7 +270,7 @@ Although we are using PCE inflation data in this comparison, as mentioned in the
 <div id="fig-trends" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="TheVibes2022/figures/trends_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="TheVibes2022/figures/trends_plot.png" class="img-fluid figure-img"></a>
+<a href="TheVibes2022/figures/trends_plot.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="TheVibes2022/figures/trends_plot.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Google News Trends: Inflation (Topic),<br>
@@ -334,7 +305,7 @@ Data from Jan.&nbsp;2010 to Jun.&nbsp;2024, Vertical Lines Denote Mar.&nbsp;2020
 <div id="fig-trends2020" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-trends2020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="TheVibes2022/figures/trends_plot_2020.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="TheVibes2022/figures/trends_plot_2020.png" class="img-fluid figure-img"></a>
+<a href="TheVibes2022/figures/trends_plot_2020.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="TheVibes2022/figures/trends_plot_2020.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trends2020-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Google News Trends: Inflation (Topic),<br>
@@ -353,7 +324,7 @@ Data from Jan.&nbsp;2010 to Jan.&nbsp;2020
 </div>
 </div>
 </div>
-<p>What we want is to find a baseline level of inflation that correlates to “disinterest” during the period of stability. In other words, we want to find a general level for the interest trend in inflation as a topic, and see whereabouts inflation tends to be at that level. This level is not entirely representative of what constitutes inflation that makes headlines (for example, periods of particularly low inflation may do the same), but it makes it easier to make an interpretable graph so bear with me. As seen in the collapsed block below, the mean and median levels of interest across the period of interest are <span class="math inline">\(13.55\)</span> and <span class="math inline">\(6\)</span> respectively.</p>
+<p>What we want is to find a baseline level of inflation that correlates to “disinterest” during the period of stability. In other words, we want to find a general level for the interest trend in inflation as a topic, and see whereabouts inflation tends to be at that level. This level is not entirely representative of what constitutes inflation that makes headlines (for example, periods of particularly low inflation may do the same), but it makes it easier to make an interpretable graph so bear with me. As seen in the collapsed block below, the mean and median levels of interest across the period of interest are 13.55 and 6 respectively.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -390,18 +361,18 @@ Google Trends Averages: Inflation
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.1993  1.8651  2.6774  3.1673  4.4443  7.1169 </code></pre>
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.02203  2.13811  3.16574  3.70907  5.05818  8.98974 </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  96.65   98.32   99.13   99.62  100.90  103.57 </code></pre>
+  95.91   98.07   99.10   99.64  100.99  104.92 </code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Inflation generally starts to turn heads when it hits about 2.68 to 3.17%. That sounds reasonable to my hind brain so we will continue, and I elect to continue with the median (the former value) again just to be safe given how varied these inflation figures can get.</p>
+<p>Inflation generally starts to turn heads when it hits about 3.168 to 3.71%. That sounds reasonable to my hind brain so we will continue. I elect to include both possible limits for the visual in the next section.</p>
 </section>
 <section id="inflation-and-consumer-confidence" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Inflation and Consumer Confidence</h1>
@@ -421,7 +392,7 @@ Google Trends Averages: Inflation
 <div id="fig-cci-all" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cci-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="TheVibes2022/figures/cc_plain_all.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="TheVibes2022/figures/cc_plain_all.png" class="img-fluid figure-img"></a>
+<a href="TheVibes2022/figures/cc_plain_all.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4"><img src="TheVibes2022/figures/cc_plain_all.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cci-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Inflation v. Consumer Confidence Index,<br>
@@ -440,14 +411,14 @@ Data from Jan.&nbsp;2010 to Jun.&nbsp;2024, Vertical Lines Denote Mar.&nbsp;2020
 </div>
 </div>
 </div>
-<p>As seen above in <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a>, it is generally true that higher inflation in one month is reflected by a lower CCI in the next<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, particularly during periods that exceeds the head-turning level. Running a simple test for correlation (in the collapsed block below) we get coefficients of about -0.665 or -0.703 that are statistically significant when including all PCE values or only those where the level of interest in inflation was above the median of 6 (the head-turning level roughly associated with an inflation rate of about 2.68%) respectively. In the years since 2010, we see that low inflation generally resulted in higher consumer confidence and vice versa, and we additionally see that when controlling to focus on inflation during periods where interest of it is higher (which is associated with the “head-turning number” at the higher end of inflation), that relationship is more pronounced.</p>
+<p>As seen above in <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a>, it is generally true that higher inflation in one month is reflected by a lower CCI in the next<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, particularly during periods that exceeds the head-turning level. Running a simple test for correlation (in the collapsed block below) we get coefficients of about -0.630 or -0.699 that are statistically significant when including all CPI values or only those where the level of interest in inflation was above the median of 6 (the head-turning level roughly associated with an inflation rate of about 2.68%) respectively. In the years since 2010, we see that low inflation generally resulted in higher consumer confidence and vice versa, and we additionally see that when controlling to focus on inflation during periods where interest of it is higher (which is associated with the “head-turning number” at the higher end of inflation), that relationship is more pronounced.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Correlation Test: PCE v. CCI
+Correlation Test: CPI v. CCI
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -458,27 +429,27 @@ Correlation Test: PCE v. CCI
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence$PCE_lag and consumer_confidence$CCI
-t = -11.679, df = 172, p-value &lt; 2.2e-16
+data:  consumer_confidence$CPI_lag and consumer_confidence$CCI
+t = -10.649, df = 172, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.7405351 -0.5729469
+ -0.7123095 -0.5313987
 sample estimates:
        cor 
--0.6650313 </code></pre>
+-0.6303366 </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence_above_avg_interest$PCE_lag and consumer_confidence_above_avg_interest$CCI
-t = -8.8981, df = 81, p-value = 1.264e-13
+data:  consumer_confidence_above_avg_interest$CPI_lag and consumer_confidence_above_avg_interest$CCI
+t = -8.8062, df = 81, p-value = 1.92e-13
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.7977786 -0.5744978
+ -0.7951171 -0.5696011
 sample estimates:
        cor 
--0.7030678 </code></pre>
+-0.6993682 </code></pre>
 </div>
 </div>
 </div>
@@ -495,7 +466,7 @@ sample estimates:
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Correlation Test: PCE v. CCI Pre-Pandemic
+Correlation Test: CPI v. CCI Pre-Pandemic
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -506,40 +477,40 @@ Correlation Test: PCE v. CCI Pre-Pandemic
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence_pre$PCE_lag and consumer_confidence_pre$CCI
-t = -4.9755, df = 121, p-value = 2.177e-06
+data:  consumer_confidence_pre$CPI_lag and consumer_confidence_pre$CCI
+t = -3.425, df = 121, p-value = 0.0008401
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.5490941 -0.2535888
+ -0.4506056 -0.1269328
 sample estimates:
        cor 
--0.4121214 </code></pre>
+-0.2972866 </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence_above_avg_interest_pre$PCE_lag and consumer_confidence_above_avg_interest_pre$CCI
-t = -4.9403, df = 37, p-value = 1.696e-05
+data:  consumer_confidence_above_avg_interest_pre$CPI_lag and consumer_confidence_above_avg_interest_pre$CCI
+t = -4.2829, df = 37, p-value = 0.0001258
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.7890117 -0.3931213
+ -0.7542238 -0.3179446
 sample estimates:
        cor 
--0.6304407 </code></pre>
+-0.5757083 </code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>The relationship of inflation and CCI noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a> is still present, but notably much-reduced. We get coefficients of about -0.412 or -0.630 that are statistically significant when including all PCE values or only those where the level of interest in inflation was above the median respectively. These are drastically lower than the original coefficients in both cases, implying that the pandemic (and recovery) period will have a much higher associated coefficient. Below is the same test but with values spanning only March 2020 to June 2024.</p>
+<p>The relationship of inflation and CCI noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a> is still present, but notably much-reduced. We get coefficients of about -0.297 or -0.576 that are statistically significant when including all CPI values or only those where the level of interest in inflation was above the median respectively. These are drastically lower than the original coefficients in both cases, implying that the pandemic (and recovery) period will have a much higher associated coefficient. Below is the same test but with values spanning only March 2020 to June 2024.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Correlation Test: PCE v. CCI Post-Pandemic
+Correlation Test: CPI v. CCI Post-Pandemic
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -550,33 +521,33 @@ Correlation Test: PCE v. CCI Post-Pandemic
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence_post$PCE_lag and consumer_confidence_post$CCI
-t = -8.5349, df = 50, p-value = 2.504e-11
+data:  consumer_confidence_post$CPI_lag and consumer_confidence_post$CCI
+t = -8.6315, df = 50, p-value = 1.783e-11
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.8618389 -0.6294231
+ -0.8640574 -0.6346413
 sample estimates:
        cor 
--0.7700518 </code></pre>
+-0.7735649 </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
 
-data:  consumer_confidence_above_avg_interest_post$PCE_lag and consumer_confidence_above_avg_interest_post$CCI
-t = -7.6059, df = 42, p-value = 2.001e-09
+data:  consumer_confidence_above_avg_interest_post$CPI_lag and consumer_confidence_above_avg_interest_post$CCI
+t = -7.8226, df = 42, p-value = 9.915e-10
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.8630223 -0.5998282
+ -0.8684093 -0.6134182
 sample estimates:
        cor 
--0.7611628 </code></pre>
+-0.7700613 </code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>The relationship of inflation and CCI noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a> is still present, but is much higher. We get coefficients of about -0.770 or -0.761 that are statistically significant when including all PCE values or only those where the level of interest in inflation was above the median respectively. Interestingly, the coefficient is greater in magnitude in the latter case than the former, which is a reversal of what we saw in the prior two series of tests. Although almost all periods during the pandemic era had a level of interest above the median, this implies that even in cases where interest was not that high, inflation and consumer confidence were quite high and low respectively. This further illustrates the souring of the vibe during the pandemic and—given that those periods are found in 2020—probably reflect concerns about a recession<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> in those instances rather than inflation. The drop in CCI was much more pronounced across the 2022 inflationary wave than other waves in earlier years.</p>
+<p>The relationship of inflation and CCI noted from <a href="#fig-cci-all" class="quarto-xref">Figure&nbsp;4</a> is still present, but is much higher. We get coefficients of about -0.774 or -0.770 that are statistically significant when including all CPI values or only those where the level of interest in inflation was above the median respectively. Interestingly, the coefficient is greater in magnitude in the latter case than the former, which is a reversal of what we saw in the prior two series of tests. Although almost all periods during the pandemic era had a level of interest above the median, this implies that even in cases where interest was not that high, inflation and consumer confidence were quite high and low respectively. This further illustrates the souring of the vibe during the pandemic and—given that those periods are found in 2020—probably reflect concerns about a recession<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> in those instances rather than inflation. The drop in CCI was much more pronounced across the 2022 inflationary wave than other waves in earlier years.</p>
 </section>
 <section id="conclusion" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
@@ -593,9 +564,6 @@ Algaba, Andres, David Ardia, Keven Bluteau, Samuel Borms, and Kris Boudt. 2020. 
 </div>
 <div id="ref-google" class="csl-entry" role="listitem">
 <span>“Inflation (Topic).”</span> 2024. <em>Google Trends</em>. <a href="https://trends.google.com/trends/explore?date=2010-01-01%202024-06-01&amp;geo=US&amp;gprop=news&amp;q=%2Fm%2F09jx2&amp;hl=en">https://trends.google.com/trends/explore?date=2010-01-01%202024-06-01&amp;geo=US&amp;gprop=news&amp;q=%2Fm%2F09jx2&amp;hl=en</a>.
-</div>
-<div id="ref-PCE" class="csl-entry" role="listitem">
-<span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI).”</span> 2024. <em>U.S. Bureau of Economic Analysis</em>. <a href="https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html">https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html</a>.
 </div>
 <div id="ref-vibes" class="csl-entry" role="listitem">
 Scanlon, Kyla. 2022. <span>“The Vibecession: The Self-Fulfilling Prophecy.”</span> <em>Kyla’s Newsletter</em>. <a href="https://kyla.substack.com/p/the-vibecession-the-self-fulfilling">https://kyla.substack.com/p/the-vibecession-the-self-fulfilling</a>.
@@ -1036,7 +1004,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
