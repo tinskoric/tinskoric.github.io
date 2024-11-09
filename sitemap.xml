@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tins/page/stuff/index.html</loc>
-    <lastmod>2024-06-28T22:03:02.588Z</lastmod>
-  </url>
-  <url>
     <loc>https://tins/page/index.html</loc>
     <lastmod>2024-09-08T21:43:41.368Z</lastmod>
   </url>
@@ -50,6 +46,6 @@
   </url>
   <url>
     <loc>https://tins/page/stuff/posts/TheVibes2022.html</loc>
-    <lastmod>2024-09-08T22:14:04.691Z</lastmod>
+    <lastmod>2024-09-08T23:40:46.282Z</lastmod>
   </url>
 </urlset>

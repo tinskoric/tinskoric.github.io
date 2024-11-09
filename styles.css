@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+    --bg-light: #fbfcfe;
+    --primary-light: #4c48a3;
+    --secondary-light: #3a355f;
+    --accent-light: #1a124e;
+    --text-light: #161617;
+    
+    --bg-dark: #010204;
+    --primary-dark: #615cb7;
+    --secondary-dark: #a49eca;
+    --accent-dark: #bab2ed;
+    --text-dark: #e8e8e9;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 0px;
+    border-bottom: 6px solid var(--primary-light);
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+header .abstraction {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+}
+
+header .abstraction .left-column {
+    display: flex;
+    flex-direction: column;
+    padding-right: 12px;
+}
+
+header .abstraction img {
+    max-height: 256px;
+    object-fit: contain;
+    flex-direction: column;
+}
+
+header .nav-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+    opacity: 80%;
+}
+
+header .style-toggle {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    transform: translateY(85%);
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    font-weight: bold;
+    text-align: center;
+}
+
+header .nav-links {
+    position: relative;
+    top: 100%;
+    left: 0;
+    transform: translateX(110%);
+}
+
+header .nav-links a {
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+header .style-toggle:hover, header .nav-links a:hover{
+    text-decoration: underline;
+    opacity: 100%;
+}
+
+body.dark-mode header .style-toggle, body.dark-mode header .nav-links a {
+    background-color: var(--primary-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode header {
+    border-color: var(--primary-dark);
+}
+
+body.dark-mode header .nav-bar {
+    border-color: var(--primary-dark);
+}
+
+body.dark-mode header .nav-links a {
+    color: var(--text-dark);
+}
+
+.can, .big-can, .empty-tin {
+    border: 1px solid var(--primary-light);
+    border-radius: 10px;
+    margin: 20px 0;
+    border-radius: 1px;
+    background-color: var(--bg-light);
+    box-shadow: 1px 1px 1px var(--secondary-light), -1px -1px 1px var(--accent-light);
+    color: var (--text-light);
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.can {
+    cursor: zoom-in;
+}
+
+body.dark-mode .can, body.dark-mode .big-can, body.dark-mode .empty-tin {
+    border: 1px solid var(--primary-dark);
+    background-color: var(--bg-dark);
+    box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
+    color: var (--text-dark);
+}
+
+.can:hover {
+    transform: scale(1.04);
+    box-shadow: 1px 1px 1px var(--secondary-light), -1px -1px 1px var(--bg-light), 0 0 10px var(--accent-light);
+}
+
+body.dark-mode .can:hover {
+    transform: scale(1.04);
+    box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--bg-dark), 0 0 10px var(--accent-dark);
+}
+
+.can .header, .big-can .header {
+    background-color: var(--secondary-light);
+    color: var(--text-dark);
+    padding: 5px;
+    border-radius: 1px;
+}
+
+.can .body {
+    padding: 5px;
+    overflow: hidden;
+    max-height: 100px; /* Limit the height of non-expanded cans */
+}
+
+.empty-tin .body {
+    padding: 0px;
+    overflow: hidden;
+}
+
+.big-can .body {
+    padding: 5px;
+    overflow: hidden;
+}
+
+body.dark-mode .can, body.dark-mode .empty-tin {
+    box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
+    border-color: var(--primary-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .big-can{
+    box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
+    border-color: var(--primary-dark);
+    color: var(--text-dark);
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
+}
+
+.column {
+    width: 49%;
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
+}
+
+.within-column {
+    width: 49%;
+}
+
+.within-column p {
+    position: relative;
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
+    border-left: 2px solid var(--primary-light);
+    padding-left: 3px;
+    left: 0;
+}
+
+.within-column p:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    left: 7px;
+}
+
+.within-column.dark-mode p {
+    border-left: 2px solid var(--primary-dark);
+}
+
+.input-group-text {
+    color: #1d1e20;
+}
+
+pre.output-code {
+    color: #e8e8e9;
+}
+
+div.callout-note.callout {
+    border-color: var(--accent-light);
+    border-width: 5px;
+}
+
+div.callout-note.callout.dark-mode {
+    border-color: var(--accent-dark);
+    border-width: 5px;
+}
+
+div.callout-note.callout-style-default > .callout-header {
+    background-color: #413d6c;
+    border-radius: 1px;
+}
+
+div.callout-note.callout-style-default > .callout-body {
+    color: #e8e8e9;
+    border-radius: 1px;
+}
+
+.expanded {
+    overflow: auto !important;
+    max-height: none !important;
+    height: auto !important;
+    cursor: zoom-out !important;
+}
+
+#quarto-search {
+    position: absolute;
+    opacity: 80%;
+}
+
+@media (max-width: 768px) {
+    header .abstraction {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .abstraction .left-column {
+        padding-right: 0;
+    }
+
+    header .abstraction img {
+        margin-top: 10px;
+    }
+}
