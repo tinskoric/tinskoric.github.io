@@ -1205,7 +1205,7 @@ function algoliaSearch(query, limit, algoliaOptions) {
         const remappedHits = response.hits.map((hit) => {
           return hit.map((item) => {
             const newItem = { ...item };
-            ["href", "section", "title", "text", "crumbs"].forEach(
+            ["title"].forEach(
               (keyName) => {
                 const mappedName = indexFields[keyName];
                 if (
