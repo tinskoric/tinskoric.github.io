@@ -30,15 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateToggleText();
 
-    const cans = document.querySelectorAll('.can');
+    const cans = document.querySelectorAll('.can, .massive-can');
 
     const closeExpandedCan = () => {
         const expandedCan = document.querySelector('.expanded');
         if (expandedCan) {
             expandedCan.classList.remove('expanded');
             Object.assign(expandedCan.style, expandedCan.originalStyle);
+
+            if (expandedCan.classList.contains('massive-can')) {
+                expandedCan.querySelector('.body').style.maxHeight = '340px';
+            } else {
+                expandedCan.querySelector('.body').style.maxHeight = '100px';
+            }
+
             expandedCan.querySelector('.body').style.overflow = 'hidden';
-            expandedCan.querySelector('.body').style.maxHeight = '100px';
             expandedCan.style.cursor = 'zoom-in';
         }
     };
@@ -56,8 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 Object.assign(can.style, can.originalStyle);
                 can.classList.remove('expanded');
                 can.style.cursor = 'zoom-in';
+
+                if (can.classList.contains('massive-can')) {
+                    can.querySelector('.body').style.maxHeight = '340px';
+                } else {
+                    can.querySelector('.body').style.maxHeight = '100px';
+                }
+
                 can.querySelector('.body').style.overflow = 'hidden';
-                can.querySelector('.body').style.maxHeight = '100px';
             } else {
                 // Close any other expanded Can first
                 closeExpandedCan();

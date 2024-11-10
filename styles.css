@@ -67,11 +67,11 @@ header .nav-bar {
 }
 
 header .style-toggle {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px 5px 0 0;
-    transform: translateY(85%);
+    transform: translateY(-15%);
     background-color: var(--primary-light);
     color: var(--text-light);
     font-weight: bold;
@@ -79,6 +79,7 @@ header .style-toggle {
 }
 
 header .nav-links {
+    margin-left: -7.5359em;
     position: relative;
     top: 100%;
     left: 0;
@@ -97,7 +98,7 @@ header .nav-links a {
 
 header .style-toggle:hover, header .nav-links a:hover{
     text-decoration: underline;
-    opacity: 100%;
+    opacity: 80%;
 }
 
 body.dark-mode header .style-toggle, body.dark-mode header .nav-links a {
@@ -117,7 +118,7 @@ body.dark-mode header .nav-links a {
     color: var(--text-dark);
 }
 
-.can, .big-can, .empty-tin {
+.can, .big-can, .massive-can, .empty-tin {
     border: 1px solid var(--primary-light);
     border-radius: 10px;
     margin: 20px 0;
@@ -131,28 +132,28 @@ body.dark-mode header .nav-links a {
     overflow: hidden;
 }
 
-.can {
+.can, .massive-can {
     cursor: zoom-in;
 }
 
-body.dark-mode .can, body.dark-mode .big-can, body.dark-mode .empty-tin {
+body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, body.dark-mode .empty-tin {
     border: 1px solid var(--primary-dark);
     background-color: var(--bg-dark);
     box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
     color: var (--text-dark);
 }
 
-.can:hover {
+.can:hover, .massive-can:hover {
     transform: scale(1.04);
     box-shadow: 1px 1px 1px var(--secondary-light), -1px -1px 1px var(--bg-light), 0 0 10px var(--accent-light);
 }
 
-body.dark-mode .can:hover {
+body.dark-mode .can:hover, .body.dark-mode .massive-can:hover {
     transform: scale(1.04);
     box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--bg-dark), 0 0 10px var(--accent-dark);
 }
 
-.can .header, .big-can .header {
+.can .header, .big-can .header, .massive-can .header {
     background-color: var(--secondary-light);
     color: var(--text-dark);
     padding: 5px;
@@ -165,6 +166,12 @@ body.dark-mode .can:hover {
     max-height: 100px; /* Limit the height of non-expanded cans */
 }
 
+.massive-can .body {
+    padding: 5px;
+    overflow: hidden;
+    max-height: 346px; /* Limit the height of non-expanded cans */
+}
+
 .empty-tin .body {
     padding: 0px;
     overflow: hidden;
@@ -175,13 +182,7 @@ body.dark-mode .can:hover {
     overflow: hidden;
 }
 
-body.dark-mode .can, body.dark-mode .empty-tin {
-    box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
-    border-color: var(--primary-dark);
-    color: var(--text-dark);
-}
-
-body.dark-mode .big-can{
+body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, .dark-mode .empty-tin {
     box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
     border-color: var(--primary-dark);
     color: var(--text-dark);
