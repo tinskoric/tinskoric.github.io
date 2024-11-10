@@ -67,11 +67,11 @@ header .nav-bar {
 }
 
 header .style-toggle {
-    position: absolute;
+    position: relative;
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 5px 5px 0 0;
-    transform: translateY(-15%);
+    transform: translateY(85%);
     background-color: var(--primary-light);
     color: var(--text-light);
     font-weight: bold;
@@ -79,8 +79,8 @@ header .style-toggle {
 }
 
 header .nav-links {
-    margin-left: -7em;
     position: relative;
+    margin-left: -7em;
     top: 100%;
     left: 0;
     transform: translateX(110%);
@@ -98,7 +98,7 @@ header .nav-links a {
 
 header .style-toggle:hover, header .nav-links a:hover{
     text-decoration: underline;
-    opacity: 80%;
+    opacity: 100%;
 }
 
 body.dark-mode header .style-toggle, body.dark-mode header .nav-links a {
