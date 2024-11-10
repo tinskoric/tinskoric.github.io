@@ -43,7 +43,7 @@ header {
 header .abstraction {
     display: flex;
     justify-content: space-between;
-    width: 98%;
+    width: 94%;
 }
 
 header .abstraction .left-column {
