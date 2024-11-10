@@ -188,17 +188,12 @@ body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, .dar
     color: var(--text-dark);
 }
 
-.columns {
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.1s ease-in;
-    transition: all 0.3s ease-out;
+.columns { 
+    display: flex; justify-content: space-between; transition: all 0.1s ease-in; transition: all 0.3s ease-out;
 }
 
 .column {
-    width: 49%;
-    transition: all 0.1s ease-in;
-    transition: all 0.3s ease-out;
+    width: 49%; transition: all 0.1s ease-in; transition: all 0.3s ease-out;
 }
 
 .within-column {
@@ -206,18 +201,11 @@ body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, .dar
 }
 
 .within-column p {
-    position: relative;
-    transition: all 0.1s ease-in;
-    transition: all 0.3s ease-out;
-    border-left: 2px solid var(--primary-light);
-    padding-left: 3px;
-    left: 0;
+    position: relative; transition: all 0.1s ease-in; transition: all 0.3s ease-out; border-left: 2px solid var(--primary-light); padding-left: 3px; left: 0;
 }
 
 .within-column p:hover {
-    cursor: pointer;
-    transform: scale(1.04);
-    left: 7px;
+    cursor: pointer; transform: scale(1.04); left: 7px;
 }
 
 .within-column.dark-mode p {
@@ -229,27 +217,23 @@ body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, .dar
 }
 
 pre.output-code {
-    color: #e8e8e9;
+    color: #e8e8e9
 }
 
 div.callout-note.callout {
-    border-color: var(--accent-light);
-    border-width: 5px;
+    border-color: var(--accent-light); border-width: 5px;
 }
 
 div.callout-note.callout.dark-mode {
-    border-color: var(--accent-dark);
-    border-width: 5px;
-}
+    border-color: var(--accent-dark); border-width: 5px;
+} div.callout-note.callout-style-default >
 
-div.callout-note.callout-style-default > .callout-header {
-    background-color: #413d6c;
-    border-radius: 1px;
+.callout-header {
+    background-color: #413d6c; border-radius: 1px;
 }
 
 div.callout-note.callout-style-default > .callout-body {
-    color: #e8e8e9;
-    border-radius: 1px;
+    color: #e8e8e9; border-radius: 1px;
 }
 
 .expanded {
@@ -259,21 +243,13 @@ div.callout-note.callout-style-default > .callout-body {
     cursor: zoom-out !important;
 }
 
-#quarto-search {
-    position: absolute;
-    opacity: 80%;
-}
-
 @media (max-width: 768px) {
     header .abstraction {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; align-items: center;
     }
-
     header .abstraction .left-column {
         padding-right: 0;
     }
-
     header .abstraction img {
         margin-top: 10px;
     }
