@@ -136,7 +136,7 @@ body.dark-mode header .nav-links a {
     cursor: zoom-in;
 }
 
-body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, body.dark-mode .empty-tin {
+body.dark-mode .can, body.dark-mode .big-can, body.dark-mode .massive-can, body.dark-mode .empty-tin {
     border: 1px solid var(--primary-dark);
     background-color: var(--bg-dark);
     box-shadow: 1px 1px 1px var(--secondary-dark), -1px -1px 1px var(--accent-dark);
