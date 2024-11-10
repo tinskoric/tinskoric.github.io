@@ -190,11 +190,16 @@ body.dark-mode .can, body.dark-mode .big-can, .body.dark-mode .massive-can, .dar
 }
 
 .columns { 
-    display: flex; justify-content: space-between; transition: all 0.1s ease-in; transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
 }
 
 .column {
-    width: 49%; transition: all 0.1s ease-in; transition: all 0.3s ease-out;
+    width: 49%;
+    transition: all 0.1s ease-in;
+    transition: all 0.3s ease-out;
 }
 
 .within-column {
