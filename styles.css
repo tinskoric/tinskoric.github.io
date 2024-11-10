@@ -43,7 +43,7 @@ header {
 header .abstraction {
     display: flex;
     justify-content: space-between;
-    width: 94%;
+    width: 98%;
 }
 
 header .abstraction .left-column {
@@ -79,7 +79,7 @@ header .style-toggle {
 }
 
 header .nav-links {
-    margin-left: -7.5359em;
+    margin-left: -7.5em;
     position: relative;
     top: 100%;
     left: 0;
