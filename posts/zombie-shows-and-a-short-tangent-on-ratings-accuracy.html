@@ -95,10 +95,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<meta name="mermaid-theme" content="neutral">
-<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -177,83 +173,6 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>Are obvious metrics even reliable? Can we actually trust something like user reviews simply because they are collected in aggregate?</p>
 </blockquote>
-<p>To explain the train of thought that arrived at the question in the above block quote, I’ve provided the following extremely vital (and improperly formatted) flowchart(s):</p>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Flowchart
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A(Wow! How the hell did The Walking Dead only just end?)
-    A --&gt;B{Why and when should a show end?}
-    B --&gt;C(When it stops making money! I love the invisible hand!!!)
-    B --&gt;D[When most people stop watching.]
-    B --&gt;E[When it starts sucking.]
-    D --&gt;F{How do you measure this?}
-    E --&gt;F
-    F --&gt;G[Other metrics of course! Viewership numbers and ratings!]
-    F --&gt;G1{Is profitability not a good enough metric?}
-    G1 --&gt;|Yes it is!|C
-    G1 --&gt;|No, I want good shows, not just shows that make money.|G
-    G --&gt;H{Are these metrics really reliable?}
-    H --&gt;|No.|C
-    H --&gt;|Yes?|I[No they're not, how can you really trust that something like review data on television shows isn't skewed by bias?]
-    I --&gt;|Retry!|H
-    H --&gt;|Maybe.|J[Divine the vibe with data!]
-    J --&gt;|And then...|C
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Unrelated Flowcharts
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-    AA(Am I unreasonably biased against a show I haven't watched in a decade?)
-    AA --&gt;AB(A little bit yeah.)
-
-    AAA(What if a show can't end? What is a world without The Simpsons?)
-    AAA --&gt;AAB(Wow that's heavy, you should be a poet.)
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <p>The immediate answer to the question posed is that user-reviews may be biased by <a href="https://en.wikipedia.org/wiki/Selection_bias#Volunteer_bias">selection bias</a>. <em>Sometimes</em>, perhaps, we can trust user-review aggregates, but other times selection bias is too strong. This is because user-reviews are entirely voluntary at not one but <em>two</em> stages. First (excluding <a href="https://en.wikipedia.org/wiki/Review_bomb">review-bombing</a>), users presumably must choose to watch a show and form an opinion. Second, users must decide that their opinion is worth expressing online in a review. If, for example, a show is slowly dying and only the truest of true fans are left watching, the user-reviews will be biased in aggregate, because those who may otherwise negatively review the show have already dropped out at stage one. This phenomenon isn’t particularly difficult to grasp, but, I think <em>The Walking Dead</em> television show provides a very good example. For the next few sections, I’ll demonstrate how even obvious data can be difficult to trust by using a long-zombified, now-dead, television show as an example. Specifically, I will be looking at viewership statistics and IMDB ratings for <em>The Walking Dead</em> over time.</p>
 </section>
 <section id="the-walking-dead" class="level1" data-number="2">
@@ -289,7 +208,7 @@ Figure&nbsp;1: Zombie Show: TV Viewership of The Walking Dead by Episode
 <br>
 Perhaps many with cable subscriptions just didn’t watch much cable anyways by then. As <span class="citation" data-cites="vox">Molla (<a href="#ref-vox" role="doc-biblioref">2018</a>)</span> points out, “Cable and satellite companies often include TV, internet and telephone for a single reduced price. For many [American cable subscribers], the cost they’d have to pay for internet alone isn’t much less than they would pay for all three services individually, so the perceived value can seem tempting. In turn, the cable companies are able to eke out higher overall monthly fees by throwing in those ‘extras.’” There could be many cable subscribers then and now who don’t actually take much advantage of their cable subscription. However, just because subscribers choose not to watch cable doesn’t mean they <em>can’t</em>. I am sure that if someone had easy access to something, the only reason they wouldn’t use it is because they don’t want to—if someone already has cable, the reason they wouldn’t be watching <em>The Walking Dead</em> is either because they don’t want to or they don’t have time to, and in the latter case, that seems not to have stopped viewership prior. Given what we know, the graph below is functionally the same as <a href="#fig-twd1" class="quarto-xref">Figure&nbsp;1</a> so I’ve put it in a collapsed note to avoid taking up too much space with graphs that convey similar points. If you’d like to view this second graph anyways, just click on the note to expand it.</p>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -298,7 +217,7 @@ The Same Graph as <a href="#fig-twd1" class="quarto-xref">Figure&nbsp;1</a> But 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div>
 
