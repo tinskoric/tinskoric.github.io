@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tins/page/index.html</loc>
-    <lastmod>2025-04-11T05:32:51.275Z</lastmod>
+    <lastmod>2025-06-04T02:27:27.579Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/projects/AnnuityCalculator.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://tins/page/posts/zombie-shows-and-a-short-tangent-on-ratings-accuracy.html</loc>
-    <lastmod>2025-04-11T05:57:26.754Z</lastmod>
+    <lastmod>2025-04-23T22:34:03.201Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/papers/thesis.html</loc>
@@ -31,5 +31,9 @@
   <url>
     <loc>https://tins/page/posts/vibes-based-economics.html</loc>
     <lastmod>2025-04-11T05:20:28.746Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins/page/projects/GraphTool.html</loc>
+    <lastmod>2025-06-04T02:26:16.458Z</lastmod>
   </url>
 </urlset>
