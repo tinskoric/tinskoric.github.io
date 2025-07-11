@@ -1,1 +1,1 @@
-Sitemap: https://tins/page/sitemap.xml
+Sitemap: https://tins.page/sitemap.xml

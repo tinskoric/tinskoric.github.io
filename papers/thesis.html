@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,17 +50,20 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../stuff/logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5b386d0418a3cf6d8fdfed3f0ddd2c91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b3c52f854227b98e341051727d8dbccd.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4eff3c74e157ff9060f5fbb5f965d7de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c18085636129a03eeb7046407eaf1f0f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-91754457b7e7ab6c8f8448a4573d8789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -125,7 +128,169 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
 <!-- content -->
@@ -188,6 +353,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">The Effect of the 2008 Financial Crisis on Bosnian Households</h1>
@@ -225,7 +391,7 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="Resume.pdf">Resume</a>
+<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="mailto:work@skoric.org"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="Resume.pdf">Resume</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -876,8 +1042,7 @@ Figure&nbsp;2: Evolution of Variables of Interest over Time after the 2008 Crisi
 </figcaption>
 </figure>
 </div>
-<div style="page-break-after: always;"></div>
-<p>The changes to investment seen in <a href="#fig-one3" class="quarto-xref">Figure&nbsp;2 (c)</a> show that the growth rate of investment drops sharply below the steady state and is increasing towards the new equilibrium. By year 100 (<span class="math inline">\(\theta\)</span> from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span>), investment is only <span class="math inline">\(12.28\%\)</span> below the steady state. Below are tables showing growth rates by year and the changes in the growth rates illustrating this same dynamic:</p>
+<p></p><div style="page-break-after: always;"></div> The changes to investment seen in <a href="#fig-one3" class="quarto-xref">Figure&nbsp;2 (c)</a> show that the growth rate of investment drops sharply below the steady state and is increasing towards the new equilibrium. By year 100 (<span class="math inline">\(\theta\)</span> from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span>), investment is only <span class="math inline">\(12.28\%\)</span> below the steady state. Below are tables showing growth rates by year and the changes in the growth rates illustrating this same dynamic:<p></p>
 <div id="tbl-seven" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-seven-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1083,150 +1248,73 @@ In the long run, the variables of interest are all below the initial equilibrium
 </section>
 <section id="sec-new_rho_results" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="sec-new_rho_results"><span class="header-section-number">5.1.2</span> Results</h3>
-<p>The variables of interest, <span class="math inline">\(y\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(i\)</span>, all have lower steady-state values with the adjustment to the value of <span class="math inline">\(\rho\)</span> still decreasing following the changes in <span class="math inline">\(\theta\)</span> as in the model without the adjusted value of <span class="math inline">\(\rho\)</span>:</p>
-<div style="page-break-after: always;"></div>
-<div id="tbl-stdy-rho" class="quarto-layout-panel anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-rho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7: Steady States (With Higher Rate of Time Preference <span class="math inline">\(\rho\)</span>)
-</figcaption>
-<div aria-describedby="tbl-stdy-rho-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-rho" style="flex-basis: 50.0%;justify-content: center;">
+<p>The variables of interest, <span class="math inline">\(y\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(i\)</span>, all have lower steady-state values with the adjustment to the value of <span class="math inline">\(\rho\)</span> still decreasing following the changes in <span class="math inline">\(\theta\)</span> as in the model without the adjusted value of <span class="math inline">\(\rho\)</span>: </p><div style="page-break-after: always;"></div> ::: {#tbl-stdy-rho layout-ncol=“2”} | | <span class="math inline">\(~~~~~y~~\)</span> | <span class="math inline">\(~~~~~c~~\)</span> | <span class="math inline">\(~~~~~i~~\)</span> | |—————–|———-|———-|———-| | <span class="math inline">\(\theta=0.72\)</span> | <span class="math inline">\(~~~2.91\)</span> | <span class="math inline">\(~~~2.24\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(\theta=0.89\)</span> | <span class="math inline">\(~~~2.89\)</span> | <span class="math inline">\(~~2.23\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-0.50\)</span> | <span class="math inline">\(-0.47\)</span> | <span class="math inline">\(-1.49\)</span> | | <span class="math inline">\(\theta=1.25\)</span> | <span class="math inline">\(~~~2.86\)</span> | <span class="math inline">\(~~~2.21\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-1.53\)</span> | <span class="math inline">\(-1.45\)</span> | <span class="math inline">\(-4.52\)</span> | | <span class="math inline">\(\theta=1.61\)</span> | <span class="math inline">\(~~~2.83\)</span> | <span class="math inline">\(~~~2.19\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-2.53\)</span> | <span class="math inline">\(-2.41\)</span> | <span class="math inline">\(-7.40\)</span> |<p></p>
 <div id="tbl-stdy-rho1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-rho1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) <span class="math inline">\(\rho=0.03776\)</span>
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-rho1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: <span class="math inline">\(\rho=0.03776\)</span>
 </figcaption>
 <div aria-describedby="tbl-stdy-rho1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
+<th></th>
+<th><span class="math inline">\(~~~~~y~~\)</span></th>
+<th><span class="math inline">\(~~~~~c~~\)</span></th>
+<th><span class="math inline">\(~~~~~i~~\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.91\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.24\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.72\)</span></td>
+<td><span class="math inline">\(~~~2.48\)</span></td>
+<td><span class="math inline">\(~~~1.93\)</span></td>
+<td><span class="math inline">\(~~~0.04\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~2.23\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.89\)</span></td>
+<td><span class="math inline">\(~~~2.57\)</span></td>
+<td><span class="math inline">\(~~~1.92\)</span></td>
+<td><span class="math inline">\(~~~0.04\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-0.50\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.47\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.49\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-0.36\)</span></td>
+<td><span class="math inline">\(-0.35\)</span></td>
+<td><span class="math inline">\(-1.09\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.21\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.25\)</span></td>
+<td><span class="math inline">\(~~~2.45\)</span></td>
+<td><span class="math inline">\(~~~1.90\)</span></td>
+<td><span class="math inline">\(~~~0.03\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.45\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-4.52\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-1.12\)</span></td>
+<td><span class="math inline">\(-1.08\)</span></td>
+<td><span class="math inline">\(-3.33\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.83\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.19\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.61\)</span></td>
+<td><span class="math inline">\(~~~2.44\)</span></td>
+<td><span class="math inline">\(~~~1.89\)</span></td>
+<td><span class="math inline">\(~~~0.03\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-2.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-2.41\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-7.40\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-1.86\)</span></td>
+<td><span class="math inline">\(-1.80\)</span></td>
+<td><span class="math inline">\(-5.49\)</span></td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-rho" style="flex-basis: 50.0%;justify-content: center;">
-<div id="tbl-stdy-rho2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-rho2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) <span class="math inline">\(\rho=0.05243\)</span>
-</figcaption>
-<div aria-describedby="tbl-stdy-rho2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.48\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.93\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.04\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.57\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.92\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.04\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-0.36\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.35\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.09\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.45\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.90\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.03\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.12\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.08\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-3.33\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.44\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.03\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.80\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-5.49\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</div>
-<p>As seen in <a href="#tbl-stdy-rho" class="quarto-xref">Table&nbsp;7</a>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the higher value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(0.36\%\)</span>, <span class="math inline">\(0.35\%\)</span>, and <span class="math inline">\(1.09\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(2.45\%\)</span>, <span class="math inline">\(1.90\%\)</span>, and <span class="math inline">\(3.33\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by <span class="math inline">\(1.86\%\)</span>, <span class="math inline">\(1.80\%\)</span>, and <span class="math inline">\(5.49\%\)</span> respectively. However, both the steady-state levels per each value of <span class="math inline">\(\theta\)</span>, and the changes between them are slightly different. Output is decreased in <a href="#tbl-stdy-rho2" class="quarto-xref">Table&nbsp;7 (b)</a> (new value of <span class="math inline">\(\rho\)</span>) when compared to <a href="#tbl-stdy-rho1" class="quarto-xref">Table&nbsp;7 (a)</a> (initial <span class="math inline">\(\rho\)</span>), alongside consumption and investment, but the ratios of the latter two to the former remain about the same as seen when comparing their initial steady states.<br>
+<p>: <span class="math inline">\(\rho=0.05243\)</span> {#tbl-stdy-rho2}</p>
+<p>Steady States (With Higher Rate of Time Preference <span class="math inline">\(\rho\)</span>) :::</p>
+<p>As seen in <strong>?@tbl-stdy-rho</strong>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the higher value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(0.36\%\)</span>, <span class="math inline">\(0.35\%\)</span>, and <span class="math inline">\(1.09\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(2.45\%\)</span>, <span class="math inline">\(1.90\%\)</span>, and <span class="math inline">\(3.33\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by <span class="math inline">\(1.86\%\)</span>, <span class="math inline">\(1.80\%\)</span>, and <span class="math inline">\(5.49\%\)</span> respectively. However, both the steady-state levels per each value of <span class="math inline">\(\theta\)</span>, and the changes between them are slightly different. Output is decreased in <strong>?@tbl-stdy-rho2</strong> (new value of <span class="math inline">\(\rho\)</span>) when compared to <a href="#tbl-stdy-rho1" class="quarto-xref">Table&nbsp;7</a> (initial <span class="math inline">\(\rho\)</span>), alongside consumption and investment, but the ratios of the latter two to the former remain about the same as seen when comparing their initial steady states.<br>
 <br>
 Using the new value for the rate of time preference, I simulate the quantitative impacts on the Bosnian economy of the increase in risk aversion from the 2008 crisis. I only simulate the change from <span class="math inline">\(\theta=0.72\)</span> to <span class="math inline">\(\theta=1.61\)</span> since the difference in this case is the new value of <span class="math inline">\(\rho\)</span>. Below are time paths comparing the change in the coefficient of relative risk aversion depending on the value of the rate of time preference (<span class="math inline">\(y\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(i\)</span> when <span class="math inline">\(\theta\)</span> increases from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span> for when <span class="math inline">\(\rho\)</span> is <span class="math inline">\(0.03776\)</span> and <span class="math inline">\(0.05243\)</span>, <span class="math inline">\(t=\)</span> years):</p>
 <div id="fig-onerho" class="quarto-layout-panel">
@@ -1280,9 +1368,8 @@ Figure&nbsp;3: Evolution of Variables of Interest over Time after 2008 Crisis (W
 </figcaption>
 </figure>
 </div>
-<div style="page-break-after: always;"></div>
-<p>The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\(\rho=0.03776\)</span> and <span class="math inline">\(\rho=0.05243\)</span> respectively. The time paths of output and consumption are very similar to those seen in <a href="#fig-one1" class="quarto-xref">Figure&nbsp;2 (a)</a> and <a href="#fig-one" class="quarto-xref">Figure&nbsp;2</a>, although that of consumption does become negative by year 20. This slight difference in the time path for consumption leads the time path for investment to increase further as time passes. This dynamic of consumption dropping more steeply with time makes sense intuitively: a higher rate of time preference—the premium for impatience—will result in greater emphasis being placed on consumption in earlier years, with later years increasingly written off. These dynamics show that the model is fairly robust.<br>
-</p>
+<p></p><div style="page-break-after: always;"></div> The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\(\rho=0.03776\)</span> and <span class="math inline">\(\rho=0.05243\)</span> respectively. The time paths of output and consumption are very similar to those seen in <a href="#fig-one1" class="quarto-xref">Figure&nbsp;2 (a)</a> and <a href="#fig-one" class="quarto-xref">Figure&nbsp;2</a>, although that of consumption does become negative by year 20. This slight difference in the time path for consumption leads the time path for investment to increase further as time passes. This dynamic of consumption dropping more steeply with time makes sense intuitively: a higher rate of time preference—the premium for impatience—will result in greater emphasis being placed on consumption in earlier years, with later years increasingly written off. These dynamics show that the model is fairly robust.<br>
+<p></p>
 </section>
 </section>
 <section id="sec-new_tsy" class="level2" data-number="5.2">
@@ -1296,150 +1383,73 @@ Figure&nbsp;3: Evolution of Variables of Interest over Time after 2008 Crisis (W
 </section>
 <section id="sec-new_tsy_results" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="sec-new_tsy_results"><span class="header-section-number">5.2.2</span> Results</h3>
-<p>Only <span class="math inline">\(c\)</span> has a different—higher— steady-state value when compared to <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>.</p>
-<div style="page-break-after: always;"></div>
-<div id="tbl-stdy-tsy" class="quarto-layout-panel anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-tsy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;8: Steady States (With Higher Tax Ratio <span class="math inline">\(T \over Y\)</span>)
-</figcaption>
-<div aria-describedby="tbl-stdy-tsy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-tsy" style="flex-basis: 50.0%;justify-content: center;">
+<p>Only <span class="math inline">\(c\)</span> has a different—higher— steady-state value when compared to <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>. </p><div style="page-break-after: always;"></div> ::: {#tbl-stdy-tsy layout-ncol=“2”} | | <span class="math inline">\(~~~~~y~~\)</span> | <span class="math inline">\(~~~~~c~~\)</span> | <span class="math inline">\(~~~~~i~~\)</span> | |—————–|———-|———-|———-| | <span class="math inline">\(\theta=0.72\)</span> | <span class="math inline">\(~~~2.91\)</span> | <span class="math inline">\(~~~2.24\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(\theta=0.89\)</span> | <span class="math inline">\(~~~2.89\)</span> | <span class="math inline">\(~~~2.23\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-0.50\)</span> | <span class="math inline">\(-0.47\)</span> | <span class="math inline">\(-1.49\)</span> | | <span class="math inline">\(\theta=1.25\)</span> | <span class="math inline">\(~~~2.86\)</span> | <span class="math inline">\(~~~2.21\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-1.53\)</span> | <span class="math inline">\(-1.45\)</span> | <span class="math inline">\(-4.52\)</span> | | <span class="math inline">\(\theta=1.61\)</span> | <span class="math inline">\(~~~2.83\)</span> | <span class="math inline">\(~~~2.19\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-2.53\)</span> | <span class="math inline">\(-2.41\)</span> | <span class="math inline">\(-7.40\)</span> |<p></p>
 <div id="tbl-stdy-tsy1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-tsy1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) <span class="math inline">\({T \over Y}=0.20990\)</span>
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-tsy1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8: <span class="math inline">\({T \over Y}=0.20990\)</span>
 </figcaption>
 <div aria-describedby="tbl-stdy-tsy1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
+<th></th>
+<th><span class="math inline">\(~~~~~y~~\)</span></th>
+<th><span class="math inline">\(~~~~~c~~\)</span></th>
+<th><span class="math inline">\(~~~~~i~~\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.91\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.24\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.72\)</span></td>
+<td><span class="math inline">\(~~~2.91\)</span></td>
+<td><span class="math inline">\(~~~1,85\)</span></td>
+<td><span class="math inline">\(~~~0.06\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.23\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.89\)</span></td>
+<td><span class="math inline">\(~~~2.89\)</span></td>
+<td><span class="math inline">\(~~~1.85\)</span></td>
+<td><span class="math inline">\(~~~0.06\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-0.50\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.47\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.49\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-0.50\)</span></td>
+<td><span class="math inline">\(-0.47\)</span></td>
+<td><span class="math inline">\(-1.49\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.21\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.25\)</span></td>
+<td><span class="math inline">\(~~~2.86\)</span></td>
+<td><span class="math inline">\(~~~1.83\)</span></td>
+<td><span class="math inline">\(~~0.05\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.45\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-4.52\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-1.53\)</span></td>
+<td><span class="math inline">\(-1.44\)</span></td>
+<td><span class="math inline">\(-4.52\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.83\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.19\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.61\)</span></td>
+<td><span class="math inline">\(~~~2.83\)</span></td>
+<td><span class="math inline">\(~~~1.81\)</span></td>
+<td><span class="math inline">\(~~~0.05\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-2.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-2.41\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-7.40\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-2.53\)</span></td>
+<td><span class="math inline">\(-2.38\)</span></td>
+<td><span class="math inline">\(-7.40\)</span></td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-tsy" style="flex-basis: 50.0%;justify-content: center;">
-<div id="tbl-stdy-tsy2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-tsy2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) <span class="math inline">\({T \over Y}=0.34228\)</span>
-</figcaption>
-<div aria-describedby="tbl-stdy-tsy2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.91\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1,85\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.85\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-0.50\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.47\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.49\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.83\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~0.05\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.44\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-4.52\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.83\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.81\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-2.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-2.38\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-7.40\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</div>
-<p>The resulting steady state with the updated value of <span class="math inline">\(T \over Y\)</span> shows no change to investment as a share of GDP, with taxes assuming a portion of the share held prior by consumption. The model now underestimates consumption and still greatly underestimates investment in the steady state. As seen in <a href="#tbl-stdy-tsy" class="quarto-xref">Table&nbsp;8</a>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(0.50\%\)</span>, <span class="math inline">\(0.47\%\)</span>, <span class="math inline">\(1.49\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(1.53\%\)</span>, <span class="math inline">\(1.44\%\)</span>, and <span class="math inline">\(4.52\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by <span class="math inline">\(2.53\%\)</span>, <span class="math inline">\(2.38\%\)</span>, and <span class="math inline">\(7.40\%\)</span> respectively. However, only the steady state levels and changes of consumption are different per each value of <span class="math inline">\(\theta\)</span> when <a href="#tbl-stdy-tsy2" class="quarto-xref">Table&nbsp;8 (b)</a> and <a href="#tbl-stdy-tsy1" class="quarto-xref">Table&nbsp;8 (a)</a> are compared—the levels are the same for output and investment as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a> as well as the changes between steady states. The change to the tax ratio has almost no effect beyond snatching some of the share of output once held by consumption. Unlike the change to <span class="math inline">\(\rho\)</span> from the prior section, output is not reduced at all by this change to <span class="math inline">\(T \over Y\)</span>, and instead, it is the ratio of consumption to output that is changed, rather than the level of output. This is consistent with <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, where it was demonstrated in <a href="#tbl-actvmodelNoTax" class="quarto-xref">Table&nbsp;3</a> that changes in taxation only affect consumption in the RCK model.<br>
+<p>: <span class="math inline">\({T \over Y}=0.34228\)</span> {#tbl-stdy-tsy2}</p>
+<p>Steady States (With Higher Tax Ratio <span class="math inline">\(T \over Y\)</span>) :::</p>
+<p>The resulting steady state with the updated value of <span class="math inline">\(T \over Y\)</span> shows no change to investment as a share of GDP, with taxes assuming a portion of the share held prior by consumption. The model now underestimates consumption and still greatly underestimates investment in the steady state. As seen in <strong>?@tbl-stdy-tsy</strong>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(0.50\%\)</span>, <span class="math inline">\(0.47\%\)</span>, <span class="math inline">\(1.49\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(1.53\%\)</span>, <span class="math inline">\(1.44\%\)</span>, and <span class="math inline">\(4.52\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by <span class="math inline">\(2.53\%\)</span>, <span class="math inline">\(2.38\%\)</span>, and <span class="math inline">\(7.40\%\)</span> respectively. However, only the steady state levels and changes of consumption are different per each value of <span class="math inline">\(\theta\)</span> when <strong>?@tbl-stdy-tsy2</strong> and <a href="#tbl-stdy-tsy1" class="quarto-xref">Table&nbsp;8</a> are compared—the levels are the same for output and investment as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a> as well as the changes between steady states. The change to the tax ratio has almost no effect beyond snatching some of the share of output once held by consumption. Unlike the change to <span class="math inline">\(\rho\)</span> from the prior section, output is not reduced at all by this change to <span class="math inline">\(T \over Y\)</span>, and instead, it is the ratio of consumption to output that is changed, rather than the level of output. This is consistent with <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, where it was demonstrated in <a href="#tbl-actvmodelNoTax" class="quarto-xref">Table&nbsp;3</a> that changes in taxation only affect consumption in the RCK model.<br>
 <br>
 Using the new value for the tax ratio, I simulate the quantitative impacts on the Bosnian economy of the increase in risk aversion from the 2008 crisis. Below are time paths comparing the change in the coefficient of relative risk aversion depending on the value of the tax ratio (<span class="math inline">\(y\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(i\)</span> when <span class="math inline">\(\theta\)</span> increases from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span> for when <span class="math inline">\(T \over Y\)</span> is <span class="math inline">\(0.20990\)</span> and <span class="math inline">\(0.34228\)</span>, <span class="math inline">\(t=\)</span> years):</p>
 <div id="fig-onetsy" class="quarto-layout-panel">
@@ -1493,9 +1503,8 @@ Figure&nbsp;4: Evolution of Variables of Interest over Time after 2008 Crisis (W
 </figcaption>
 </figure>
 </div>
-<div style="page-break-after: always;"></div>
-<p>The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\({T \over Y}=0.20990\)</span> and <span class="math inline">\({T \over Y}=0\)</span> respectively. As can be seen, the resulting changes lie entirely with consumption, with it being significantly higher in level at all points in the time path. Do these results imply anything about tax cuts as a policy to stimulate investment? Not really. Again, this is more a reflection of the shortcomings of a closed economy model imposed on an economy with a high trade deficit. However, it is not unreasonable to say that cutting taxes to spur investment would similarly not function as a one-to-one interaction, with much of the difference rather being saved or consumed. Either way, the dynamics of the model are identical following the change in the tax ratio, with consumption only being higher in absolute <em>level</em>. This is consistent with what was discussed in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, and is further evidence of robustness in terms of dynamic results from the model.<br>
-</p>
+<p></p><div style="page-break-after: always;"></div> The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\({T \over Y}=0.20990\)</span> and <span class="math inline">\({T \over Y}=0\)</span> respectively. As can be seen, the resulting changes lie entirely with consumption, with it being significantly higher in level at all points in the time path. Do these results imply anything about tax cuts as a policy to stimulate investment? Not really. Again, this is more a reflection of the shortcomings of a closed economy model imposed on an economy with a high trade deficit. However, it is not unreasonable to say that cutting taxes to spur investment would similarly not function as a one-to-one interaction, with much of the difference rather being saved or consumed. Either way, the dynamics of the model are identical following the change in the tax ratio, with consumption only being higher in absolute <em>level</em>. This is consistent with what was discussed in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, and is further evidence of robustness in terms of dynamic results from the model.<br>
+<p></p>
 </section>
 </section>
 <section id="sec-new_delta" class="level2" data-number="5.3">
@@ -1527,150 +1536,73 @@ c=k^{\alpha}-k(\delta+n+g)-T \label{eq:class_eq_30} \tag{30}
 </section>
 <section id="sec-new_delta_results" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="sec-new_delta_results"><span class="header-section-number">5.3.2</span> Results</h3>
-<p>The steady-state outcomes across values of <span class="math inline">\(\theta\)</span> show a clear departure from those found in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>. While <span class="math inline">\(y\)</span> and <span class="math inline">\(c\)</span> are lower across steady states, <span class="math inline">\(i\)</span> is higher with the non-zero value of <span class="math inline">\(\delta\)</span>.</p>
-<div style="page-break-after: always;"></div>
-<div id="tbl-stdy-delta" class="quarto-layout-panel anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-delta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;9: Steady States (With Depreciation <span class="math inline">\(\delta\)</span>)
-</figcaption>
-<div aria-describedby="tbl-stdy-delta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-delta" style="flex-basis: 50.0%;justify-content: center;">
+<p>The steady-state outcomes across values of <span class="math inline">\(\theta\)</span> show a clear departure from those found in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>. While <span class="math inline">\(y\)</span> and <span class="math inline">\(c\)</span> are lower across steady states, <span class="math inline">\(i\)</span> is higher with the non-zero value of <span class="math inline">\(\delta\)</span>. </p><div style="page-break-after: always;"></div> ::: {#tbl-stdy-delta layout-ncol=“2”} | | <span class="math inline">\(~~~~~y~~\)</span> | <span class="math inline">\(~~~~~c~~\)</span> | <span class="math inline">\(~~~~~i~~\)</span> | |—————–|———-|———-|———-| | <span class="math inline">\(\theta=0.72\)</span> | <span class="math inline">\(~~~2.91\)</span> | <span class="math inline">\(~~~2.24\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(\theta=0.89\)</span> | <span class="math inline">\(~~~2.89\)</span> | <span class="math inline">\(~~~2.23\)</span> | <span class="math inline">\(~~~0.06\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-0.50\)</span> | <span class="math inline">\(-0.47\)</span> | <span class="math inline">\(-1.49\)</span> | | <span class="math inline">\(\theta=1.25\)</span> | <span class="math inline">\(~~~2.86\)</span> | <span class="math inline">\(~~~2.21\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-1.53\)</span> | <span class="math inline">\(-1.45\)</span> | <span class="math inline">\(-4.52\)</span> | | <span class="math inline">\(\theta=1.61\)</span> | <span class="math inline">\(~~~2.83\)</span> | <span class="math inline">\(~~~2.19\)</span> | <span class="math inline">\(~~~0.05\)</span> | | <span class="math inline">\(~~~\Delta\)</span> (%) | <span class="math inline">\(-2.53\)</span> | <span class="math inline">\(-2.41\)</span> | <span class="math inline">\(-7.40\)</span> |<p></p>
 <div id="tbl-stdy-delta1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-delta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) <span class="math inline">\(\delta=0\)</span>
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-stdy-delta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9: <span class="math inline">\(\delta=0\)</span>
 </figcaption>
 <div aria-describedby="tbl-stdy-delta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
+<th></th>
+<th><span class="math inline">\(~~~~~y~~\)</span></th>
+<th><span class="math inline">\(~~~~~c~~\)</span></th>
+<th><span class="math inline">\(~~~~~i~~\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.91\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.24\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.72\)</span></td>
+<td><span class="math inline">\(~~~1.97\)</span></td>
+<td><span class="math inline">\(~~~1.05\)</span></td>
+<td><span class="math inline">\(~~~0.51\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.23\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.06\)</span></td>
+<td><span class="math inline">\(\theta=0.89\)</span></td>
+<td><span class="math inline">\(~~~1.86\)</span></td>
+<td><span class="math inline">\(~~~1.04\)</span></td>
+<td><span class="math inline">\(~~~0.42\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-0.50\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.47\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.49\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-6.01\)</span></td>
+<td><span class="math inline">\(-0.68\)</span></td>
+<td><span class="math inline">\(-16.96\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.21\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.25\)</span></td>
+<td><span class="math inline">\(~~~1.66\)</span></td>
+<td><span class="math inline">\(~~~1.01\)</span></td>
+<td><span class="math inline">\(~~~0.30\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-1.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-1.45\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-4.52\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-15.82\)</span></td>
+<td><span class="math inline">\(-3.87\)</span></td>
+<td><span class="math inline">\(-40.35\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.83\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~2.19\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.05\)</span></td>
+<td><span class="math inline">\(\theta=1.61\)</span></td>
+<td><span class="math inline">\(~~~1.52\)</span></td>
+<td><span class="math inline">\(~~~0.97\)</span></td>
+<td><span class="math inline">\(~~~0.23\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-2.53\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-2.41\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-7.40\)</span></td>
+<td><span class="math inline">\(~~~\Delta\)</span> (%)</td>
+<td><span class="math inline">\(-23.09\)</span></td>
+<td><span class="math inline">\(-7.80\)</span></td>
+<td><span class="math inline">\(-54.50\)</span></td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="tbl-stdy-delta" style="flex-basis: 50.0%;justify-content: center;">
-<div id="tbl-stdy-delta2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-subfloat-caption quarto-subfloat-tbl" id="tbl-stdy-delta2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) <span class="math inline">\(\delta=0.06403\)</span>
-</figcaption>
-<div aria-describedby="tbl-stdy-delta2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~y~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~c~~\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(~~~~~i~~\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.72\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.97\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.05\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.51\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=0.89\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.86\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.04\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.42\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-6.01\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-0.68\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-16.96\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.25\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.66\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.01\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.30\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-15.82\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-3.87\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-40.35\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\theta=1.61\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~1.52\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.97\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(~~~0.23\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(~~~\Delta\)</span> (%)</td>
-<td style="text-align: left;"><span class="math inline">\(-23.09\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-7.80\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(-54.50\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</figure>
-</div>
-<p>As seen in <a href="#tbl-stdy-delta" class="quarto-xref">Table&nbsp;9</a>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(6.01\%\)</span>, <span class="math inline">\(0.68\%\)</span>, and <span class="math inline">\(16.96\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(15.82\%\)</span>, <span class="math inline">\(3.87\%\)</span>, and <span class="math inline">\(40.35\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by $23.09%$, $7.80%$, and <span class="math inline">\(54.50\%\)</span> respectively. However, both the steady-state levels per each value of <span class="math inline">\(\theta\)</span>, and the changes between them are all very different. Introducing depreciation, <span class="math inline">\(\delta\)</span>, greatly reduces the steady-state levels of output and consumption across all values of <span class="math inline">\(\theta\)</span> and greatly magnifies the size of their changes between steady-state levels. Additionally, the results of investment are very significantly affected by depreciation. The dynamic response of investment is <em>increased</em> ten-fold and decreases sharply between <span class="math inline">\(\theta\)</span> values. The introduction of depreciation has <em>both</em> reduced output <em>and</em> changed the respective shares of consumption and investment in it. A change in the <em>level</em> makes sense intuitively. First, if assets depreciate output is lost by their depreciation. Second, if assets depreciate, it is necessary to invest in them to prevent further losses to output. Together these two realities explain the level but not the dynamic response.<br>
+<p>: <span class="math inline">\(\delta=0.06403\)</span> {#tbl-stdy-delta2}</p>
+<p>Steady States (With Depreciation <span class="math inline">\(\delta\)</span>) :::</p>
+<p>As seen in <strong>?@tbl-stdy-delta</strong>, just as in <a href="#tbl-stdy" class="quarto-xref">Table&nbsp;4</a>, no matter the value of <span class="math inline">\(\theta\)</span>, all variables of interest decrease between steady states. When <span class="math inline">\(\theta=0.89\)</span>, output, consumption, and investment decrease by <span class="math inline">\(6.01\%\)</span>, <span class="math inline">\(0.68\%\)</span>, and <span class="math inline">\(16.96\%\)</span> respectively. When <span class="math inline">\(\theta=1.25\)</span>, output, consumption, and investment decrease by <span class="math inline">\(15.82\%\)</span>, <span class="math inline">\(3.87\%\)</span>, and <span class="math inline">\(40.35\%\)</span> respectively. When <span class="math inline">\(\theta=1.61\)</span>, output, consumption, and investment decrease by $23.09%$, $7.80%$, and <span class="math inline">\(54.50\%\)</span> respectively. However, both the steady-state levels per each value of <span class="math inline">\(\theta\)</span>, and the changes between them are all very different. Introducing depreciation, <span class="math inline">\(\delta\)</span>, greatly reduces the steady-state levels of output and consumption across all values of <span class="math inline">\(\theta\)</span> and greatly magnifies the size of their changes between steady-state levels. Additionally, the results of investment are very significantly affected by depreciation. The dynamic response of investment is <em>increased</em> ten-fold and decreases sharply between <span class="math inline">\(\theta\)</span> values. The introduction of depreciation has <em>both</em> reduced output <em>and</em> changed the respective shares of consumption and investment in it. A change in the <em>level</em> makes sense intuitively. First, if assets depreciate output is lost by their depreciation. Second, if assets depreciate, it is necessary to invest in them to prevent further losses to output. Together these two realities explain the level but not the dynamic response.<br>
 <br>
 Using the new value for depreciation, I simulate the quantitative impacts on the Bosnian economy of the increase in risk aversion from the 2008 crisis. Below are time paths comparing the change in the coefficient of relative risk aversion depending on the value of depreciation (<span class="math inline">\(y\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(i\)</span> when <span class="math inline">\(\theta\)</span> increases from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span> for when <span class="math inline">\(\delta\)</span> is <span class="math inline">\(0\)</span> and <span class="math inline">\(0.06403~\)</span>, <span class="math inline">\(t=\)</span> years):</p>
 <div id="fig-onedelta" class="quarto-layout-panel">
@@ -1724,9 +1656,8 @@ Figure&nbsp;5: Evolution of Variables of Interest over Time after 2008 Crisis (W
 </figcaption>
 </figure>
 </div>
-<div style="page-break-after: always;"></div>
-<p>The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\(\delta=0\)</span> and <span class="math inline">\(\delta=0.06403\)</span> respectively. As can be seen, the resulting changes starkly contrast the initial time paths seen in <a href="#fig-one" class="quarto-xref">Figure&nbsp;2</a>. For example, output and consumption begin above their steady states as still expected but decrease so sharply that the first few periods are cut off from the graphs. Investment, by contrast, sees the opposite and is significantly higher across time when compared to <a href="#fig-one3" class="quarto-xref">Figure&nbsp;2 (c)</a>. The dynamics here are very different from those of the model without depreciation, and evidence that my results with the baseline calibration are <em>not</em> robust to new values of <span class="math inline">\(\delta\)</span> as far as the dynamic response to investment is concerned.<br>
-</p>
+<p></p><div style="page-break-after: always;"></div> The dashed and dotted lines in the above figures show the steady state prior to the change in <span class="math inline">\(\theta\)</span> when <span class="math inline">\(\delta=0\)</span> and <span class="math inline">\(\delta=0.06403\)</span> respectively. As can be seen, the resulting changes starkly contrast the initial time paths seen in <a href="#fig-one" class="quarto-xref">Figure&nbsp;2</a>. For example, output and consumption begin above their steady states as still expected but decrease so sharply that the first few periods are cut off from the graphs. Investment, by contrast, sees the opposite and is significantly higher across time when compared to <a href="#fig-one3" class="quarto-xref">Figure&nbsp;2 (c)</a>. The dynamics here are very different from those of the model without depreciation, and evidence that my results with the baseline calibration are <em>not</em> robust to new values of <span class="math inline">\(\delta\)</span> as far as the dynamic response to investment is concerned.<br>
+<p></p>
 </section>
 </section>
 </section>
@@ -1922,380 +1853,255 @@ between steady states characterized by [Theta]=0.72 to<br>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/tins\.page");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
       });
     }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/tins\/page");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        return container.innerHTML
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -2303,186 +2109,219 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ 2025 ❤️ 
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://tins.page">
+<p>Tin Skoric</p>
+</a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tinskoric/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tinskoric/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:work@skoric.org">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
+<p>Site Source</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

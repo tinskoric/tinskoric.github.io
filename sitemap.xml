@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tins/page/index.html</loc>
-    <lastmod>2025-06-04T02:27:27.579Z</lastmod>
+    <lastmod>2025-07-11T16:52:46.401Z</lastmod>
   </url>
   <url>
     <loc>https://tins/page/projects/AnnuityCalculator.html</loc>
@@ -35,5 +35,41 @@
   <url>
     <loc>https://tins/page/projects/GraphTool.html</loc>
     <lastmod>2025-06-04T02:26:16.458Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/index.html</loc>
+    <lastmod>2025-07-11T17:00:14.778Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/papers/thesis.html</loc>
+    <lastmod>2025-07-11T17:02:59.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/papers/brexit-and-the-phillips-curve.html</loc>
+    <lastmod>2025-07-11T17:00:56.903Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/papers/the-phillips-curve-is-alive-and-well-in-2023.html</loc>
+    <lastmod>2025-07-11T17:02:48.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/posts/zombie-shows-and-a-short-tangent-on-ratings-accuracy.html</loc>
+    <lastmod>2025-07-11T17:05:17.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/projects/AnnuityCalculator.html</loc>
+    <lastmod>2025-07-11T17:05:23.378Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/projects/GraphTool.html</loc>
+    <lastmod>2025-07-11T17:05:30.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/posts/the-vibes-from-2022.html</loc>
+    <lastmod>2025-07-11T17:03:10.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tins.page/posts/vibes-based-economics.html</loc>
+    <lastmod>2025-07-11T17:03:14.678Z</lastmod>
   </url>
 </urlset>
