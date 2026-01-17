@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../stuff/logo.png" rel="icon" type="image/png">
+<link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -62,9 +62,9 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-91754457b7e7ab6c8f8448a4573d8789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-95617a11274424b78d61d27e506c8caa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -351,7 +351,7 @@ Figure&nbsp;1: Harvard IOP Youth Poll; Fall 2023
 </section>
 <section id="measuring-sentiments" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Measuring Sentiments</h1>
-<p>To see how sentiment has changed compared to economic conditions, we need a measure of sentiment and a common economic indicator to compare. To keep things simple, I use consumer price index <span class="citation" data-cites="CPI">(<a href="#ref-CPI" role="doc-biblioref"><strong>CPI?</strong></a>)</span> inflation as the indicator of reference (PCE is better but CPI is what most mass media uses) and the consumer confidence index <span class="citation" data-cites="CCI">(<a href="#ref-CCI" role="doc-biblioref"><strong>CCI?</strong></a>)</span> to measure sentiment. I chose inflation because it is a metric that makes headlines, and which has some correlation with the sentiment metric when plotted. Don’t worry about stationarity econometricians, this is not about the number of inflation, it’s about the number of it that turns heads. I’ve elected to employ a one-month lag of inflation in comparing it to consumer sentiment since it would be the preceding month’s inflation that is known in the month of each consumer confidence survey. The time period of both datasets is January 2010 to June 2024<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Before proceeding, only one more thing is necessary.<br>
+<p>To see how sentiment has changed compared to economic conditions, we need a measure of sentiment and a common economic indicator to compare. To keep things simple, I use personal consumption expenditures <span class="citation" data-cites="PCE">(<a href="#ref-PCE" role="doc-biblioref"><span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI)”</span> 2024</a>)</span> as the indicator of reference for inflation and the consumer confidence index <span class="citation" data-cites="oecd">(<a href="#ref-oecd" role="doc-biblioref"><span>“Consumer Confidence Index (CCI)”</span> 2024</a>)</span> to measure sentiment. I chose inflation because it is a metric that makes headlines, and which has some correlation with the sentiment metric when plotted. Don’t worry about stationarity econometricians, this is not about the number of inflation, it’s about the number of it that turns heads. I’ve elected to employ a one-month lag of inflation in comparing it to consumer sentiment since it would be the preceding month’s inflation that is known in the month of each consumer confidence survey. The time period of both datasets is January 2010 to June 2024<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Before proceeding, only one more thing is necessary.<br>
 <br>
 Although we are using CPI inflation data in this comparison, as mentioned in the above paragraph, we are looking for what makes headlines. This is to say that when inflation is on target, it is unlikely that it is a considerable factor in terms of consumer sentiment. Who was talking about inflation in December of the year 2020? In addition to simply grabbing inflation data, it is necessary to create a benchmark for the <em>kind of inflation</em> that makes headlines. To do this without going through the pain of actually aggregating news articles manually, I use Google Trends with the query “Inflation (Topic)” specifically concerning Google News searches <span class="citation" data-cites="google">(<a href="#ref-google" role="doc-biblioref"><span>“Inflation (Topic)”</span> 2024</a>)</span> over the same time frame as the CCI and CPI data. The results below illustrate Google News search interest in inflation over time:</p>
 <div class="quarto-layout-panel" data-layout-nrow="2">
@@ -622,11 +622,17 @@ sample estimates:
 <div id="ref-algaba2020" class="csl-entry" role="listitem">
 Algaba, Andres, David Ardia, Keven Bluteau, Samuel Borms, and Kris Boudt. 2020. <span>“ECONOMETRICS MEETS SENTIMENT: AN OVERVIEW OF METHODOLOGY AND APPLICATIONS.”</span> <em>Journal of Economic Surveys</em> 34 (3): 512–47. <a href="https://doi.org/10.1111/joes.12370">https://doi.org/10.1111/joes.12370</a>.
 </div>
+<div id="ref-oecd" class="csl-entry" role="listitem">
+<span>“Consumer Confidence Index (CCI).”</span> 2024. <em>OECD</em>. <a href="https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html">https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html</a>.
+</div>
 <div id="ref-harvard" class="csl-entry" role="listitem">
 <span>“Harvard IOP Youth Poll.”</span> 2023. <em>Institute of Politics at Harvard Kennedy School</em>. <a href="https://iop.harvard.edu/youth-poll/46th-edition-fall-2023">https://iop.harvard.edu/youth-poll/46th-edition-fall-2023</a>.
 </div>
 <div id="ref-google" class="csl-entry" role="listitem">
 <span>“Inflation (Topic).”</span> 2024. <em>Google Trends</em>. <a href="https://trends.google.com/trends/explore?date=2010-01-01%202024-06-01&amp;geo=US&amp;gprop=news&amp;q=%2Fm%2F09jx2&amp;hl=en">https://trends.google.com/trends/explore?date=2010-01-01%202024-06-01&amp;geo=US&amp;gprop=news&amp;q=%2Fm%2F09jx2&amp;hl=en</a>.
+</div>
+<div id="ref-PCE" class="csl-entry" role="listitem">
+<span>“Personal Consumption Expenditures: Chain-Type Price Index (PCEPI).”</span> 2024. <em>U.S. Bureau of Economic Analysis</em>. <a href="https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html">https://www.oecd.org/en/data/indicators/consumer-confidence-index-cci.html</a>.
 </div>
 <div id="ref-vibes" class="csl-entry" role="listitem">
 Scanlon, Kyla. 2022. <span>“The Vibecession: The Self-Fulfilling Prophecy.”</span> <em>Kyla’s Newsletter</em>. <a href="https://kyla.substack.com/p/the-vibecession-the-self-fulfilling">https://kyla.substack.com/p/the-vibecession-the-self-fulfilling</a>.

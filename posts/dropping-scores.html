@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tin Skoric">
+
+<title>Dropping Scores – Tin Skoric</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-95617a11274424b78d61d27e506c8caa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Pondering Thy Grade Inflation</a></li>
+  <li><a href="#sec-math" id="toc-sec-math" class="nav-link" data-scroll-target="#sec-math"><span class="header-section-number">2</span> Math</a>
+  <ul class="collapse">
+  <li><a href="#sec-example" id="toc-sec-example" class="nav-link" data-scroll-target="#sec-example"><span class="header-section-number">2.1</span> Example</a></li>
+  <li><a href="#sec-result" id="toc-sec-result" class="nav-link" data-scroll-target="#sec-result"><span class="header-section-number">2.2</span> The Fun</a></li>
+  </ul></li>
+  <li><a href="#sec-dropper" id="toc-sec-dropper" class="nav-link" data-scroll-target="#sec-dropper"><span class="header-section-number">3</span> Interactive Dropper</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Dropping Scores</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tin Skoric </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="mailto:work@skoric.org"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="Resume.pdf">Resume</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<section id="sec-intro" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Pondering Thy Grade Inflation</h1>
+<p>A friend of mine asked a question some time ago, the gist of it being: what is the optimal number of quizzes to drop, if you are a teacher/instructor/lecturer/professor (et cetera infinitum) in the business of dropping quizzes? Now, if the question is just about getting the highest scores, then the answer is pretty simple: give a bajillion quizzes and only keep the highest single result per student. That would obviously result in the highest class average, but it wouldn’t be very <em>efficient</em>, would it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>? Similarly, assuming some distribution of scores by student, the improvement to scores per quiz dropped relative to a baseline of none dropped would just be the inverse of that distribution; e.g., a high return from the first and last quizzes dropped, and a low return from those around the mean (if dropping scores in order from lowest to highest <span class="math inline">\(n-1\)</span> quizzes). This is because the first scores dropped would eliminate the lowest edge of the distribution, and thereafter the improvement from additional drops would be small <em>until</em> you remove enough to see a large return in aggregate. So, rather than considering scores relative to a case where none are dropped, what is the incremental improvement to scores per quizzes dropped relative to prior drops? Let’s think of an example:</p>
+<blockquote class="blockquote">
+<p>You distribute 20 quizzes to each student in your class over the course of a semester. You drop the single lowest quiz, and see a large return to scores. Assuming a normal distribution of scores, how many more quizzes can you drop, before the improvement per total dropped, compared to the prior number dropped, flattens out? Keeping only the highest score per student returns higher average scores across students than keeping the <em>two</em> highest scores, but when you have already chopped 18 scores off (just about the whole of the distribution below the maximum), is the relative improvement to scores from dropping the second-highest very high? No; not unless the distribution is insanely skewed.</p>
+</blockquote>
+<p>Thinking intuitively, the highest incremental improvements would come from the first drops, and thereafter the improvement should decline. This is because, as before, the first drops will be from the lowest end of the distribution, but, since we are looking incrementally the “disaggregated” effect of each additional drop we don’t see such a large shared return from the high end of drops. To elaborate, if we were to <em>add</em> the gains from all increments from 0 v. 1 through 18 v. 19, it would likely come out as the same number as the gain from 0 v. 19; but 18 v. 19 will be much smaller than 0 v. 19.</p>
+<p>Our aim, either way, is to see what number of scores are dropped where we get the most value out of our increments. Of course, assuming a normal distribution of scores, it should be pretty obvious that the most important score to drop in any case is the lowest one, because it will be <em>very low</em> (unless you set the minima to truncate at at a higher level); the truth is that this whole endeavor is an excuse to make something fun (skip to <a href="#sec-dropper" class="quarto-xref">Section&nbsp;3</a> for that). While different results will come from setting different minima/maxima/means, ever case there is arbitrary, and reliant on the scenario… so, I put together a little tool to set those things and illustrate a given case.</p>
+</section>
+<section id="sec-math" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Math</h1>
+<p>Let’s get the first part out of the way. Assuming a (<a href="https://en.wikipedia.org/wiki/Truncated_normal_distribution#">truncated</a>) normal distribution of scores around a given mean, changing the number of quizzes given shouldn’t matter much in terms of the marginal improvement from the proportion of quizzes dropped. In other words, our marginally-efficient proportion of quizzes dropped should be applicable across any <em>n</em> number of quizzes distributed, assuming that the distributions are consistent and that each quiz is roughly centered around the same mean.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Below is a function that takes the following:</p>
+<blockquote class="blockquote">
+<p><code>n</code>: the number, <span class="math inline">\(n\)</span>, quizzes distributed; <code>dropCount</code>: the number of quizzes dropped; <code>mean</code>: the mean result of each quiz; <code>nLoop</code>: the number of times that we loop our results to take averages among cases; <code>nDrop</code>: the number of quizzes remaining after the drop; and <code>trial_i</code>: a vector containing the result of each loop.</p>
+</blockquote>
+<p>to return the average score by student across <span class="math inline">\(n-n_\text{dropped}\)</span> quizzes distributed with a given common mean for each quiz. The standard deviation used here is arbitrarily assigned as <span class="math inline">\(\frac{1}{10}\)</span> of the given mean, and the limits to the distribution (beyond which values are truncated) are 0 and 100, respectively.</p>
+<pre><code>quizDropLoop &lt;- function(n, dropCount, mean, nLoop){
+  if(dropCount &lt; n){
+    nDrop &lt;- n - dropCount
+    trial_i &lt;- c()
+    for (i in 1:nLoop) {
+      trial_i &lt;- append(trial_i, mean(sort(rnormTrunc(n = n, mean = mean, sd = mean/10, min = 0, max = 100), decreasing = TRUE)[1:nDrop]))
+    }
+    return(trial_i)
+  } else {
+    print("uh oh")
+  }
+}</code></pre>
+<section id="sec-example" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-example"><span class="header-section-number">2.1</span> Example</h2>
+<p>With this in-hand, let us assume a simple comparison scenario to test this function; 20 quizzes per student are distributed throughout the whole of the class curriculum<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, with one scenario having 0 dropped, and the other having the lowest 10 each dropped. We will use 80 as our mean quiz score and we will take the mean of 1000 loops for each scenario:</p>
+<div class="cell">
+<div id="tbl-example1table" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-example1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Comparing Two Scenarios
+</figcaption>
+<div aria-describedby="tbl-example1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table table-striped do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; background-color: transparent !important;">scenario</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: transparent !important;">result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">None Dropped</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">79.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">10 Dropped</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">85.88</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>data.frame(
+  scenario = c("None Dropped", "10 Dropped"),
+  result = c(
+    round(mean(quizDropLoop(20, 0, 80, 1000)), 2),
+    round(mean(quizDropLoop(20, 10, 80, 1000)), 2)
+  )
+) %&gt;% kable() %&gt;% 
+  column_spec(1:2, background = "transparent", include_thead = TRUE) %&gt;%
+  column_spec(1:2, background = "inherit") %&gt;% 
+  kable_styling("striped", full_width = F)</code></pre>
+</div>
+</div>
+</div>
+<p>Well look at that, dropping the lowest <em>half</em> of quizzes boosts the average; who’d’ve thought? We can also plot out the same two scenarios to show their respective clumps of scores:</p>
+<div id="fig-example1chart" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example1chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example1chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-example1chart-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-example1chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-example1chart-1.png" class="lightbox" data-gallery="fig-example1chart" title="Figure&nbsp;1&nbsp;(a): None Dropped"><img src="dropping-scores_files/figure-html/fig-example1chart-1.png" class="img-fluid figure-img" data-ref-parent="fig-example1chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-example1chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) None Dropped
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-example1chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-example1chart-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-example1chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-example1chart-2.png" class="lightbox" data-gallery="fig-example1chart" title="Figure&nbsp;1&nbsp;(b): 10 Dropped"><img src="dropping-scores_files/figure-html/fig-example1chart-2.png" class="img-fluid figure-img" data-ref-parent="fig-example1chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-example1chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 10 Dropped
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example1chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Comparing Two Scenarios
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>ggplot() +
+  geom_point(
+    data = data.frame(n = 1:1000, val = quizDropLoop(20, 0, 80, 1000)),
+    mapping = aes(x = n, y = val), shape = 21, size = 2, color = canned_colors_get(,"softpurple"), fill = canned_colors_get(,"oceanpurple")
+  ) +
+  geom_smooth(
+    data = data.frame(n = 1:1000, val = quizDropLoop(20, 0, 80, 1000)),
+    mapping = aes(x = n, y = val), linewidth = 2, color = canned_colors_get(,"danger"),
+    method = "lm", lineend = "round"
+  ) +
+  theme_can() +
+  scale_y_continuous(limits = c(70, 100), breaks = seq(70, 100, 5))
+
+ggplot() +
+  geom_point(
+    data = data.frame(n = 1:1000, val = quizDropLoop(20, 10, 80, 1000)),
+    mapping = aes(x = n, y = val), shape = 21, size = 2, color = canned_colors_get(,"softpurple"), fill = canned_colors_get(,"oceanpurple")
+  ) +
+  geom_smooth(
+    data = data.frame(n = 1:1000, val = quizDropLoop(20, 10, 80, 1000)),
+    mapping = aes(x = n, y = val), linewidth = 2, color = canned_colors_get(,"danger"),
+    method = "lm", lineend = "round"
+  ) +
+  theme_can() +
+  scale_y_continuous(limits = c(70, 100), breaks = seq(70, 100, 5))</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-result" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-result"><span class="header-section-number">2.2</span> The Fun</h2>
+<p>Let’s extend our prior scenario in <a href="#sec-example" class="quarto-xref">Section&nbsp;2.1</a> to cover a range of possible values for <code>dropCount</code>. Using the same number of quizzes distributed per student (20), the same mean (80), and the same number of loops (1000), but iterating <code>dropCount</code> from 1 through <span class="math inline">\(n-1\)</span>, let us calculate the improvement to scores relative to no drops and the improvement per each increment of drop:</p>
+<div class="cell">
+<div id="tbl-margin1table" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-margin1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</span> Quizzes
+</figcaption>
+<div aria-describedby="tbl-margin1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:250px; ">
+<table class="table table-striped do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: transparent !important; position: sticky; top: 0; background-color: #FFFFFF;">Number Dropped</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: transparent !important; position: sticky; top: 0; background-color: #FFFFFF;">Drop Margin</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; background-color: transparent !important; position: sticky; top: 0; background-color: #FFFFFF;">Incremental Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">1</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6800000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6400000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">2</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6950000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.3650000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">3</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6866667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.2133333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">4</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6450000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1275000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">5</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6440000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1220000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">6</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.5966667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0833333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">7</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6242857</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0885714</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">8</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6337500</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0800000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">9</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.5955556</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0488889</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">10</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6000000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0580000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">11</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6154545</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0581818</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">12</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6041667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0550000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">13</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6076923</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0484615</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">14</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6128571</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0478571</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">15</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6313333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0566667</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">16</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6525000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0593750</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">17</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6647059</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0547059</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">18</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6916667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0650000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">19</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7394737</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0868421</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>trial_drop_i &lt;- c()
+trial_no_drop_i &lt;- c()
+# n = 20; 20 - 1 = 19
+for (i in 0:19) {
+  trial_drop_i &lt;- append(trial_drop_i, round(mean(quizDropLoop(20, i, 80, 1000)), 2))
+  trial_no_drop_i &lt;- append(trial_no_drop_i, round(mean(quizDropLoop(20, 0, 80, 1000)), 2))
+}
+drop_test &lt;- tibble(
+  "Number Dropped" = 0:19, "Dropped (Result)" = trial_drop_i, "None Dropped (Result)" = trial_no_drop_i, Difference = trial_drop_i - trial_no_drop_i,
+  "Incremental Difference" = trial_drop_i - lag(trial_drop_i, 1)
+)
+drop_test$`Drop Margin` &lt;- (drop_test$Difference)/(drop_test$`Number Dropped`)
+drop_test$`Incremental Margin` &lt;- (drop_test$`Incremental Difference`)/(drop_test$`Number Dropped`)
+drop_test &lt;- drop_test %&gt;% filter(`Number Dropped` &gt; 0)
+
+drop_test %&gt;% select(`Number Dropped`, `Drop Margin`, `Incremental Margin`) %&gt;% arrange(`Number Dropped`) %&gt;% kable() %&gt;%
+  column_spec(1:3, background = "transparent", include_thead = TRUE) %&gt;%
+  column_spec(1:3, background = "inherit") %&gt;% 
+  kable_styling("striped", full_width = F) %&gt;% scroll_box(height = "250px")</code></pre>
+</div>
+</div>
+</div>
+<p><a href="#tbl-margin1table" class="quarto-xref">Table&nbsp;2</a> shows us both the marginal improvement of a number of dropped quizzes relative to none being dropped, and the improvement by increment of quiz dropped. As noted in <a href="#sec-intro" class="quarto-xref">Section&nbsp;1</a>, the former just reflects the inverse of our given score distribution, whereas the latter begins high, and quickly flattens. We can see this clearly when plotted:</p>
+<div id="fig-margin1chart" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-margin1chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-margin1chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-margin1chart-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-margin1chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-margin1chart-1.png" class="lightbox" data-gallery="fig-margin1chart" title="Figure&nbsp;2&nbsp;(a): Drop Margin"><img src="dropping-scores_files/figure-html/fig-margin1chart-1.png" class="img-fluid figure-img" data-ref-parent="fig-margin1chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-margin1chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Drop Margin
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-margin1chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-margin1chart-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-margin1chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-margin1chart-2.png" class="lightbox" data-gallery="fig-margin1chart" title="Figure&nbsp;2&nbsp;(b): Incremental Margin"><img src="dropping-scores_files/figure-html/fig-margin1chart-2.png" class="img-fluid figure-img" data-ref-parent="fig-margin1chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-margin1chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Incremental Margin
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-margin1chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</span> Quizzes
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>ggplot() +
+  geom_point(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = (`Drop Margin` - 0.5) * (0.8/0.3)), shape = 21, size = 2, color = canned_colors_get(,"danger"), fill = canned_colors_get(,"danger")
+  ) +
+  geom_point(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Incremental Margin`), shape = 21, size = 2, color = canned_colors_get(,"success"), fill = canned_colors_get(,"success")
+  ) +
+  geom_line(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = (`Drop Margin` - 0.5) * (0.8/0.3)), color = canned_colors_get(,"danger"),
+    linewidth = 2, lineend = "round"
+  ) +
+  geom_line(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Incremental Margin`), color = canned_colors_get(,"success"),
+    linewidth = 2, lineend = "round"
+  ) +
+  theme_can() +
+  scale_y_continuous(
+    "Incremental Margin",
+    limits = c(0, 0.8),
+    breaks = seq(0, 0.8, 0.1),
+    sec.axis = sec_axis(trans = ~((.) * (0.3/0.8)) + 0.5,
+                    name = "Drop Margin",
+                    # limits = c(0, 0.8),
+                    breaks = seq(0.5, 0.8, 0.05),
+                    labels = seq(0.5, 0.8, 0.05)),
+    expand = c(0,0)
+  ) +
+  theme(
+    axis.title.y.left = element_text(family = "Space Grotesk", size = 16, color = canned_colors_get(,"success"), angle = 90, vjust = 2.5),
+    axis.title.y.right = element_text(family = "Space Grotesk", size = 16, color = canned_colors_get(,"danger"), angle = -90)
+  )</code></pre>
+</div>
+</div>
+</div>
+<p>It looks like the first 2 to 3 drops in <a href="#fig-margin1chart-2" class="quarto-xref">Figure&nbsp;2 (b)</a> have the largest effect on improving scores among the 20 quizzes distributed. Lets see how this changes if we change the number distributed; let’s say, 90:</p>
+<div id="fig-margin2chart" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-margin2chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-margin2chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-margin2chart-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-margin2chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-margin2chart-1.png" class="lightbox" data-gallery="fig-margin2chart" title="Figure&nbsp;3&nbsp;(a): Drop Margin"><img src="dropping-scores_files/figure-html/fig-margin2chart-1.png" class="img-fluid figure-img" data-ref-parent="fig-margin2chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-margin2chart-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Drop Margin
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-margin2chart" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-margin2chart-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-margin2chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="dropping-scores_files/figure-html/fig-margin2chart-2.png" class="lightbox" data-gallery="fig-margin2chart" title="Figure&nbsp;3&nbsp;(b): Incremental Margin"><img src="dropping-scores_files/figure-html/fig-margin2chart-2.png" class="img-fluid figure-img" data-ref-parent="fig-margin2chart" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-margin2chart-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Incremental Margin
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-margin2chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Marginal Returns to Score for <span class="math inline">\(n=30\)</span> Quizzes
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>trial_drop_i &lt;- c()
+trial_no_drop_i &lt;- c()
+# n = 20; 20 - 1 = 19
+for (i in 0:89) {
+  trial_drop_i &lt;- append(trial_drop_i, round(mean(quizDropLoop(90, i, 80, 1000)), 2))
+  trial_no_drop_i &lt;- append(trial_no_drop_i, round(mean(quizDropLoop(90, 0, 80, 1000)), 2))
+}
+drop_test &lt;- tibble(
+  "Number Dropped" = 0:89, "Dropped (Result)" = trial_drop_i, "None Dropped (Result)" = trial_no_drop_i, Difference = trial_drop_i - trial_no_drop_i,
+  "Incremental Difference" = trial_drop_i - lag(trial_drop_i, 1)
+)
+drop_test$`Drop Margin` &lt;- (drop_test$Difference)/(drop_test$`Number Dropped`)
+drop_test$`Incremental Margin` &lt;- (drop_test$`Incremental Difference`)/(drop_test$`Number Dropped`)
+drop_test &lt;- drop_test %&gt;% filter(`Number Dropped` &gt; 0)
+
+ggplot() +
+  geom_point(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Drop Margin`), shape = 21, size = 2, color = canned_colors_get(,"danger"), fill = canned_colors_get(,"danger")
+  ) +
+  geom_line(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Drop Margin`), color = canned_colors_get(,"danger"),
+    linewidth = 2, lineend = "round"
+  ) +
+  theme_can() +
+  scale_y_continuous(
+    "Drop Margin",
+    limits = c(0.10, 0.25),
+    breaks = seq(0.10, 0.25, 0.05),
+    expand = c(0, 0)
+  )
+
+ggplot() +
+  geom_point(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Incremental Margin`), shape = 21, size = 2, color = canned_colors_get(,"success"), fill = canned_colors_get(,"success")
+  ) +
+  geom_line(
+    data = drop_test,
+    mapping = aes(x = `Number Dropped`, y = `Incremental Margin`), color = canned_colors_get(,"success"),
+    linewidth = 2, lineend = "round"
+  ) +
+  theme_can() +
+  scale_y_continuous(
+    "Incremental Margin",
+    limits = c(0, 0.155),
+    breaks = seq(0, 0.155, 0.05),
+    expand = c(0, 0)
+  )</code></pre>
+</div>
+</div>
+</div>
+<p>In <a href="#fig-margin2chart-2" class="quarto-xref">Figure&nbsp;3 (b)</a> the gap from the second to third drop widens enough that it’s clear that the first two are what really matter. This is entirely within expectations. With all this done, it’s pretty clear that our function does what we think it does. Now let’s make it interactive!</p>
+</section>
+</section>
+<section id="sec-dropper" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Interactive Dropper</h1>
+<p>For this part, we just modify our original function to allow user-input for the standard deviation, minimum, and maximum. We also limit the max number of trials to make things faster.</p>
+<iframe width="100%" height="840" name="iframe" src="https://tinskoric-quizdist.share.connect.posit.cloud" style="border : none">
+</iframe>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Won’t someone please think of the poor TAs having to grade 30 quizzes only for 29 to be dropped anyways.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Since we’re working with whole numbers (we’re not dropping half a quiz), there can be variation with the real number dropped across even v. odd cases, but on average this really should not matter much. The assumption about the means for each quiz has to do more with individual students than the quizzes; some students do not average the same as others, but let us assume that a given student with get roughly consistent scores across their quizzes, on average.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The “time” doesn’t really matter; it’s just all the quizzes ever given for that class.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/tins\.page");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ 2025 ❤️ 
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://tins.page">
+<p>Tin Skoric</p>
+</a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tinskoric/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tinskoric/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:work@skoric.org">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
+<p>Site Source</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
