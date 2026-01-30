@@ -348,7 +348,7 @@ window.Quarto = {
 </div>
 <section id="sec-intro" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Pondering Thy Grade Inflation</h1>
-<p>A friend of mine asked a question some time ago, the gist of it being: what is the optimal number of quizzes to drop, if you are a teacher/instructor/lecturer/professor (et cetera infinitum) in the business of dropping quizzes? Now, if the question is just about getting the highest scores, then the answer is pretty simple: give a bajillion quizzes and only keep the highest single result per student. That would obviously result in the highest class average, but it wouldn’t be very <em>efficient</em>, would it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>? Similarly, assuming some distribution of scores by student, the improvement to scores per quiz dropped relative to a baseline of none dropped would just be the inverse of that distribution; e.g., a high return from the first and last quizzes dropped, and a low return from those around the mean (if dropping scores in order from lowest to highest <span class="math inline">\(n-1\)</span> quizzes). This is because the first scores dropped would eliminate the lowest edge of the distribution, and thereafter the improvement from additional drops would be small <em>until</em> you remove enough to see a large return in aggregate. So, rather than considering scores relative to a case where none are dropped, what is the incremental improvement to scores per quizzes dropped relative to prior drops? Let’s think of an example:</p>
+<p>A friend of mine asked a question some time ago, the gist of it being: what is the optimal number of quizzes to drop, if you are a teacher/instructor/lecturer/professor (et cetera infinitum) in the business of dropping quizzes? Now, if the question is just about getting the highest scores, then the answer is pretty simple: give a bajillion quizzes and only keep the highest single result per student. That would obviously result in the highest class average, but it wouldn’t be very <em>efficient</em>, would it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>? Similarly, assuming some normal distribution of scores by student, the improvement to scores per quiz dropped relative to a baseline of none dropped would just be the inverse of that distribution; e.g., a high return from the first and last quizzes dropped, and a low return from those around the mean (if dropping scores in order from lowest to highest <span class="math inline">\(n-1\)</span> quizzes). This is because the first scores dropped would eliminate the lowest edge of the distribution, and thereafter the improvement from additional drops would be small <em>until</em> you remove enough to see a large return in aggregate. So, rather than considering scores relative to a case where none are dropped, what is the incremental improvement to scores per quizzes dropped relative to prior drops? Let’s think of an example:</p>
 <blockquote class="blockquote">
 <p>You distribute 20 quizzes to each student in your class over the course of a semester. You drop the single lowest quiz, and see a large return to scores. Assuming a normal distribution of scores, how many more quizzes can you drop, before the improvement per total dropped, compared to the prior number dropped, flattens out? Keeping only the highest score per student returns higher average scores across students than keeping the <em>two</em> highest scores, but when you have already chopped 18 scores off (just about the whole of the distribution below the maximum), is the relative improvement to scores from dropping the second-highest very high? No; not unless the distribution is insanely skewed.</p>
 </blockquote>
@@ -395,11 +395,11 @@ Table&nbsp;1: Comparing Two Scenarios
 <tbody>
 <tr class="odd">
 <td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">None Dropped</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">79.86</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">79.93</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">10 Dropped</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">85.85</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">85.82</td>
 </tr>
 </tbody>
 </table>
@@ -533,98 +533,98 @@ Table&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</
 <tbody>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">1</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.9200000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.8500000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7900000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.8300000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">2</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7750000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.3000000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7400000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.3400000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">3</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6900000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1833333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6366667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1900000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">4</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6550000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1600000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6800000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1650000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">5</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6160000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0860000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6320000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0940000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">6</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6383333</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1050000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6266667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1150000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">7</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6200000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0814286</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6242857</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0671429</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">8</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6087500</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0687500</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6075000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0700000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">9</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6055556</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0677778</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6122222</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0744444</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">10</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6050000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0620000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6120000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0520000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">11</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6063636</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0509091</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6000000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0500000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">12</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6033333</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0508333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6025000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0541667</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">13</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6053846</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0392308</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6146154</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0569231</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">14</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6157143</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0585714</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6242857</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0492857</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">15</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6233333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6386667</td>
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0526667</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">16</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6437500</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0531250</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6387500</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0443750</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">17</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6652941</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0635294</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6658824</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0676471</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">18</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6944444</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0672222</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6850000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0594444</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">19</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7442105</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0873684</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7373684</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0847368</td>
 </tr>
 </tbody>
 </table>
