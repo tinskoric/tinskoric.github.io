@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,23 +49,27 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../stuff/logo.png" rel="icon" type="image/png">
+<link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ed4c2e555abed4aa388aaaccdac93265.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-91754457b7e7ab6c8f8448a4573d8789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-39e087fc85dbc55a103f8cfb08f3fadd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -109,7 +113,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -385,13 +389,26 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="mailto:work@skoric.org"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="Resume.pdf">Resume</a>
+<span class="screen-reader-only">Tip</span><a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="../Resume.pdf">Resume</a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><a href="https://hdl.handle.net/20.500.14849/5617">URI</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -589,7 +606,7 @@ Taking all these changes together, the short- and long-run effects of a change i
 <div id="fig-example" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/ExamplePhaseDiagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400">
+<a href="thesis/ExamplePhaseDiagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Example Steady State When \theta Increases (\theta from 0.5 to 1.5)"><img src="thesis/ExamplePhaseDiagram.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Example Steady State When <span class="math inline">\(\theta\)</span> Increases (<span class="math inline">\(\theta\)</span> from 0.5 to 1.5)
@@ -999,7 +1016,7 @@ Table&nbsp;4: Steady States
 <div id="fig-one1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-one1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/y.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img">
+<a href="thesis/y.png" class="lightbox" data-gallery="fig-one" title="Figure&nbsp;2&nbsp;(a): Evolution of Output"><img src="thesis/y.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-one1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Evolution of Output
@@ -1013,7 +1030,7 @@ Table&nbsp;4: Steady States
 <div id="fig-one2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-one2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/c.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img">
+<a href="thesis/c.png" class="lightbox" data-gallery="fig-one" title="Figure&nbsp;2&nbsp;(b): Evolution of Consumption"><img src="thesis/c.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-one2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Evolution of Consumption
@@ -1027,7 +1044,7 @@ Table&nbsp;4: Steady States
 <div id="fig-one3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-one3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/i.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img">
+<a href="thesis/i.png" class="lightbox" data-gallery="fig-one" title="Figure&nbsp;2&nbsp;(c): Evolution of Investment"><img src="thesis/i.png" data-ref-parent="fig-one" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-one3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (c) Evolution of Investment
@@ -1325,7 +1342,7 @@ Using the new value for the rate of time preference, I simulate the quantitative
 <div id="fig-onerho1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onerho1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/yNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img">
+<a href="thesis/yNewRho.png" class="lightbox" data-gallery="fig-onerho" title="Figure&nbsp;3&nbsp;(a): Evolution of Output (\rho=0.05243)"><img src="thesis/yNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onerho1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Evolution of Output (<span class="math inline">\(\rho=0.05243\)</span>)
@@ -1339,7 +1356,7 @@ Using the new value for the rate of time preference, I simulate the quantitative
 <div id="fig-onerho2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onerho2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/cNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img">
+<a href="thesis/cNewRho.png" class="lightbox" data-gallery="fig-onerho" title="Figure&nbsp;3&nbsp;(b): Evolution of Consumption (\rho=0.05243)"><img src="thesis/cNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onerho2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Evolution of Consumption (<span class="math inline">\(\rho=0.05243\)</span>)
@@ -1353,7 +1370,7 @@ Using the new value for the rate of time preference, I simulate the quantitative
 <div id="fig-onerho3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onerho3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/iNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img">
+<a href="thesis/iNewRho.png" class="lightbox" data-gallery="fig-onerho" title="Figure&nbsp;3&nbsp;(c): Evolution of Investment (\rho=0.05243)"><img src="thesis/iNewRho.png" data-ref-parent="fig-onerho" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onerho3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (c) Evolution of Investment (<span class="math inline">\(\rho=0.05243\)</span>)
@@ -1460,7 +1477,7 @@ Using the new value for the tax ratio, I simulate the quantitative impacts on th
 <div id="fig-onetsy1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onetsy1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/yNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img">
+<a href="thesis/yNewTsY.png" class="lightbox" data-gallery="fig-onetsy" title="Figure&nbsp;4&nbsp;(a): Evolution of Output ({T \over Y}=0.34228)"><img src="thesis/yNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onetsy1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Evolution of Output (<span class="math inline">\({T \over Y}=0.34228\)</span>)
@@ -1474,7 +1491,7 @@ Using the new value for the tax ratio, I simulate the quantitative impacts on th
 <div id="fig-onetsy2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onetsy2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/cNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img">
+<a href="thesis/cNewTsY.png" class="lightbox" data-gallery="fig-onetsy" title="Figure&nbsp;4&nbsp;(b): Evolution of Consumption ({T \over Y}=0.34228)"><img src="thesis/cNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onetsy2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Evolution of Consumption (<span class="math inline">\({T \over Y}=0.34228\)</span>)
@@ -1488,7 +1505,7 @@ Using the new value for the tax ratio, I simulate the quantitative impacts on th
 <div id="fig-onetsy3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onetsy3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/iNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img">
+<a href="thesis/iNewTsY.png" class="lightbox" data-gallery="fig-onetsy" title="Figure&nbsp;4&nbsp;(c): Evolution of Investment ({T \over Y}=0.34228)"><img src="thesis/iNewTsY.png" data-ref-parent="fig-onetsy" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onetsy3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (c) Evolution of Investment (<span class="math inline">\({T \over Y}=0.34228\)</span>)
@@ -1613,7 +1630,7 @@ Using the new value for depreciation, I simulate the quantitative impacts on the
 <div id="fig-onedelta1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onedelta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/yNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img">
+<a href="thesis/yNewDelta.png" class="lightbox" data-gallery="fig-onedelta" title="Figure&nbsp;5&nbsp;(a): Evolution of Output (\delta=0.06403)"><img src="thesis/yNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onedelta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Evolution of Output (<span class="math inline">\(\delta=0.06403\)</span>)
@@ -1627,7 +1644,7 @@ Using the new value for depreciation, I simulate the quantitative impacts on the
 <div id="fig-onedelta2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onedelta2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/cNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img">
+<a href="thesis/cNewDelta.png" class="lightbox" data-gallery="fig-onedelta" title="Figure&nbsp;5&nbsp;(b): Evolution of Consumption (\delta=0.06403)"><img src="thesis/cNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onedelta2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Evolution of Consumption (<span class="math inline">\(\delta=0.06403\)</span>)
@@ -1641,7 +1658,7 @@ Using the new value for depreciation, I simulate the quantitative impacts on the
 <div id="fig-onedelta3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-onedelta3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="thesis/iNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img">
+<a href="thesis/iNewDelta.png" class="lightbox" data-gallery="fig-onedelta" title="Figure&nbsp;5&nbsp;(c): Evolution of Investment (\delta=0.06403)"><img src="thesis/iNewDelta.png" data-ref-parent="fig-onedelta" width="300" height="120" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-onedelta3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (c) Evolution of Investment (<span class="math inline">\(\delta=0.06403\)</span>)
@@ -1739,16 +1756,16 @@ World Bank. 2023. <span>“Population Growth.”</span> Databank Bosnia; Herzego
 </div>
 <div style="page-break-after: always;"></div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Mathematica Code
+<span class="screen-reader-only">Important</span>Mathematica Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>```{.} (************************************************************************) (<em>THESIS CODE</em>) (<em>RCK Model with TvsY and G=T</em>) (************************************************************************)</p>
 <p>Clear All; Remove[“Global`*”];</p>
@@ -1916,13 +1933,14 @@ between steady states characterized by [Theta]=0.72 to<br>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -2301,15 +2319,6 @@ between steady states characterized by [Theta]=0.72 to<br>
     <li class="nav-item">
  |
   </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="mailto:work@skoric.org">
-      <i class="bi bi-envelope" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item">
- |
-  </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
 <p>Site Source</p>
@@ -2322,6 +2331,38 @@ between steady states characterized by [Theta]=0.72 to<br>
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

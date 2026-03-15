@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -52,20 +52,24 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ed4c2e555abed4aa388aaaccdac93265.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-95617a11274424b78d61d27e506c8caa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-39e087fc85dbc55a103f8cfb08f3fadd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -109,7 +113,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -365,13 +369,13 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="mailto:work@skoric.org"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="Resume.pdf">Resume</a>
+<span class="screen-reader-only">Tip</span><a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="../Resume.pdf">Resume</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -413,7 +417,7 @@ One way to observe changes in labor market conditions is by simply looking at th
 <div id="fig-unemp-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-unemp-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-1.png" class="img-fluid figure-img" data-ref-parent="fig-unemp" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-1.png" class="lightbox" data-gallery="fig-unemp" title="Figure&nbsp;1&nbsp;(a): Rates"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-1.png" class="img-fluid figure-img" data-ref-parent="fig-unemp" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-unemp-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Rates
@@ -425,7 +429,7 @@ One way to observe changes in labor market conditions is by simply looking at th
 <div id="fig-unemp-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-unemp-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-2.png" class="img-fluid figure-img" data-ref-parent="fig-unemp" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-2.png" class="lightbox" data-gallery="fig-unemp" title="Figure&nbsp;1&nbsp;(b): Gaps"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-unemp-2.png" class="img-fluid figure-img" data-ref-parent="fig-unemp" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-unemp-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Gaps
@@ -463,7 +467,7 @@ The effects of the pandemic on labor markets were complicated, and it is clear t
 <div id="fig-Inflation-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-Inflation-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-1.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-1.png" class="lightbox" data-gallery="fig-Inflation" title="Figure&nbsp;2&nbsp;(a): Headline"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-1.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Inflation-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Headline
@@ -475,7 +479,7 @@ The effects of the pandemic on labor markets were complicated, and it is clear t
 <div id="fig-Inflation-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-Inflation-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-2.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-2.png" class="lightbox" data-gallery="fig-Inflation" title="Figure&nbsp;2&nbsp;(b): Core"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-2.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Inflation-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Core
@@ -489,7 +493,7 @@ The effects of the pandemic on labor markets were complicated, and it is clear t
 <div id="fig-Inflation-3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-Inflation-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-3.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-3.png" class="lightbox" data-gallery="fig-Inflation" title="Figure&nbsp;2&nbsp;(c): Energy"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-3.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Inflation-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (c) Energy
@@ -501,7 +505,7 @@ The effects of the pandemic on labor markets were complicated, and it is clear t
 <div id="fig-Inflation-4" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-Inflation-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-4.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-4.png" class="lightbox" data-gallery="fig-Inflation" title="Figure&nbsp;2&nbsp;(d): Food"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-Inflation-4.png" class="img-fluid figure-img" data-ref-parent="fig-Inflation" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Inflation-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (d) Food
@@ -833,7 +837,7 @@ Table&nbsp;1: Gordon Model Regression Output
 <div id="fig-Gordon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Gordon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-Gordon-1.png" class="img-fluid figure-img" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-Gordon-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;3: Gordon Model"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-Gordon-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Gordon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Gordon Model
@@ -969,7 +973,7 @@ Including a table per adjusted variable would manifest as a bunch of extremely l
 <div id="fig-structural-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-structural-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-structural-1.png" class="img-fluid figure-img" data-ref-parent="fig-structural" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-structural-1.png" class="lightbox" data-gallery="fig-structural" title="Figure&nbsp;4&nbsp;(a): Initial"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-structural-1.png" class="img-fluid figure-img" data-ref-parent="fig-structural" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-structural-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Initial
@@ -981,7 +985,7 @@ Including a table per adjusted variable would manifest as a bunch of extremely l
 <div id="fig-structural-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-structural-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="brexit-and-the-phillips-curve_files/figure-html/fig-structural-2.png" class="img-fluid figure-img" data-ref-parent="fig-structural" width="672">
+<a href="brexit-and-the-phillips-curve_files/figure-html/fig-structural-2.png" class="lightbox" data-gallery="fig-structural" title="Figure&nbsp;4&nbsp;(b): Model with Food Inflation"><img src="brexit-and-the-phillips-curve_files/figure-html/fig-structural-2.png" class="img-fluid figure-img" data-ref-parent="fig-structural" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-structural-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Model with Food Inflation
@@ -1130,13 +1134,14 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1515,15 +1520,6 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
     <li class="nav-item">
  |
   </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="mailto:work@skoric.org">
-      <i class="bi bi-envelope" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item">
- |
-  </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
 <p>Site Source</p>
@@ -1536,6 +1532,38 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

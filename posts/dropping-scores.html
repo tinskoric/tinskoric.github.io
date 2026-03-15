@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,18 +33,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ed4c2e555abed4aa388aaaccdac93265.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-95617a11274424b78d61d27e506c8caa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-e9038aa09b5db13c06e777728772f172.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-39e087fc85dbc55a103f8cfb08f3fadd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -95,7 +96,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -333,13 +334,13 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="mailto:work@skoric.org"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="Resume.pdf">Resume</a>
+<span class="screen-reader-only">Tip</span><a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="../Resume.pdf">Resume</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -385,7 +386,7 @@ Table&nbsp;1: Comparing Two Scenarios
 </figcaption>
 <div aria-describedby="tbl-example1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="table table-striped do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<table class="table table-striped do-not-create-environment cell caption-top table-sm small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; background-color: transparent !important;">scenario</th>
@@ -395,11 +396,11 @@ Table&nbsp;1: Comparing Two Scenarios
 <tbody>
 <tr class="odd">
 <td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">None Dropped</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">79.93</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">79.91</td>
 </tr>
 <tr class="even">
 <td style="text-align: left; background-color: transparent !important; background-color: inherit !important;">10 Dropped</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">85.82</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">85.90</td>
 </tr>
 </tbody>
 </table>
@@ -409,12 +410,12 @@ Table&nbsp;1: Comparing Two Scenarios
 </div>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Important</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -470,12 +471,12 @@ Figure&nbsp;1: Comparing Two Scenarios
 </figure>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Important</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -522,7 +523,7 @@ Table&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</
 <div aria-describedby="tbl-margin1table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:250px; ">
-<table class="table table-striped do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<table class="table table-striped do-not-create-environment cell caption-top table-sm small">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: right; background-color: transparent !important; position: sticky; top: 0; background-color: #FFFFFF;">Number Dropped</th>
@@ -533,98 +534,98 @@ Table&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</
 <tbody>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">1</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7900000</td>
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.8300000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7600000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">2</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7400000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.3400000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7150000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.3500000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">3</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6366667</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1900000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6600000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.2000000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">4</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6800000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1650000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6825000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1525000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">5</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6320000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0940000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6520000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1140000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">6</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6266667</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1150000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6383333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.1000000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">7</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6242857</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0671429</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6100000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0700000</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">8</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6075000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0700000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6125000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0662500</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">9</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6122222</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0744444</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6233333</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0711111</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">10</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6120000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0520000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6040000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0560000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">11</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6000000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0500000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6027273</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0527273</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">12</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6025000</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0541667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6116667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0525000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">13</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6146154</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0569231</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6076923</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0538462</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">14</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6242857</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0492857</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6235714</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0500000</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">15</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6386667</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0526667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6286667</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0493333</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">16</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6387500</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0443750</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6556250</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0718750</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">17</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6658824</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0676471</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6711765</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0476471</td>
 </tr>
 <tr class="even">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">18</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6850000</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.6955556</td>
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0594444</td>
 </tr>
 <tr class="odd">
 <td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">19</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7373684</td>
-<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0847368</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.7326316</td>
+<td style="text-align: right; background-color: transparent !important; background-color: inherit !important;">0.0752632</td>
 </tr>
 </tbody>
 </table>
@@ -635,12 +636,12 @@ Table&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)</
 </div>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Important</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -705,12 +706,12 @@ Figure&nbsp;2: Marginal Returns to Score for <span class="math inline">\(n=20\)<
 </figure>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Important</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -791,12 +792,12 @@ Figure&nbsp;3: Marginal Returns to Score for <span class="math inline">\(n=90\)<
 </figure>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Important</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -940,13 +941,14 @@ ggplot() +
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1319,15 +1321,6 @@ ggplot() +
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/tinskoric/">
       <i class="bi bi-linkedin" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item">
- |
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="mailto:work@skoric.org">
-      <i class="bi bi-envelope" role="img">
 </i> 
     </a>
   </li>  

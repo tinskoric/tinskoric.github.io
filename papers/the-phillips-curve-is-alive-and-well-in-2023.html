@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,23 +49,27 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../stuff/logo.png" rel="icon" type="image/png">
+<link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-92153b6d74ebec2b9469f4fe31905469.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cfb5ebb161f7ef2b93547b7da16b0106.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ed4c2e555abed4aa388aaaccdac93265.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-91754457b7e7ab6c8f8448a4573d8789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-4370273e4b124178b5f66bd5c29cdf20.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-39e087fc85dbc55a103f8cfb08f3fadd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -109,7 +113,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -349,13 +353,13 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout callout-style-default callout-tip no-icon callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="Resume.pdf">Resume</a>
+<span class="screen-reader-only">Tip</span><a href="..">🏡</a> <a href="https://github.com/tinskoric"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="https://www.linkedin.com/in/tinskoric/"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="../Resume.pdf">Resume</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -802,7 +806,7 @@ Table&nbsp;3: Summary Statistics (Q1 1960-Q2 2023)
 <div id="fig-inflation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/inflation_plot.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/inflation_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Headline vs.&nbsp;Core PCE Inflation"><img src="the-phillips-curve-is-alive-and-well-in-2023/inflation_plot.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Headline vs.&nbsp;Core PCE Inflation
@@ -813,7 +817,7 @@ Figure&nbsp;1: Headline vs.&nbsp;Core PCE Inflation
 <div id="fig-ungap" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ungap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/ungap_plot.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/ungap_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Smoothed vs.&nbsp;Unsmoothed TV-NAIRU Unemployment Gap"><img src="the-phillips-curve-is-alive-and-well-in-2023/ungap_plot.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ungap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Smoothed vs.&nbsp;Unsmoothed TV-NAIRU Unemployment Gap
@@ -1094,7 +1098,7 @@ Table&nbsp;4: Summary Statistics (Q4 1974-Q2 2023)
 <div id="fig-trad" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-trad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/trad_curve.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/trad_curve.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Traditional Phillips Curve"><img src="the-phillips-curve-is-alive-and-well-in-2023/trad_curve.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Traditional Phillips Curve
@@ -1107,7 +1111,7 @@ The accelerationist curve demonstrates the relationship between the change of th
 <div id="fig-accel1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-accel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/accel_curve.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Accelerationist Phillips Curve"><img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-accel1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Accelerationist Phillips Curve
@@ -1123,7 +1127,7 @@ Figure&nbsp;4: Accelerationist Phillips Curve
 <div id="fig-accel2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-accel2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_2.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Accelerationist Phillips Curve by Decade"><img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_2.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-accel2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Accelerationist Phillips Curve by Decade
@@ -1137,7 +1141,7 @@ Figure&nbsp;5: Accelerationist Phillips Curve by Decade
 <div id="fig-accel3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-accel3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_model.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Accelerationist Phillips Curve Model Estimates"><img src="the-phillips-curve-is-alive-and-well-in-2023/accel_curve_model.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-accel3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6: Accelerationist Phillips Curve Model Estimates
@@ -1151,7 +1155,7 @@ Figure&nbsp;6: Accelerationist Phillips Curve Model Estimates
 Table&nbsp;5: Accelerationist Phillips Curve Model Regression Table
 </figcaption>
 <div aria-describedby="tbl-result1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/result1.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/result1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Table&nbsp;5: Accelerationist Phillips Curve Model Regression Table"><img src="the-phillips-curve-is-alive-and-well-in-2023/result1.png" class="img-fluid figure-img"></a>
 </div>
 </figure>
 </div>
@@ -1235,7 +1239,7 @@ Interestingly, the regression on the initial model did not find the second or th
 Table&nbsp;7: Triangle Model Regression Table
 </figcaption>
 <div aria-describedby="tbl-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="papers/the-phillips-curve-is-alive-and-well-in-2023/result2.png" class="img-fluid figure-img">
+<a href="papers/the-phillips-curve-is-alive-and-well-in-2023/result2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Table&nbsp;7: Triangle Model Regression Table"><img src="papers/the-phillips-curve-is-alive-and-well-in-2023/result2.png" class="img-fluid figure-img"></a>
 </div>
 </figure>
 </div>
@@ -1246,7 +1250,7 @@ Table&nbsp;7: Triangle Model Regression Table
 <div id="fig-result1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-result1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="the-phillips-curve-is-alive-and-well-in-2023/PCE_delta_gordon_plot_20yearSample.png" class="img-fluid figure-img">
+<a href="the-phillips-curve-is-alive-and-well-in-2023/PCE_delta_gordon_plot_20yearSample.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;7: Triangle Model Inflation Estimates"><img src="the-phillips-curve-is-alive-and-well-in-2023/PCE_delta_gordon_plot_20yearSample.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-result1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: Triangle Model Inflation Estimates
@@ -1364,13 +1368,14 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1749,15 +1754,6 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
     <li class="nav-item">
  |
   </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="mailto:work@skoric.org">
-      <i class="bi bi-envelope" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item">
- |
-  </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
 <p>Site Source</p>
@@ -1770,6 +1766,38 @@ Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Un
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
