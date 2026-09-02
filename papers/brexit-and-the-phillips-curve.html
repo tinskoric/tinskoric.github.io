@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Brexit and the Phillips Curve – Tin Skoric</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -52,15 +54,14 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-eee86b45865e343c2fba371b2118d1f1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-88982c517a1816b2e0cf1b63bd342fb9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-4a33dc0a5b7a0e6ee205ce070916446b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4b7ed31eb8f0a058c155c7d334444078.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -96,7 +97,7 @@ div.csl-indent {
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -228,7 +229,7 @@ I will first briefly discuss the background of Brexit and then move on to an ove
 <p>The UK was one of the principal members of the EU by size and economic power. In the same class were only France, Germany, and perhaps Italy. Among these members—specifically among France and Germany—the UK was long least committed to the European project. The reasons for this vary but, as aptly summarized by writers Henley, Rankin, and O’Carroll for <em>The Guardian</em>:</p>
 <blockquote class="blockquote">
 <p><em>[Britain has] a profound sense of exceptionalism, reinforced by relative economic success and an overwhelmingly Eurosceptic popular press […] This eventually combined to create the impression that the EU was essentially an anti-British plot […] Amid the bitter fallout of the financial crash, mounting public concern over immigration and a political threat from the right in the form of Nigel Farage’s anti-EU [UKIP] party led David Cameron to promise an in-out Brexit referendum if he won the 2015 election. A largely populist, emotive, and evidence-free campaign with the inspired slogan “Take back control” carried the day, with voters motivated by a wide range of factors opting by 52% to 48% in [favor] of the UK leaving the EU.</em></p>
-<p>-<span class="citation" data-cites="guardian2020">Henley, Rankin, and O’Carroll (<a href="#ref-guardian2020" role="doc-biblioref">2020</a>)</span></p>
+<p>-<span class="citation" data-cites="guardian2020">Henley et al. (<a href="#ref-guardian2020" role="doc-biblioref">2020</a>)</span></p>
 </blockquote>
 <p>This is a familiar narrative for Americans. Following the 2008 financial crisis, right-wing populists gained a foothold in mainstream conversations. In the UK this growth of the populist right put the Conservative Cameron government in the understandably difficult position of doing something it may not have necessarily wanted to do but did in the hope of appealing to a growing voting segment. Understanding all the individual motivations for Brexit is not paramount to understanding its economic implications, but it is useful to have an idea of who was in charge when this happened.</p>
 </section>
@@ -398,7 +399,7 @@ Knowing already that these are the likely effects of Brexit given this work and 
 <h1 data-number="3"><span class="header-section-number">3</span> Data, Methodology, and Models</h1>
 <section id="sec-data_methods" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-data_methods"><span class="header-section-number">3.1</span> Data and Methodology</h2>
-<p>All data is sourced from the Organisation for Economic Co-operation and Development (OECD), with monthly time series observations from January 2007 to June 2023 for 26 groups at the national level. I collect data on as many EU (or in the case of the UK, former EU) members as are available from the OECD alongside the EU member-state average—although I do not use this average in my models. Headline, core, food, and energy inflation are all from <span class="citation" data-cites="inflatio2017"><span>“Inflation (CPI)”</span> (<a href="#ref-inflatio2017" role="doc-biblioref">2017</a>)</span>. Unemployment rates are from <span class="citation" data-cites="harmonis2017"><span>“Harmonised Unemployment Rate (HUR)”</span> (<a href="#ref-harmonis2017" role="doc-biblioref">2017</a>)</span>. All data cleaning and modeling is done in R.<br>
+<p>All data is sourced from the Organisation for Economic Co-operation and Development (OECD), with monthly time series observations from January 2007 to June 2023 for 26 groups at the national level. I collect data on as many EU (or in the case of the UK, former EU) members as are available from the OECD alongside the EU member-state average—although I do not use this average in my models. Headline, core, food, and energy inflation are all from <span class="citation" data-cites="inflatio2017"><em>Inflation (CPI)</em> (<a href="#ref-inflatio2017" role="doc-biblioref">2017</a>)</span>. Unemployment rates are from <span class="citation" data-cites="harmonis2017"><em>Harmonised Unemployment Rate (HUR)</em> (<a href="#ref-harmonis2017" role="doc-biblioref">2017</a>)</span>. All data cleaning and modeling is done in R.<br>
 <br>
 All data is measured as percent rates, with inflation being the percent change in consumer price levels between years and unemployment being the proportion of persons in the labor force but not working within a given country. To identify Brexit and the pandemic, I create dummy variables <span class="math inline">\(\text{BREXITnumeric}\)</span> and <span class="math inline">\(\text{COVIDnumeric}\)</span> respectively. Additionally, I create a third dummy to identify the UK exclusively among other countries, <span class="math inline">\(\text{isUKnumeric}\)</span>. The conditions for the three dummies are as follows (in the order that they were presented):</p>
 <ol type="1">
@@ -476,7 +477,7 @@ To test the robustness of the Gordon model, I will construct a simple variation 
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-models"><span class="header-section-number">3.2</span> Model(s)</h2>
 <section id="sec-NAIRUest" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="sec-NAIRUest"><span class="header-section-number">3.2.1</span> Estimating the TV-NAIRU</h3>
-<p>To estimate a TV-NAIRU <span class="citation" data-cites="gordon1997">Gordon (<a href="#ref-gordon1997" role="doc-biblioref">1997</a>)</span> follows the methodology of <span class="citation" data-cites="staiger1997">Staiger, Stock, and Watson (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, which involves regressing lags of the unemployment rate rate on the change in core inflation and dividing the intercept by the coefficients on the lagged regressors. From <span class="citation" data-cites="staiger1997">Staiger, Stock, and Watson (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, consider a quarterly model wherein core inflation is regressed on four lags of the unemployment rate:</p>
+<p>To estimate a TV-NAIRU <span class="citation" data-cites="gordon1997">Gordon (<a href="#ref-gordon1997" role="doc-biblioref">1997</a>)</span> follows the methodology of <span class="citation" data-cites="staiger1997">Staiger et al. (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, which involves regressing lags of the unemployment rate rate on the change in core inflation and dividing the intercept by the coefficients on the lagged regressors. From <span class="citation" data-cites="staiger1997">Staiger et al. (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, consider a quarterly model wherein core inflation is regressed on four lags of the unemployment rate:</p>
 <p><span class="math display">\[
 C\pi_{t} = \beta_{0}+\beta_{1}u_{t-1}+\beta_{2}u_{t-2}+\beta_{3}u_{t-3}+\beta_{4}u_{t-4} \label{eq:eq_NAIRU1} \tag{2}
 \]</span></p>
@@ -484,11 +485,11 @@ C\pi_{t} = \beta_{0}+\beta_{1}u_{t-1}+\beta_{2}u_{t-2}+\beta_{3}u_{t-3}+\beta_{4
 <p><span class="math display">\[
 \overline{u} = \frac{\beta_{0}}{\beta_{1}+\beta_{2}+\beta_{3}+\beta_{4}} \label{eq:eq_NAIRU2} \tag{3}
 \]</span></p>
-<p>Four lags of unemployment are used for quarterly data in <span class="citation" data-cites="staiger1997">Staiger, Stock, and Watson (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, so I use twelve for monthly data:</p>
+<p>Four lags of unemployment are used for quarterly data in <span class="citation" data-cites="staiger1997">Staiger et al. (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span>, so I use twelve for monthly data:</p>
 <p><span class="math display">\[
 \overline{u} = \frac{\beta_{0}}{\beta_{1}+\beta_{2}+\beta_{3}+\beta_{4}+\beta_{5}+\beta_{6}+\beta_{7}+\beta_{8}+\beta_{9}+\beta_{10}+\beta_{11}+\beta_{12}} \label{eq:eq_NAIRU3} \tag{4}
 \]</span></p>
-<p><span class="citation" data-cites="staiger1997">Staiger, Stock, and Watson (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span> go on to use a complex cubic spline, so instead I just run a rolling regression and smooth it with a Hodrick-Prescott filter set to <span class="math inline">\(\lambda = 14400\)</span>. This rolling average regression method results in some observations being lost due to the window of observations per average. The window needs to be sufficiently large while also leaving room for the average to change. I use a window period of <span class="math inline">\(99\)</span> which evenly divides the total dataset, but unfortunately still leads to the first years being lost as the first <span class="math inline">\(99\)</span> periods per entity are averaged for the first step of the rolling average. Additionally, once I have the TV-NAIRU estimates, I shift the estimates down to match with other variable observations per month. This results in the last few months being lost. Still, I have over <span class="math inline">\(2000\)</span> observations for <span class="math inline">\(25\)</span> countries as noted in <a href="#sec-data_methods" class="quarto-xref">Section&nbsp;3.1</a>.</p>
+<p><span class="citation" data-cites="staiger1997">Staiger et al. (<a href="#ref-staiger1997" role="doc-biblioref">1997</a>)</span> go on to use a complex cubic spline, so instead I just run a rolling regression and smooth it with a Hodrick-Prescott filter set to <span class="math inline">\(\lambda = 14400\)</span>. This rolling average regression method results in some observations being lost due to the window of observations per average. The window needs to be sufficiently large while also leaving room for the average to change. I use a window period of <span class="math inline">\(99\)</span> which evenly divides the total dataset, but unfortunately still leads to the first years being lost as the first <span class="math inline">\(99\)</span> periods per entity are averaged for the first step of the rolling average. Additionally, once I have the TV-NAIRU estimates, I shift the estimates down to match with other variable observations per month. This results in the last few months being lost. Still, I have over <span class="math inline">\(2000\)</span> observations for <span class="math inline">\(25\)</span> countries as noted in <a href="#sec-data_methods" class="quarto-xref">Section&nbsp;3.1</a>.</p>
 </section>
 <section id="sec-triangle" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="sec-triangle"><span class="header-section-number">3.2.2</span> Gordon’s Triangle</h3>
@@ -844,48 +845,48 @@ This paper is imperfect. For future works it would be good to use a better metho
 </section>
 <section id="references" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-npr2016" class="csl-entry" role="listitem">
-Frayer, Lauren. 2016. <span>“If Britain Leaves The EU, What Happens To The "Polish Plumber?".”</span> <em>National Public Radio</em>, May. <a href="https://www.npr.org/sections/parallels/2016/05/14/477685487/if-britain-leaves-the-eu-what-happens-to-the-polish-plumber">https://www.npr.org/sections/parallels/2016/05/14/477685487/if-britain-leaves-the-eu-what-happens-to-the-polish-plumber</a>.
+Frayer, Lauren. 2016. <span>“If Britain Leaves the EU, What Happens to the "Polish Plumber?".”</span> <em>National Public Radio</em>, May 14. <a href="https://www.npr.org/sections/parallels/2016/05/14/477685487/if-britain-leaves-the-eu-what-happens-to-the-polish-plumber">https://www.npr.org/sections/parallels/2016/05/14/477685487/if-britain-leaves-the-eu-what-happens-to-the-polish-plumber</a>.
 </div>
 <div id="ref-gordon1981a" class="csl-entry" role="listitem">
-Gordon, Robert J. 1981. <span>“Inflation, Flexible Exchange Rates, and the Natural Rate of Unemployment.”</span> <a href="https://doi.org/10.3386/w0708">https://doi.org/10.3386/w0708</a>.
+Gordon, Robert J. 1981. <em>Inflation, Flexible Exchange Rates, and the Natural Rate of Unemployment</em>. <a href="https://doi.org/10.3386/w0708">https://doi.org/10.3386/w0708</a>.
 </div>
 <div id="ref-gordon1997" class="csl-entry" role="listitem">
-———. 1997. <span>“The Time-Varying NAIRU and Its Implications for Economic Policy.”</span> <em>Journal of Economic Perspectives</em> 11 (1): 11–32. <a href="https://doi.org/10.1257/jep.11.1.11">https://doi.org/10.1257/jep.11.1.11</a>.
+Gordon, Robert J. 1997. <span>“The Time-Varying NAIRU and Its Implications for Economic Policy.”</span> <em>Journal of Economic Perspectives</em> 11 (1): 11–32. <a href="https://doi.org/10.1257/jep.11.1.11">https://doi.org/10.1257/jep.11.1.11</a>.
 </div>
 <div id="ref-gordon2013" class="csl-entry" role="listitem">
-———. 2013. <span>“The Phillips Curve Is Alive and Well: Inflation and the NAIRU During the Slow Recovery.”</span> <a href="https://doi.org/10.3386/w19390">https://doi.org/10.3386/w19390</a>.
+Gordon, Robert J. 2013. <em>The Phillips Curve Is Alive and Well: Inflation and the NAIRU During the Slow Recovery</em>. <a href="https://doi.org/10.3386/w19390">https://doi.org/10.3386/w19390</a>.
 </div>
 <div id="ref-gordon1977" class="csl-entry" role="listitem">
-Gordon, Robert J., George Perry, Franco Modigliani, Arthur Okun, Michael Wachter, Pentti Kouri, Edmund Phelps, and Christopher Sims. 1977. <span>“Can the Inflation of the 1970s Be Explained?”</span> <em>Brookings Papers on Economic Activity</em> 1977 (1): 253. <a href="https://doi.org/10.2307/2534262">https://doi.org/10.2307/2534262</a>.
+Gordon, Robert J., George Perry, Franco Modigliani, et al. 1977. <span>“Can the Inflation of the 1970s Be Explained?”</span> <em>Brookings Papers on Economic Activity</em> 1977 (1): 253. <a href="https://doi.org/10.2307/2534262">https://doi.org/10.2307/2534262</a>.
 </div>
 <div id="ref-gupta2023a" class="csl-entry" role="listitem">
-Gupta, Raghav, Md. Mahadi Hasan, Syed Zahurul Islam, Tahmina Yasmin, and Jasim Uddin. 2023. <span>“Evaluating the Brexit and COVID-19<span>’</span>s Influence on the UK Economy: A Data Analysis.”</span> Edited by Umer Shahzad. <em>PLOS ONE</em> 18 (6): e0287342. <a href="https://doi.org/10.1371/journal.pone.0287342">https://doi.org/10.1371/journal.pone.0287342</a>.
+Gupta, Raghav, Md. Mahadi Hasan, Syed Zahurul Islam, Tahmina Yasmin, and Jasim Uddin. 2023. <span>“Evaluating the Brexit and COVID-19<span>’</span>s Influence on the UK Economy: A Data Analysis.”</span> <em>PLOS ONE</em> 18 (6): e0287342. <a href="https://doi.org/10.1371/journal.pone.0287342">https://doi.org/10.1371/journal.pone.0287342</a>.
 </div>
 <div id="ref-gylfason2022b" class="csl-entry" role="listitem">
 Gylfason, Thorvaldur, and Eduard Hochreiter. 2022. <span>“To Grow or Not to Grow: Belarus and Lithuania.”</span> <em>Comparative Economic Studies</em> 65 (1): 137–67. <a href="https://doi.org/10.1057/s41294-022-00188-1">https://doi.org/10.1057/s41294-022-00188-1</a>.
 </div>
 <div id="ref-harmonis2017" class="csl-entry" role="listitem">
-<span>“Harmonised Unemployment Rate (HUR).”</span> 2017. OECD. <a href="https://doi.org/10.1787/52570002-en">https://doi.org/10.1787/52570002-en</a>.
+<em>Harmonised Unemployment Rate (HUR)</em>. 2017. OECD. <a href="https://doi.org/10.1787/52570002-en">https://doi.org/10.1787/52570002-en</a>.
 </div>
 <div id="ref-guardian2020" class="csl-entry" role="listitem">
-Henley, Jon, Jennifer Rankin, and Lisa O’Carroll. 2020. <span>“Brexit Explained: How It Happened and What Comes Next.”</span> <em>The Guardian</em>, January. <a href="https://www.theguardian.com/news/2020/jan/27/brexit-explained-how-it-happened-and-what-comes-next">https://www.theguardian.com/news/2020/jan/27/brexit-explained-how-it-happened-and-what-comes-next</a>.
+Henley, Jon, Jennifer Rankin, and Lisa O’Carroll. 2020. <span>“Brexit Explained: How It Happened and What Comes Next.”</span> <em>The Guardian</em>, January 27. <a href="https://www.theguardian.com/news/2020/jan/27/brexit-explained-how-it-happened-and-what-comes-next">https://www.theguardian.com/news/2020/jan/27/brexit-explained-how-it-happened-and-what-comes-next</a>.
 </div>
 <div id="ref-inflatio2017" class="csl-entry" role="listitem">
-<span>“Inflation (CPI).”</span> 2017. OECD. <a href="https://doi.org/10.1787/eee82e6e-en">https://doi.org/10.1787/eee82e6e-en</a>.
+<em>Inflation (CPI)</em>. 2017. OECD. <a href="https://doi.org/10.1787/eee82e6e-en">https://doi.org/10.1787/eee82e6e-en</a>.
 </div>
 <div id="ref-phillips1958" class="csl-entry" role="listitem">
 Phillips, A. W. 1958. <span>“The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861<span></span>1957<span><sup>1</sup></span>.”</span> <em>Economica</em> 25 (100): 283–99. <a href="https://doi.org/10.1111/j.1468-0335.1958.tb00003.x">https://doi.org/10.1111/j.1468-0335.1958.tb00003.x</a>.
 </div>
 <div id="ref-piie2022" class="csl-entry" role="listitem">
-Posen, Adam S., and Lucas Rengifo-Keller. 2016. <span>“Brexit Is Driving Inflation Higher in the UK Than Its European Peers After Identical Supply Shocks.”</span> <em>Peterson Institute for International Economics</em>, May. <a href="https://www.piie.com/research/piie-charts/brexit-driving-inflation-higher-uk-its-european-peers-after-identical-supply">https://www.piie.com/research/piie-charts/brexit-driving-inflation-higher-uk-its-european-peers-after-identical-supply</a>.
+Posen, Adam S., and Lucas Rengifo-Keller. 2016. <span>“Brexit Is Driving Inflation Higher in the UK Than Its European Peers After Identical Supply Shocks.”</span> <em>Peterson Institute for International Economics</em>, May 24. <a href="https://www.piie.com/research/piie-charts/brexit-driving-inflation-higher-uk-its-european-peers-after-identical-supply">https://www.piie.com/research/piie-charts/brexit-driving-inflation-higher-uk-its-european-peers-after-identical-supply</a>.
 </div>
 <div id="ref-ukhouse2024" class="csl-entry" role="listitem">
-Powell, Andy, and Brigid Francis-Devine. 2024. <span>“UK Labour Market Statistics.”</span> <em>UK Parliament House of Commons</em>. <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-9366/">https://commonslibrary.parliament.uk/research-briefings/cbp-9366/</a>.
+Powell, Andy, and Brigid Francis-Devine. 2024. <span>“UK Labour Market Statistics.”</span> In <em>UK Parliament House of Commons</em>. <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-9366/">https://commonslibrary.parliament.uk/research-briefings/cbp-9366/</a>.
 </div>
 <div id="ref-cer2023" class="csl-entry" role="listitem">
-Springford, John, and Jonathan Ports. 2023. <span>“Early Impacts of the Post-Brexit Immigration System on the UK Labour Market.”</span> <em>Centre for European Reform</em>, January. <a href="https://www.cer.eu/insights/post-brexit-immigration-uk-labour-market">https://www.cer.eu/insights/post-brexit-immigration-uk-labour-market</a>.
+Springford, John, and Jonathan Ports. 2023. <span>“Early Impacts of the Post-Brexit Immigration System on the UK Labour Market.”</span> <em>Centre for European Reform</em>, January 17. <a href="https://www.cer.eu/insights/post-brexit-immigration-uk-labour-market">https://www.cer.eu/insights/post-brexit-immigration-uk-labour-market</a>.
 </div>
 <div id="ref-staiger1997" class="csl-entry" role="listitem">
 Staiger, Douglas, James H Stock, and Mark W Watson. 1997. <span>“The NAIRU, Unemployment and Monetary Policy.”</span> <em>Journal of Economic Perspectives</em> 11 (1): 33–49. <a href="https://doi.org/10.1257/jep.11.1.33">https://doi.org/10.1257/jep.11.1.33</a>.

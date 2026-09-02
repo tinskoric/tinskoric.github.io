@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>The Effect of the 2008 Financial Crisis on Bosnian Households – Tin Skoric</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -24,7 +27,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -52,19 +54,14 @@ div.csl-indent {
 <link href="../logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ed4c2e555abed4aa388aaaccdac93265.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4e77d12204de3f50264ecda95c55294d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-88982c517a1816b2e0cf1b63bd342fb9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-39e087fc85dbc55a103f8cfb08f3fadd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-ae23c4d98c86d340dd53c310052a07ba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-4b7ed31eb8f0a058c155c7d334444078.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
@@ -100,7 +97,7 @@ div.csl-indent {
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -129,172 +126,9 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
@@ -356,7 +190,6 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
-
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -893,13 +726,13 @@ h_{i} = \alpha + \gamma{g(y_{i})}+x_{i}\beta+v_{i} \label{eq:HappyPaper2} \tag{2
 \]</span></p>
 <p>While I would have liked to replicate this methodology given that it produces sound estimates, using Gallup World Poll data was not an option due to the cost involved. Instead, I attempt three different methods of estimation for <span class="math inline">\(\theta\)</span> in the second period, and I will detail each and their results.<br>
 <br>
-The first method involves solving for <span class="math inline">\(\theta\)</span> using Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span> with values of the interest and population growth rates, and the growth rate of technological progress, updated for the year 2008. As noted earlier, the population growth rate is positive if derived from the World Bank, and negative if from the Penn World Table over the 1996 to 2007 period. Although the latter appears more reasonable on the surface, <span class="math inline">\(g\)</span> is <em>also</em> negative, and if both <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> are negative, the Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span> returns very wonky (negative) estimates. So, while I acknowledge the real population growth may be negative (although it is fair to say that the conditions of the war make basically any estimate from the era difficult), I cannot use a negative value in the model. Further, <span class="math inline">\(g\)</span> cannot reasonably be made positive for argument’s sake after being consistently negative for 2008 and the years immediately prior. I therefore resolve to use the averages of <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> for the period 1996 to 2008 to account for this issue, allowing <span class="math inline">\(n\)</span> to remain positive. While it is not ideal, it is more reasonable to say that out of all of the variables involved in Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span>, population growth and technological progress rates are the least likely to significantly change in the course of a year absent emergency conditions. I then take the value of the deposit interest rate for 2008, calibrate the rate of time preference as I did with the average prior to 2008 in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, and plug all the values into Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span>. The resulting estimate is <span class="math inline">\(\theta=1.61\)</span>, which is higher than the estimates noted later, but is not unreasonable to see high jumps in risk aversion under the context of the Global Financial Crisis as seen in <span class="citation" data-cites="bekaert2022">Bekaert, Engstrom, and Xu (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>.<br>
+The first method involves solving for <span class="math inline">\(\theta\)</span> using Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span> with values of the interest and population growth rates, and the growth rate of technological progress, updated for the year 2008. As noted earlier, the population growth rate is positive if derived from the World Bank, and negative if from the Penn World Table over the 1996 to 2007 period. Although the latter appears more reasonable on the surface, <span class="math inline">\(g\)</span> is <em>also</em> negative, and if both <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> are negative, the Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span> returns very wonky (negative) estimates. So, while I acknowledge the real population growth may be negative (although it is fair to say that the conditions of the war make basically any estimate from the era difficult), I cannot use a negative value in the model. Further, <span class="math inline">\(g\)</span> cannot reasonably be made positive for argument’s sake after being consistently negative for 2008 and the years immediately prior. I therefore resolve to use the averages of <span class="math inline">\(n\)</span> and <span class="math inline">\(g\)</span> for the period 1996 to 2008 to account for this issue, allowing <span class="math inline">\(n\)</span> to remain positive. While it is not ideal, it is more reasonable to say that out of all of the variables involved in Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span>, population growth and technological progress rates are the least likely to significantly change in the course of a year absent emergency conditions. I then take the value of the deposit interest rate for 2008, calibrate the rate of time preference as I did with the average prior to 2008 in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a>, and plug all the values into Equation <span class="math inline">\(\eqref{eq:class_eq_20}\)</span>. The resulting estimate is <span class="math inline">\(\theta=1.61\)</span>, which is higher than the estimates noted later, but is not unreasonable to see high jumps in risk aversion under the context of the Global Financial Crisis as seen in <span class="citation" data-cites="bekaert2022">Bekaert et al. (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>.<br>
 <br>
-Although I cannot exactly replicate the methodology of <span class="citation" data-cites="gandelman2015">Gándelman and Hernández-Murillo (<a href="#ref-gandelman2015" role="doc-biblioref">2015</a>)</span>, I can use their essential model <span class="math inline">\(\eqref{eq:HappyPaper2}\)</span> and substitute it with national rather than individual data. For example, instead of using individual reports of household income, I use per capita Gross Domestic Product. Similarly, rather than using individual reports of happiness, I use the <span class="citation" data-cites="leading2017a">OECD (<a href="#ref-leading2017a" role="doc-biblioref">2017b</a>)</span> Consumer Confidence Index which reflects consumer sentiments nationally. Although data for this index is not available from the OECD for Bosnia, there are a number of countries similar to Bosnia with data available. I choose Greece, Hungary, Slovenia, and Türkiye as they are countries near Bosnia that do not generally have hugely higher incomes (none except Slovenia have a GDP per capita greater than <span class="math inline">\(\approx\)</span>$20,000 current USD) and have OECD data available. While this is not a one-for-one replacement, these are sets of data that answer alike questions. For income and all other variables—except the Consumer Confidence Index—included in the model <span class="math inline">\(\eqref{eq:HappyPaper2}\)</span> I find national substitutes for Bosnia covering the period 1996 to 2008. Since not all variables are available monthly, I average the index yearly. Further, since some countries selected from the Consumer Confidence Index do not have data available for many periods prior to 2007 I average the index values for the four countries together yearly. I then regress the model over the period 1996 to 2007 to derive coefficients for each variable. Lastly, I plug in values for the year 2008 and solve for <span class="math inline">\(\theta\)</span> using the coefficients derived. The substitutes that I was able to find do not change all that much in 2008 relative to the prior years included, so the resulting estimate for <span class="math inline">\(\theta\)</span> in 2008 is almost equal to that of years prior. Ignoring the limited number of observation periods in this implementation, this method could be useful but the substitute values that I have found simply do not do well by it.<br>
+Although I cannot exactly replicate the methodology of <span class="citation" data-cites="gandelman2015">Gándelman and Hernández-Murillo (<a href="#ref-gandelman2015" role="doc-biblioref">2015</a>)</span>, I can use their essential model <span class="math inline">\(\eqref{eq:HappyPaper2}\)</span> and substitute it with national rather than individual data. For example, instead of using individual reports of household income, I use per capita Gross Domestic Product. Similarly, rather than using individual reports of happiness, I use the <span class="citation" data-cites="leading2017a">OECD (<a href="#ref-leading2017a" role="doc-biblioref">2017a</a>)</span> Consumer Confidence Index which reflects consumer sentiments nationally. Although data for this index is not available from the OECD for Bosnia, there are a number of countries similar to Bosnia with data available. I choose Greece, Hungary, Slovenia, and Türkiye as they are countries near Bosnia that do not generally have hugely higher incomes (none except Slovenia have a GDP per capita greater than <span class="math inline">\(\approx\)</span>$20,000 current USD) and have OECD data available. While this is not a one-for-one replacement, these are sets of data that answer alike questions. For income and all other variables—except the Consumer Confidence Index—included in the model <span class="math inline">\(\eqref{eq:HappyPaper2}\)</span> I find national substitutes for Bosnia covering the period 1996 to 2008. Since not all variables are available monthly, I average the index yearly. Further, since some countries selected from the Consumer Confidence Index do not have data available for many periods prior to 2007 I average the index values for the four countries together yearly. I then regress the model over the period 1996 to 2007 to derive coefficients for each variable. Lastly, I plug in values for the year 2008 and solve for <span class="math inline">\(\theta\)</span> using the coefficients derived. The substitutes that I was able to find do not change all that much in 2008 relative to the prior years included, so the resulting estimate for <span class="math inline">\(\theta\)</span> in 2008 is almost equal to that of years prior. Ignoring the limited number of observation periods in this implementation, this method could be useful but the substitute values that I have found simply do not do well by it.<br>
 <br>
-The last estimation method is to take the <span class="citation" data-cites="maineco2017">OECD (<a href="#ref-maineco2017" role="doc-biblioref">2017a</a>)</span> Consumer Barometer, which is the normalized change in the Consumer Confidence Index, and multiply the averaged yearly value for 2008 by the initial estimate (<span class="math inline">\(\theta =0.72\)</span>). The reasoning for this is that if a measure of happiness can be related to risk aversion—as it is inversely by <span class="citation" data-cites="gandelman2015">Gándelman and Hernández-Murillo (<a href="#ref-gandelman2015" role="doc-biblioref">2015</a>)</span>—and if the Consumer Confidence Index can be considered a substitute for such a measure, then the change in that index could be considered akin to a change in the prior measure, which would then mean a change in risk aversion. Since this is simply a change value that I am multiplying as a scalar rather than regressing, I am unconcerned by some countries not having data until the 2000s and select a range of values. I select from the four countries (Greece, Hungary, Slovenia, and Türkiye) for the ones with the least (Hungary, <span class="math inline">\(\Delta \approx -0.06\)</span>) and most (Türkiye, <span class="math inline">\(\Delta \approx -0.23\)</span>) negative average change in the Consumer Barometer for the year 2008. I also take the average (<span class="math inline">\(\Delta \approx -0.13\)</span>) across all four countries. This results in three estimates: <span class="math inline">\(\theta=0.77, 0.81, 0.89\)</span>. This is a good range of estimates, although the lowest one is only very marginally different from the initial value. It is worth noting that the low estimate for <span class="math inline">\(\theta\)</span> comes from the Consumer Barometer for Hungary, which is not considered a middle-income country, whereas the high estimate comes from Türkiye which is considered one. In fact, Türkiye is the only country of the four to be considered middle-income, so perhaps the higher estimate is a better characterization for Bosnia. To support this, looking at another middle-income country—albeit one not close to Bosnia—Brazil has an average yearly change that is more negative than the average of the four countries (<span class="math inline">\(\Delta \approx -0.17\)</span>). With this in mind, and <span class="citation" data-cites="bekaert2022">Bekaert, Engstrom, and Xu (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>, I think it best to focus on the highest estimate, <span class="math inline">\(\theta=0.89\)</span> of the three.<br>
+The last estimation method is to take the <span class="citation" data-cites="maineco2017">OECD (<a href="#ref-maineco2017" role="doc-biblioref">2017b</a>)</span> Consumer Barometer, which is the normalized change in the Consumer Confidence Index, and multiply the averaged yearly value for 2008 by the initial estimate (<span class="math inline">\(\theta =0.72\)</span>). The reasoning for this is that if a measure of happiness can be related to risk aversion—as it is inversely by <span class="citation" data-cites="gandelman2015">Gándelman and Hernández-Murillo (<a href="#ref-gandelman2015" role="doc-biblioref">2015</a>)</span>—and if the Consumer Confidence Index can be considered a substitute for such a measure, then the change in that index could be considered akin to a change in the prior measure, which would then mean a change in risk aversion. Since this is simply a change value that I am multiplying as a scalar rather than regressing, I am unconcerned by some countries not having data until the 2000s and select a range of values. I select from the four countries (Greece, Hungary, Slovenia, and Türkiye) for the ones with the least (Hungary, <span class="math inline">\(\Delta \approx -0.06\)</span>) and most (Türkiye, <span class="math inline">\(\Delta \approx -0.23\)</span>) negative average change in the Consumer Barometer for the year 2008. I also take the average (<span class="math inline">\(\Delta \approx -0.13\)</span>) across all four countries. This results in three estimates: <span class="math inline">\(\theta=0.77, 0.81, 0.89\)</span>. This is a good range of estimates, although the lowest one is only very marginally different from the initial value. It is worth noting that the low estimate for <span class="math inline">\(\theta\)</span> comes from the Consumer Barometer for Hungary, which is not considered a middle-income country, whereas the high estimate comes from Türkiye which is considered one. In fact, Türkiye is the only country of the four to be considered middle-income, so perhaps the higher estimate is a better characterization for Bosnia. To support this, looking at another middle-income country—albeit one not close to Bosnia—Brazil has an average yearly change that is more negative than the average of the four countries (<span class="math inline">\(\Delta \approx -0.17\)</span>). With this in mind, and <span class="citation" data-cites="bekaert2022">Bekaert et al. (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>, I think it best to focus on the highest estimate, <span class="math inline">\(\theta=0.89\)</span> of the three.<br>
 <br>
-While the second method would have been ideal, it was not feasible for the reasons outlined earlier. By contrast, the first and third methods each have some positives and negatives. For the former, it provides an estimate that feels sufficiently high given the circumstances while not requiring any particularly severe leaps of logic. However, the first method still requires me to hold constant some data that <em>is not</em> constant—even if it is slow-changing—and to make personal assumptions about data integrity under wartime conditions. For the latter, it requires only the assumption that consumer confidence and happiness are closely related. However, the third method provides much lower estimates than the first—not even the largest one is two-tenths greater than the pre-crisis estimate—and frankly, the numbers appear too low for a financial crisis based on analyses of changes in risk-aversion during the financial crisis <span class="citation" data-cites="bekaert2022">(<a href="#ref-bekaert2022" role="doc-biblioref">Bekaert, Engstrom, and Xu 2022</a>)</span>. In all, I carry forward the former and latter as the high and low ends of a range of possible estimates. I also take the mean of the two <span class="math inline">\(\theta=1 .25\)</span> to serve as a middle-road estimate.</p>
+While the second method would have been ideal, it was not feasible for the reasons outlined earlier. By contrast, the first and third methods each have some positives and negatives. For the former, it provides an estimate that feels sufficiently high given the circumstances while not requiring any particularly severe leaps of logic. However, the first method still requires me to hold constant some data that <em>is not</em> constant—even if it is slow-changing—and to make personal assumptions about data integrity under wartime conditions. For the latter, it requires only the assumption that consumer confidence and happiness are closely related. However, the third method provides much lower estimates than the first—not even the largest one is two-tenths greater than the pre-crisis estimate—and frankly, the numbers appear too low for a financial crisis based on analyses of changes in risk-aversion during the financial crisis <span class="citation" data-cites="bekaert2022">(<a href="#ref-bekaert2022" role="doc-biblioref">Bekaert et al. 2022</a>)</span>. In all, I carry forward the former and latter as the high and low ends of a range of possible estimates. I also take the mean of the two <span class="math inline">\(\theta=1 .25\)</span> to serve as a middle-road estimate.</p>
 <table class="caption-top table">
 <caption>Relative Risk Aversion (<span class="math inline">\(\theta\)</span>) Estimates for 2008</caption>
 <colgroup>
@@ -1682,7 +1515,7 @@ Figure&nbsp;5: Evolution of Variables of Interest over Time after 2008 Crisis (W
 <h1 data-number="6"><span class="header-section-number">6</span> Conclusion</h1>
 <p>The increase in the coefficient of relative risk aversion, <span class="math inline">\(\theta\)</span>, in Bosnia results in large drops in output, consumption, investment, and capital accumulation. In sum, between the two steady states, output, consumption, and investment, all decrease by as much as <span class="math inline">\(2.53\%\)</span>, <span class="math inline">\(2.41\%\)</span>, and <span class="math inline">\(7.40\%\)</span> respectively. In dynamic simulations, by year 10, output and investment decrease by as much as <span class="math inline">\(0.61\%\)</span> and <span class="math inline">\(-69.51\%\)</span>, and the initial spike in consumption is reduced to only <span class="math inline">\(1.15\%\)</span> over equilibrium when compared to <span class="math inline">\(1.68\%\)</span> in year 5. As noted in <a href="#sec-dynamics" class="quarto-xref">Section&nbsp;4.2</a>, the changes to investment show that the level of investment drops sharply below the steady state but the growth rate is positively increasing towards the new—still lower—equilibrium. This can be seen in <a href="#tbl-six" class="quarto-xref">Table&nbsp;6</a>, where the change to investment in year 5 is even larger in magnitude than in year 10. Additionally, in the sensitivity analysis, all variables of interest still decrease alongside an increase in risk aversion, <span class="math inline">\(\theta\)</span>, although the relative shares fluctuate with the changes in other parameters. The fact that the changes noted from an increase in risk aversion remain consistent through the comparative statics exercise, dynamic simulations, and the sensitivity analysis, except the change to <span class="math inline">\(\delta\)</span>, evidences the model implementation to be robust to changes in the rate of time preference (<span class="math inline">\(\rho\)</span>) and tax ratio (<span class="math inline">\(T \over Y\)</span>) but not depreciation (<span class="math inline">\(\delta\)</span>), and the level of investment in the steady state is underestimated.<br>
 <br>
-Comparing results to <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> and real-world evidence from <span class="citation" data-cites="fed_paper">Weinberg (<a href="#ref-fed_paper" role="doc-biblioref">2013</a>)</span>, I find that the reaction of households to a period of heightened uncertainty in Bosnia resulted in similarly negative adjustments to consumption. In other words, changes to consumption saving behavior in Bosnia, a middle-income country, are comparable to changes in high-income countries. In dynamic simulations with rising levels of risk aversion, individuals reduce their consumption—and, given no alternatives, any income that is not consumed is saved. This reduction in consumption represents a decline in economic activity which results in a decline in output, thereby reducing all macroeconomic variables. This is consistent with the theory outlined by <span class="citation" data-cites="cass1965">Cass (<a href="#ref-cass1965" role="doc-biblioref">1965</a>)</span> and <span class="citation" data-cites="tjalling1963">Koopmans (<a href="#ref-tjalling1963" role="doc-biblioref">1963</a>)</span> and explored in <a href="#sec-method" class="quarto-xref">Section&nbsp;2</a>. This dynamic is noted by <span class="citation" data-cites="fed_paper">Weinberg (<a href="#ref-fed_paper" role="doc-biblioref">2013</a>)</span>, who writes that in the real world, output in the United States declined by <span class="math inline">\(4.3\%\)</span> through the height of the 2008 Global Financial Crisis. My results with the initial parametrization seen in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a> show a decline of <span class="math inline">\(2.53\%\)</span> at the highest end. It is very well possible that the highest estimate of risk aversion, <span class="math inline">\(\theta=1.61\)</span>, may even be low given how sharp the decline was in the real-world United States and that estimates of risk aversion can range far higher, as seen in <span class="citation" data-cites="bekaert2022">Bekaert, Engstrom, and Xu (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>. At the same time, estimating risk aversion at higher levels—particularly given the issues with data availability—runs the risk of overstepping things. Next, although following a different model and methodology, in their consumption growth models, <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> find the coefficients of their various measures of uncertainty on consumption to range from <span class="math inline">\(-0.043\)</span> to <span class="math inline">\(-0.053\)</span>, with standard errors ranging from <span class="math inline">\(1.38\)</span> to <span class="math inline">\(1.83\)</span>. These coefficients from <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> may appear low in comparison, but that is because they are regression outputs, representing a decrease per one-point increment in their estimates of uncertainty, of which they use multiple and which have ranges of values greater than just one point each. In other words, these are elasticities. Comparing these results to the elasticity of output from the change in risk aversion (<span class="math inline">\(\theta\)</span> from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span>) in my model implementation:</p>
+Comparing results to <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> and real-world evidence from <span class="citation" data-cites="fed_paper">Weinberg (<a href="#ref-fed_paper" role="doc-biblioref">2013</a>)</span>, I find that the reaction of households to a period of heightened uncertainty in Bosnia resulted in similarly negative adjustments to consumption. In other words, changes to consumption saving behavior in Bosnia, a middle-income country, are comparable to changes in high-income countries. In dynamic simulations with rising levels of risk aversion, individuals reduce their consumption—and, given no alternatives, any income that is not consumed is saved. This reduction in consumption represents a decline in economic activity which results in a decline in output, thereby reducing all macroeconomic variables. This is consistent with the theory outlined by <span class="citation" data-cites="cass1965">Cass (<a href="#ref-cass1965" role="doc-biblioref">1965</a>)</span> and <span class="citation" data-cites="tjalling1963">Koopmans (<a href="#ref-tjalling1963" role="doc-biblioref">1963</a>)</span> and explored in <a href="#sec-method" class="quarto-xref">Section&nbsp;2</a>. This dynamic is noted by <span class="citation" data-cites="fed_paper">Weinberg (<a href="#ref-fed_paper" role="doc-biblioref">2013</a>)</span>, who writes that in the real world, output in the United States declined by <span class="math inline">\(4.3\%\)</span> through the height of the 2008 Global Financial Crisis. My results with the initial parametrization seen in <a href="#sec-initial_params" class="quarto-xref">Section&nbsp;3.2.1</a> show a decline of <span class="math inline">\(2.53\%\)</span> at the highest end. It is very well possible that the highest estimate of risk aversion, <span class="math inline">\(\theta=1.61\)</span>, may even be low given how sharp the decline was in the real-world United States and that estimates of risk aversion can range far higher, as seen in <span class="citation" data-cites="bekaert2022">Bekaert et al. (<a href="#ref-bekaert2022" role="doc-biblioref">2022</a>)</span>. At the same time, estimating risk aversion at higher levels—particularly given the issues with data availability—runs the risk of overstepping things. Next, although following a different model and methodology, in their consumption growth models, <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> find the coefficients of their various measures of uncertainty on consumption to range from <span class="math inline">\(-0.043\)</span> to <span class="math inline">\(-0.053\)</span>, with standard errors ranging from <span class="math inline">\(1.38\)</span> to <span class="math inline">\(1.83\)</span>. These coefficients from <span class="citation" data-cites="bande2013">Bande and Riveiro (<a href="#ref-bande2013" role="doc-biblioref">2013</a>)</span> may appear low in comparison, but that is because they are regression outputs, representing a decrease per one-point increment in their estimates of uncertainty, of which they use multiple and which have ranges of values greater than just one point each. In other words, these are elasticities. Comparing these results to the elasticity of output from the change in risk aversion (<span class="math inline">\(\theta\)</span> from <span class="math inline">\(0.72\)</span> to <span class="math inline">\(1.61\)</span>) in my model implementation:</p>
 <p><span class="math display">\[
 \frac{(\frac{y_{2}-y_{1}}{y_{1}})}{(\frac{\theta_{2}-\theta_{1}}{\theta_{1}})} \to \frac{(\frac{2.83-2.91}{2.91})}{(\frac{1.61-0.72}{0.72})}=-2.224\% \label{eq:class_eq_31} \tag{31}
 \]</span></p>
@@ -1695,7 +1528,7 @@ Given the limited literature covering consumption-saving behavior in Bosnia, mor
 </section>
 <section id="sec-references" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-bande2013" class="csl-entry" role="listitem">
 Bande, Roberto, and Dolores Riveiro. 2013. <span>“Private Saving Rates and Macroeconomic Uncertainty: Evidence from Spanish Regional Data.”</span> <em>Economic and Social Review</em> 44 (3): 323–49. <a href="https://ideas.repec.org/a/eso/journl/v44y2013i3p323-349.html">https://ideas.repec.org/a/eso/journl/v44y2013i3p323-349.html</a>.
 </div>
@@ -1712,16 +1545,16 @@ Dieppe, Alistair. 2020. <em>Global Productivity: Trends, Drivers, and Policies</
 Dvorsky, Thomas Scheiber, Sandra, and Helmut Stix. 2010. <span>“Real Effects of Crisis Have Reached CESEE Households: Euro Survey Shows Dampened Savings and Changes in Borrowing Behaviory.”</span> <em>Focus on European Economic Integration</em>, 79–90. <a href="https://www.proquest.com/scholarly-journals/real-effects-crisis-have-reached-cesee-households/docview/919221477/se-2">https://www.proquest.com/scholarly-journals/real-effects-crisis-have-reached-cesee-households/docview/919221477/se-2</a>.
 </div>
 <div id="ref-friedman1957" class="csl-entry" role="listitem">
-Friedman, Milton. 1957. <span>“Introduction to "a Theory of the Consumption Function".”</span> In <em>A Theory of the Consumption Function</em>, 1–6. National Bureau of Economic Research, Inc. <a href="https://EconPapers.repec.org/RePEc:nbr:nberch:4403">https://EconPapers.repec.org/RePEc:nbr:nberch:4403</a>.
+Friedman, Milton. 1957. <span>“Introduction to "a Theory of the Consumption Function".”</span> In <em>A Theory of the Consumption Function</em>. National Bureau of Economic Research, Inc. <a href="https://EconPapers.repec.org/RePEc:nbr:nberch:4403">https://EconPapers.repec.org/RePEc:nbr:nberch:4403</a>.
 </div>
 <div id="ref-gandelman2015" class="csl-entry" role="listitem">
 Gándelman, Néstor, and Rubén Hernández-Murillo. 2015. <span>“Risk Aversion at the Country Level.”</span> <em>Review</em> 97 (1): 53–66. <a href="https://doi.org/10.20955/r.2015.53-66">https://doi.org/10.20955/r.2015.53-66</a>.
 </div>
 <div id="ref-groningengrowthanddevelopmentcentre2023" class="csl-entry" role="listitem">
-Groningen Growth And Development Centre. 2023. <span>“Penn World Table Version 10.01.”</span> DataverseNL. <a href="https://doi.org/10.34894/QT5BCC">https://doi.org/10.34894/QT5BCC</a>.
+Groningen Growth And Development Centre. 2023. <em>Penn World Table Version 10.01</em>. DataverseNL. <a href="https://doi.org/10.34894/QT5BCC">https://doi.org/10.34894/QT5BCC</a>.
 </div>
 <div id="ref-tjalling1963" class="csl-entry" role="listitem">
-Koopmans, Tjalling C. 1963. <span>“<span class="nocase">On the Concept of Optimal Economic Growth</span>.”</span> Cowles Foundation Discussion Papers 163. Cowles Foundation for Research in Economics, Yale University. <a href="https://ideas.repec.org/p/cwl/cwldpp/163.html">https://ideas.repec.org/p/cwl/cwldpp/163.html</a>.
+Koopmans, Tjalling C. 1963. <em><span class="nocase">On the Concept of Optimal Economic Growth</span></em>. Cowles Foundation Discussion Papers No. 163. Cowles Foundation for Research in Economics, Yale University. <a href="https://ideas.repec.org/p/cwl/cwldpp/163.html">https://ideas.repec.org/p/cwl/cwldpp/163.html</a>.
 </div>
 <div id="ref-kydland1996" class="csl-entry" role="listitem">
 Kydland, Finn E, and Edward C Prescott. 1996. <span>“The Computational Experiment: An Econometric Tool.”</span> <em>Journal of Economic Perspectives</em> 10 (1): 69–85. <a href="https://doi.org/10.1257/jep.10.1.69">https://doi.org/10.1257/jep.10.1.69</a>.
@@ -1729,29 +1562,29 @@ Kydland, Finn E, and Edward C Prescott. 1996. <span>“The Computational Experim
 <div id="ref-leland1968" class="csl-entry" role="listitem">
 Leland, Hayne E. 1968. <span>“Saving and Uncertainty: The Precautionary Demand for Saving.”</span> <em>The Quarterly Journal of Economics</em> 82 (3): 465. <a href="https://doi.org/10.2307/1879518">https://doi.org/10.2307/1879518</a>.
 </div>
-<div id="ref-maineco2017" class="csl-entry" role="listitem">
-OECD. 2017a. <span>“Main Economic Indicators,”</span> November. <a href="https://doi.org/10.1787/mei-data-en">https://doi.org/10.1787/mei-data-en</a>.
-</div>
 <div id="ref-leading2017a" class="csl-entry" role="listitem">
-———. 2017b. <span>“Leading Indicators,”</span> November. <a href="https://doi.org/10.1787/0f3ff737-en">https://doi.org/10.1787/0f3ff737-en</a>.
+OECD. 2017a. <em>Leading Indicators</em>. November 18. <a href="https://doi.org/10.1787/0f3ff737-en">https://doi.org/10.1787/0f3ff737-en</a>.
+</div>
+<div id="ref-maineco2017" class="csl-entry" role="listitem">
+OECD. 2017b. <em>Main Economic Indicators</em>. November 17. <a href="https://doi.org/10.1787/mei-data-en">https://doi.org/10.1787/mei-data-en</a>.
 </div>
 <div id="ref-tamura2011" class="csl-entry" role="listitem">
 Tamura, Hideaki, and Yoichi Matsubayashi. 2011. <span>“Income Uncertainty, Risk Aversion, and Consumption Behavior : The Japanese Experience from 1987 to 2009.”</span> <em>Kobe University Economic Review</em> 57: 13–38. <a href="https://doi.org/10.24546/81003824">https://doi.org/10.24546/81003824</a>.
 </div>
 <div id="ref-fed_paper" class="csl-entry" role="listitem">
-Weinberg, John. 2013. <span>“The Great Recession and Its Aftermath.”</span> <em>United States Federal Reserve</em>, November. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath">https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath</a>.
+Weinberg, John. 2013. <span>“The Great Recession and Its Aftermath.”</span> <em>United States Federal Reserve</em>, November 22. <a href="https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath">https://www.federalreservehistory.org/essays/great-recession-and-its-aftermath</a>.
 </div>
 <div id="ref-wb_pop2023" class="csl-entry" role="listitem">
-World Bank. 2023. <span>“Population Growth.”</span> Databank Bosnia; Herzegovina. <a href="https://api.worldbank.org/v2/en/indicator/SP.POP.GROW?downloadformat=xml">https://api.worldbank.org/v2/en/indicator/SP.POP.GROW?downloadformat=xml</a>.
+World Bank. 2023. <em>Population Growth</em>. Databank Bosnia; Herzegovina. <a href="https://api.worldbank.org/v2/en/indicator/SP.POP.GROW?downloadformat=xml">https://api.worldbank.org/v2/en/indicator/SP.POP.GROW?downloadformat=xml</a>.
 </div>
 <div id="ref-wb_interest2024" class="csl-entry" role="listitem">
-———. 2024a. <span>“Deposit Interest Rate (.”</span> Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA">https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA</a>.
+World Bank. 2024a. <em>Deposit Interest Rate (</em>. Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA">https://data.worldbank.org/indicator/FR.INR.DPST?locations=BA</a>.
 </div>
 <div id="ref-wb_exp2024" class="csl-entry" role="listitem">
-———. 2024b. <span>“Expense.”</span> Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/GC.XPN.TOTL.GD.ZS?locations=BA">https://data.worldbank.org/indicator/GC.XPN.TOTL.GD.ZS?locations=BA</a>.
+World Bank. 2024b. <em>Expense</em>. Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/GC.XPN.TOTL.GD.ZS?locations=BA">https://data.worldbank.org/indicator/GC.XPN.TOTL.GD.ZS?locations=BA</a>.
 </div>
 <div id="ref-wb_tax2024" class="csl-entry" role="listitem">
-———. 2024c. <span>“Tax Revenue.”</span> Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS?locations=BA&amp;name_desc=true">https://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS?locations=BA&amp;name_desc=true</a>.
+World Bank. 2024c. <em>Tax Revenue</em>. Databank Bosnia; Herzegovina. <a href="https://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS?locations=BA&amp;name_desc=true">https://data.worldbank.org/indicator/GC.TAX.TOTL.GD.ZS?locations=BA&amp;name_desc=true</a>.
 </div>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1871,19 +1704,6 @@ between steady states characterized by [Theta]=0.72 to<br>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -2291,7 +2111,7 @@ between steady states characterized by [Theta]=0.72 to<br>
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- 2025 ❤️ 
+ 2026 ❤️ 
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://tins.page">
