@@ -402,7 +402,7 @@ ul.task-list li input[type="checkbox"] {
     mobBtn.addEventListener('click', function () { mobInput.value = ''; mobBox.innerHTML = ''; openModal(searchModal); mobInput.focus(); });
   }
 
-  document.querySelectorAll('.resume-trigger').forEach(function (btn) { btn.addEventListener('click', function (e) { e.preventDefault(); if (resumeFrame) resumeFrame.src = '/Resume.pdf'; openModal(resumeModal); }); });
+  document.querySelectorAll('.resume-trigger').forEach(function (btn) { btn.addEventListener('click', function (e) { e.preventDefault(); if (resumeFrame) resumeFrame.src = 'assets/Resume.pdf'; openModal(resumeModal); }); });
   document.querySelectorAll('.modal-close').forEach(function (b) { b.addEventListener('click', function () { closeModal(b.closest('.modal-overlay')); }); });
   document.querySelectorAll('.modal-overlay').forEach(function (m) { m.addEventListener('click', function (e) { if (e.target === m) closeModal(m); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var active = document.querySelector('.modal-overlay.active'); if (active) closeModal(active); } });
