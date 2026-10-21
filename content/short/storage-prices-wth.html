@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tin Skoric">
+
+<title>Digital Storage Pricing in 2026 – Tin Skoric</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3860a814a4289a7e45897cfe1545c760.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-ca12423b36edcd8c8a890206f742f341.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3860a814a4289a7e45897cfe1545c760.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-1327db5638d779c740b854c13058215e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-b792025d68e112615fc0c8365b7ad036.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-1327db5638d779c740b854c13058215e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="../../styles/custom.css">
+</head>
+
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#impetus" id="toc-impetus" class="nav-link active" data-scroll-target="#impetus"><span class="header-section-number">1</span> Impetus</a>
+  <ul class="collapse">
+  <li><a href="#in-the-clouds" id="toc-in-the-clouds" class="nav-link" data-scroll-target="#in-the-clouds"><span class="header-section-number">1.1</span> In the Clouds</a></li>
+  <li><a href="#walmart" id="toc-walmart" class="nav-link" data-scroll-target="#walmart"><span class="header-section-number">1.2</span> Walmart</a></li>
+  </ul></li>
+  <li><a href="#the-hell-its-not-so-bad" id="toc-the-hell-its-not-so-bad" class="nav-link" data-scroll-target="#the-hell-its-not-so-bad"><span class="header-section-number">2</span> The Hell (it’s not so bad)</a></li>
+  <li><a href="#diskprices.com" id="toc-diskprices.com" class="nav-link" data-scroll-target="#diskprices.com"><span class="header-section-number">3</span> Diskprices.com</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Digital Storage Pricing in 2026</h1></header>
+
+
+<div id="cool-title-grid">
+  <div class="title-left-column">
+
+    <div class="quarto-title"></div>
+
+    <div class="quarto-title-meta has-meta has-meta">
+      <div class="meta-item"><b class="meta-label">Author: </b><span class="meta-value">Tin Skoric</span></div>
+      <div class="meta-item"><b class="meta-label">Published: </b><span class="meta-value">January 2026</span></div>
+    </div>
+
+
+  </div>
+
+</div>
+
+<nav id="cool-header">
+  <div class="header-left">
+    <a href="../../" class="header-link" aria-label="Home"><i class="bi bi-house-heart-fill"></i></a>
+    <a href="https://github.com/tinskoric" class="header-link" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/tinskoric/" class="header-link" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <button class="header-link resume-trigger">Resume</button>
+  </div>
+
+  <div class="header-right">
+    <div class="search-desktop">
+      <input type="text" class="search-input-full" placeholder="Search..." id="search-input" autocomplete="off">
+      <div id="search-dropdown" class="search-dropdown"></div>
+    </div>
+    <button class="search-icon-btn search-trigger" aria-label="Search"><i class="bi bi-search"></i></button>
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode"><i class="bi bi-toggle-off"></i></button>
+  </div>
+</nav>
+
+<div id="resume-modal" class="modal-overlay">
+  <div class="modal-shell">
+    <button class="modal-close" aria-label="Close">
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" space="preserve"><g><g><path d="M505.943,6.058c-8.077-8.077-21.172-8.077-29.249,0L6.058,476.693c-8.077,8.077-8.077,21.172,0,29.249C10.096,509.982,15.39,512,20.683,512c5.293,0,10.586-2.019,14.625-6.059L505.943,35.306C514.019,27.23,514.019,14.135,505.943,6.058z" fill="white"></path></g></g><g><g><path d="M505.942,476.694L35.306,6.059c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.076-8.077,21.171,0,29.248l470.636,470.636c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.624-6.057C514.018,497.866,514.018,484.771,505.942,476.694z" fill="white"></path></g></g></svg>
+    </button>
+    <div class="modal-content"><iframe id="resume-iframe" class="resume-iframe" title="Resume"></iframe></div>
+  </div>
+</div>
+
+<div id="search-modal" class="modal-overlay">
+  <div class="modal-shell">
+    <button class="modal-close" aria-label="Close">
+    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" space="preserve"><g><g><path d="M505.943,6.058c-8.077-8.077-21.172-8.077-29.249,0L6.058,476.693c-8.077,8.077-8.077,21.172,0,29.249C10.096,509.982,15.39,512,20.683,512c5.293,0,10.586-2.019,14.625-6.059L505.943,35.306C514.019,27.23,514.019,14.135,505.943,6.058z" fill="white"></path></g></g><g><g><path d="M505.942,476.694L35.306,6.059c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.076-8.077,21.171,0,29.248l470.636,470.636c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.624-6.057C514.018,497.866,514.018,484.771,505.942,476.694z" fill="white"></path></g></g></svg>
+    </button>
+    <div class="modal-content search-modal">
+      <input type="text" id="search-modal-input" placeholder="Search pages..." autocomplete="off">
+      <div id="search-results"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  document.querySelectorAll('.modal-overlay').forEach(function (m) { if (m.parentNode !== document.body) document.body.appendChild(m); });
+
+  var header = document.getElementById('cool-header');
+  var themeBtn = document.getElementById('theme-toggle');
+  var themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
+  var resumeFrame = document.getElementById('resume-iframe');
+  var resumeModal = document.getElementById('resume-modal');
+  var searchModal = document.getElementById('search-modal');
+
+  function isDark() { return document.body.classList.contains('quarto-dark'); }
+  function paintIcon() { if (themeIcon) themeIcon.className = isDark() ? 'bi bi-toggle-on' : 'bi bi-toggle-off'; }
+  if (themeBtn) themeBtn.addEventListener('click', function () {
+    var savedY = window.scrollY;
+    var nativeScrollTo = window.scrollTo;
+    window.scrollTo = function () {};
+    try { (window.quartoToggleColorScheme || function () {})(); }
+    finally {
+      setTimeout(function () {
+        window.scrollTo = nativeScrollTo;
+        window.scrollTo(0, savedY);
+        paintIcon();
+      }, 60);
+    }
+  });
+  new MutationObserver(paintIcon).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  paintIcon();
+
+  function escapeHtml(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function norm(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ''); }
+  function toUrl(href) { if (/^https?:/i.test(href)) return href; return href.charAt(0) === '/' ? href : '/' + href; }
+  function pageKey(href) { var path = String(href).split('#')[0].split('?')[0]; while (path.slice(-1) === '/') path = path.slice(0, -1); return path.toLowerCase(); }
+
+  function buildPages(entries) {
+    var byKey = {};
+    (entries || []).forEach(function (e) {
+      var key = pageKey(e.href || '');
+      if (!key || !e.title) return;
+      var pageLevel = !String(e.section || '').trim();
+      if (!byKey[key] || (pageLevel && !byKey[key].pageLevel)) byKey[key] = { title: e.title, url: toUrl(String(e.href).split('#')[0]), pageLevel: pageLevel };
+    });
+    return Object.keys(byKey).map(function (k) { return byKey[k]; });
+  }
+
+  var pagesPromise = null;
+  function getPages() {
+    if (!pagesPromise) pagesPromise = fetch('/search.json').then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; }).then(buildPages);
+    return pagesPromise;
+  }
+
+  function search(query) {
+    var needle = norm(query);
+    if (needle.length < 2) return Promise.resolve(null);
+    return getPages().then(function (pages) {
+      return pages.filter(function (p) { return norm(p.title).indexOf(needle) !== -1; }).sort(function (a, b) { var rank = (norm(a.title).indexOf(needle) === 0 ? 0 : 1) - (norm(b.title).indexOf(needle) === 0 ? 0 : 1); return rank || a.title.localeCompare(b.title); }).slice(0, 20);
+    });
+  }
+
+  function renderResults(box, hits, query) {
+    if (hits === null) { box.style.display = 'none'; return; }
+    box.innerHTML = hits.length ? hits.map(function (h) { return '<a class="search-result-item" href="' + escapeHtml(h.url) + '">' + escapeHtml(h.title) + '</a>'; }).join('') : '<div style="padding: 0.75rem;"> No results for "' + escapeHtml(query) + '"</div>';
+    box.style.display = 'block';
+  }
+
+  function bindSearch(input, box) {
+    var timer;
+    input.addEventListener('input', function () { var q = input.value; clearTimeout(timer); timer = setTimeout(function () { search(q).then(function (hits) { renderResults(box, hits, q); }); }, 140); });
+  }
+
+  var deskInput = document.getElementById('search-input');
+  var deskBox = document.getElementById('search-dropdown');
+  if (deskInput && deskBox) {
+    bindSearch(deskInput, deskBox);
+    deskInput.addEventListener('keydown', function (e) { if (e.key === 'Escape') { deskBox.style.display = 'none'; deskInput.blur(); } else if (e.key === 'Enter') { var first = deskBox.querySelector('a'); if (first) window.location.href = first.getAttribute('href'); } });
+    document.addEventListener('click', function (e) { if (e.target !== deskInput && !deskBox.contains(e.target)) deskBox.style.display = 'none'; });
+  }
+
+  function openModal(m) { if (!m) return; m.classList.remove('closing'); m.classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeModal(m) { if (!m) return; m.classList.add('closing'); setTimeout(function () { m.classList.remove('active', 'closing'); if (!document.querySelector('.modal-overlay.active')) document.body.style.overflow = ''; if (resumeFrame) resumeFrame.src = ''; }, 500); }
+
+  var mobBtn = document.querySelector('.search-trigger');
+  var mobInput = document.getElementById('search-modal-input');
+  var mobBox = document.getElementById('search-results');
+  if (mobBtn && mobInput && mobBox) {
+    bindSearch(mobInput, mobBox);
+    mobBtn.addEventListener('click', function () { mobInput.value = ''; mobBox.innerHTML = ''; openModal(searchModal); mobInput.focus(); });
+  }
+
+  document.querySelectorAll('.resume-trigger').forEach(function (btn) { btn.addEventListener('click', function (e) { e.preventDefault(); if (resumeFrame) resumeFrame.src = '/Resume.pdf'; openModal(resumeModal); }); });
+  document.querySelectorAll('.modal-close').forEach(function (b) { b.addEventListener('click', function () { closeModal(b.closest('.modal-overlay')); }); });
+  document.querySelectorAll('.modal-overlay').forEach(function (m) { m.addEventListener('click', function (e) { if (e.target === m) closeModal(m); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { var active = document.querySelector('.modal-overlay.active'); if (active) closeModal(active); } });
+  window.addEventListener('scroll', function () { if (header) header.classList.toggle('scrolled', window.scrollY > 50); }, { passive: true });
+})();
+</script>
+
+
+<section id="impetus" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Impetus</h1>
+<section id="in-the-clouds" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="in-the-clouds"><span class="header-section-number">1.1</span> In the Clouds</h2>
+<p>I’ve had <a href="https://en.wikipedia.org/wiki/Dropbox">Dropbox</a> for some time, and have found it to be exceptionally good at doing what most other services seem to suck at, which is to say that it is good at storing my files. To cut a long story short, <a href="https://en.wikipedia.org/wiki/ICloud">iCloud</a> is good but restrictive in terms of which devices I can use with it<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>; <a href="https://en.wikipedia.org/wiki/Google_Drive">Google Drive</a> similarly works quite well, <a href="https://www.principledtechnologies.com/Dropbox/Dropbox-Advanced-Durham-performance-comparison-science-1223.pdf">but its file uploads seem to be slower than Dropbox</a>, making <em>synchronization</em> feel less “seamless”; and using <a href="https://en.wikipedia.org/wiki/OneDrive">OneDrive</a> means being bombarded with <em>bullshit</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. In my time with it, Dropbox syncs my files quickly, clients are available for all my devices (including ones running GNU/Linux<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>), and I have not had to endure any Microsoft in-product advertisements; great.</p>
+<p>But I didn’t want to rely solely on Dropbox as a long-term total storage solution.</p>
+<p>Monthly fees locking you into a service that could hold all of your important files is not something I really like. Even if you can migrate away in the future, the longer you wait, the more of a pain that migration will be. This post isn’t about technical details, so I will spare you those. Rather, just know that I bought some storage drives online and put together a home file server.</p>
+</section>
+<section id="walmart" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="walmart"><span class="header-section-number">1.2</span> Walmart</h2>
+<p>Soon after completing that project, I went to my local Walmart to buy some unrelated things (Cheez-its were among them). While there, I briefly perused the storage in their electronics section… it was half the price. When I was searching online, I did not see these prices. They had NAS (network-attached storage) hard drives with almost all the same specifics as the ones I had just bought. They had 12 terabyte NAS drives for $250. What the hell?! Further, while external drives are typically cheaper for a bunch of supply reasons, they too were shockingly cheap. Perhaps in better days we would just call these reasonable prices, but in the world of <a href="https://www.techpowerup.com/341578/nand-flash-shortages-may-last-10-years-phison-ceo-warns">NAND flash shortages</a> for solid-state drives (SDDs) and <a href="https://www.techradar.com/pro/surging-ai-demand-for-hdd-means-that-you-may-have-to-wait-up-to-a-year-for-32-tb-hard-disk-drives-warns-research-and-yes-prices-are-also-going-up">production crunches</a> for hard drives (HDDs), these prices were shockingly good.</p>
+</section>
+</section>
+<section id="the-hell-its-not-so-bad" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Hell (it’s not so bad)</h1>
+<p>Learning that I had spent hundreds more than I otherwise needed, spurred me to check deeper online. In my search, I found a website, <a href="https://diskprices.com/">diskprices.com</a>, that collects and sorts memory products (including RAM and removable storage options) from Amazon and its various regional sites. Having found it, I thought it may be cool to compare these products <em>graphically</em>. The site already has some unique data points, like prices per gigabyte/terabyte, so I thought it would be neat to come up with various graphs to explore different aspects of what is there.</p>
+</section>
+<section id="diskprices.com" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Diskprices.com</h1>
+<p>First, let’s get the data we want from this site. We will keep our data source to new products from the U.S. Amazon site alone. Further, in acknowledgement of the current RAM (random-access memory) <a href="https://en.wikipedia.org/wiki/2024%E2%80%932026_global_memory_supply_shortage">shortages</a>, we will also include some graphs on those for fun. Other storage mediums (as in, other than SSDs, HDDs, and RAM) will suffer my ignorance. We will also use prices per gigabyte, but it doesn’t really make a difference beyond scales. There are many ways to get this data, but the site is formatted really nicely so the easiest in our case is to just grab the site link, plug that into the <a href="https://rvest.tidyverse.org/">rvest</a> package<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, and then select/filter/adjust for our options.</p>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code># Site source; go use one of their affiliate links!
+url_source &lt;- scrape(bow("https://diskprices.com"))
+
+# Data
+url_data &lt;- data.frame(html_table(url_source)[[1]]) %&gt;%
+  # Filter out what we *don't* want
+  filter(
+    !Form.Factor %in% c("Tape", "Optical", "USB", "SD", "microSD", "CFexpress", "Compact", "CFast"),
+    Condition == "New"
+  ) %&gt;%
+  # There is this one row that includes a pre-built NAS that we don't want to count (its literally a whole NAS with RAM and a CPU, of course its expensive per "gigabyte")
+  # Let's also filter out optane, aka 3D XPoint, since that was discontinued (https://en.wikipedia.org/wiki/3D_XPoint), meaning that getting it "new" is obviously very expensive
+  filter(
+    !str_detect(Affiliate.Link, "MINISFORUM N5 Pro"),
+    !str_detect(Affiliate.Link, "Optane"), !str_detect(Affiliate.Link, "optane"), !str_detect(Affiliate.Link, "3D XPoint")
+  ) %&gt;% 
+  # Drop the existing price per columns (we'll make a new price per gb one later), warranty, and link columns
+  select(-`Price.per.GB`, -`Price.per.TB`, -Warranty, -`Affiliate.Link`) %&gt;% 
+  # Create some new columns to tidy things
+  mutate(
+    Tech = Technology,
+    Type = case_when(
+      Form.Factor %in% c("RDIMM", "UDIMM") ~ "DIMM RAM",
+      Form.Factor == "SODIMM" ~ "SODIMM RAM",
+      Form.Factor %in% c("Internal", "Internal 3.5\"", "Internal 2.5\"", "M.2", "U.2/U.3") ~ "Internal Storage",
+      Form.Factor %in% c("External", "External 3.5\"", "External 2.5\"") ~ "External Storage"
+    ),
+    Group = case_when(
+      Tech %in% c("SSD", "NVMe", "SATA") ~ "SSD",
+      TRUE ~ Tech
+    ),
+    nDrives = case_when(
+      is.na(str_split_i(Capacity, "B x", 2)) ~ 1,
+      TRUE ~ as.numeric(str_split_i(Capacity, "B x", 2))
+    ),
+    # Using 1000 GB to 1 TB for reference since that's what storage manufacturers use
+    CapacityPerDriveGB = case_when(
+      str_detect(Capacity, "TB") ~ as.numeric(str_split_i(Capacity, "TB", 1)) * 1000,
+      str_detect(Capacity, "GB") ~ as.numeric(str_split_i(Capacity, "GB", 1))
+    ),
+    TotalCapacity = nDrives * CapacityPerDriveGB,
+    Price = as.numeric(str_sub(str_remove_all(Price, ","), 2)),
+    PricePerGB = Price / TotalCapacity,
+    PricePerGB_rounded = round(PricePerGB, 2)
+  ) %&gt;% select(Type, Group, Price, TotalCapacity, CapacityPerDriveGB, nDrives, PricePerGB, PricePerGB_rounded) 
+# sanity check: which(is.na(url_data) == TRUE) should be 0</code></pre>
+</div>
+</div>
+</div>
+<p>With this done, we can make some cool stuff. Below is a splattering of graphs, pick your poison!</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Barplots</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Other Price Graphs</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-charts1" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-charts1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-charts1" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-charts1-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-charts1-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="storage-prices-wth_files/figure-html/fig-charts1-1.png" class="lightbox" data-gallery="fig-charts1" title="Figure&nbsp;1&nbsp;(a): HDD vs SSD Prices (All Varieties, Average)"><img src="storage-prices-wth_files/figure-html/fig-charts1-1.png" class="img-fluid figure-img" data-ref-parent="fig-charts1" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-charts1-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) HDD vs SSD Prices (All Varieties, Average)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-charts1" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-charts1-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-charts1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="storage-prices-wth_files/figure-html/fig-charts1-2.png" class="lightbox" data-gallery="fig-charts1" title="Figure&nbsp;1&nbsp;(b): RAM Prices (DDR4/DDR5, All Varieties, Average)"><img src="storage-prices-wth_files/figure-html/fig-charts1-2.png" class="img-fluid figure-img" data-ref-parent="fig-charts1" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-charts1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) RAM Prices (DDR4/DDR5, All Varieties, Average)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-charts1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: diskprices.com Barplots
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>ggplot() +
+  geom_bar(
+    data = url_data %&gt;% filter(!Type %in% c("DIMM RAM", "SODIMM RAM")) %&gt;% group_by(Type, Group) %&gt;% summarize(PricePerGB_avg = mean(PricePerGB, na.rm = TRUE)),
+    mapping = aes(x = Type, y = PricePerGB_avg, fill = Group),
+    position = "dodge", stat = "identity"
+  ) +
+  scale_fill_manual(
+    values = unlist(unname(canned_colors_list()$compliments))
+  ) + 
+  theme_can() + 
+  scale_y_continuous(
+    "Price per Gigabyte",
+    limits = c(0, 0.25),
+    breaks = seq(0, 0.25, 0.05),
+    expand = c(0, 0)
+  ) + labs(caption = "Average, Jan. 29, 2026") + theme(legend.position = "top")
+
+ggplot() +
+  geom_bar(
+    data = url_data %&gt;% filter(Type %in% c("DIMM RAM", "SODIMM RAM")) %&gt;% group_by(Type, Group) %&gt;% summarize(PricePerGB_avg = mean(PricePerGB, na.rm = TRUE)),
+    mapping = aes(x = Group, y = PricePerGB_avg, fill = Type),
+    position = "dodge", stat = "identity",
+  ) +
+  scale_fill_manual(
+    values = unlist(unname(canned_colors_list()$compliments))
+  ) + 
+  theme_can() + 
+  scale_y_continuous(
+    "Price per Gigabyte",
+    limits = c(0, 15),
+    breaks = seq(0, 15, 5),
+    expand = c(0, 0)
+  ) + labs(caption = "Average, Jan. 29, 2026") + theme(legend.position = "top")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-charts2" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-charts2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-charts2" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-charts2-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-charts2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="storage-prices-wth_files/figure-html/fig-charts2-1.png" class="lightbox" data-gallery="fig-charts2" title="Figure&nbsp;2&nbsp;(a): HDD Prices (Sorted)"><img src="storage-prices-wth_files/figure-html/fig-charts2-1.png" class="img-fluid figure-img" data-ref-parent="fig-charts2" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-charts2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) HDD Prices (Sorted)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-charts2" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-charts2-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-charts2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="storage-prices-wth_files/figure-html/fig-charts2-2.png" class="lightbox" data-gallery="fig-charts2" title="Figure&nbsp;2&nbsp;(b): SSD Prices (Sorted)"><img src="storage-prices-wth_files/figure-html/fig-charts2-2.png" class="img-fluid figure-img" data-ref-parent="fig-charts2" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-charts2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) SSD Prices (Sorted)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-charts2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Other Price Graphs
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<pre><code>ggplot() +
+  geom_point(
+    data = url_data %&gt;% filter(Group == "HDD"),
+    mapping = aes(x = TotalCapacity, y = PricePerGB),
+    shape = 21, size = 2, color = canned_colors_get(, "success"), fill = canned_colors_get(, "success")
+  ) +
+  theme_can() + 
+  scale_y_continuous(
+    "Price per Gigabyte",
+    limits = c(0, 1.75),
+    breaks = seq(0, 1.75, 0.25)
+  ) +
+  scale_x_continuous(
+    "Total Capacity",
+    limits = c(0, 25000),
+    breaks = seq(0, 25000, 5000),
+    expand = c(0, 0)
+  ) + labs(caption = "Average, Jan. 29, 2026; Capacities &gt;24TB dropped") + theme(legend.position = "top")
+
+ggplot() +
+  geom_point(
+    data = url_data %&gt;% filter(Group == "SSD"),
+    mapping = aes(x = TotalCapacity, y = PricePerGB),
+    shape = 21, size = 2, color = canned_colors_get(, "danger"), fill = canned_colors_get(, "danger")
+  ) +
+  theme_can() + 
+  scale_y_continuous(
+    "Price per Gigabyte",
+    limits = c(0, 1.75),
+    breaks = seq(0, 1.75, 0.25)
+  ) +
+  scale_x_continuous(
+    "Total Capacity",
+    limits = c(0, 25000),
+    breaks = seq(0, 25000, 5000),
+    expand = c(0, 0)
+  ) + labs(caption = "Average, Jan. 29, 2026; Capacities &gt;24TB dropped") + theme(legend.position = "top")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>That is all for now, this was a fun reprieve.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The only actual clients available are for Apple devices and Microsoft Windows. While the <em>web app</em> for iCloud looks nice and is accessible otherwise, a web app is not integrated into your filesystem, which is immediately a far worse experience.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>As is the typical user experience with an increasing number of Microsoft products. Microsoft seems to have misunderstood that the reason people liked Apple’s (and even Google’s) ecosystem wasn’t that things were pre-installed and forced on them, but that those things worked and left them alone otherwise. Although features like vaults (protected folders) are nice, there is just so much about Microsoft products that sucks to use, and it becomes hard to explain. I do not ever want to see a Copilot button anywhere near my files.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I will be nice and <a href="https://www.gnu.org/gnu/gnu-linux-faq.html">call it as the GNU folks would like</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>We’re only sending one request here, we’re not bad people!<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/tins\.page");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ 2026 ❤️ 
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://tins.page">
+<p>Tin Skoric</p>
+</a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tinskoric/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tinskoric/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ |
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/tinskoric/tinskoric.github.io">
+<p>Site Source</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
